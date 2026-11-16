@@ -659,3 +659,7 @@ dialog.sheet .dlg-in{max-height:calc(100vh - 92px);box-shadow:0 40px 90px -30px 
 @media (max-width:900px){ .book2.cov{max-width:260px} }
 .side21 .ab-ph img{width:100%}
 .list .ic-yt{background:#ff0033;color:#fff}
+/* slides: author slide */
+.au-ph{display:flex;align-items:flex-end;justify-content:center;width:min(320px,70%);aspect-ratio:1;border-radius:50%;background:var(--accent-soft);overflow:hidden;margin:auto}
+.au-ph img{width:100%;height:auto;display:block}
+.colo-s{font-size:13px;color:var(--muted);margin-top:18px}
