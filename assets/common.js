@@ -39,7 +39,7 @@
   (function () {
     var h = document.getElementById('siteHeader'); if (!h) return;
     var act = h.getAttribute('data-active') || '';
-    var items = [['home', '', 'Home'], ['read', 'knowledge-mesh/playbook.html', 'Read'], ['slides', 'knowledge-mesh/slides.html', 'Simple Slides'], ['km', 'knowledge-mesh/', 'Concepts'], ['about', '#about', 'About']];
+    var items = [['home', '', 'Home'], ['read', 'knowledge-mesh/playbook.html', 'Read'], ['slides', 'knowledge-mesh/slides.html', 'Simple Slides'], ['about', '#about', 'About']];
     var nav = items.map(function (it) {
       return '<a href="' + (it[1].charAt(0) === '#' ? root + './' + it[1] : root + (it[1] || './')) + '"' + (act === it[0] ? ' aria-current="page"' : '') + '>' + it[2] + '</a>';
     }).join('');
