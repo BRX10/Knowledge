@@ -1,8 +1,25 @@
-/* Shared helpers: lists from content.js, LinkedIn link, optional download counter. */
+/* Shared: fixed header on every page, violet/amber theme, lists from content.js, optional download counter. */
 (function () {
   var S = window.SITE || {}, preview = /[?&]preview\b/.test(location.search);
   var root = document.documentElement.getAttribute('data-root') || '';
+  var KEY = 'km-theme';
   function esc(t) { var d = document.createElement('div'); d.textContent = t == null ? '' : String(t); return d.innerHTML; }
+  function theme() { return document.documentElement.getAttribute('data-theme') === 'amber' ? 'amber' : 'violet'; }
+  function img(name) { return root + 'assets/img/' + (theme() === 'amber' ? 'a' : 'v') + '/' + name + '.png'; }
+  function swapImages() {
+    var t = theme() === 'amber' ? '/img/a/' : '/img/v/';
+    document.querySelectorAll('img').forEach(function (i) {
+      var s = i.getAttribute('src') || '';
+      if (/\/img\/[av]\//.test(s)) { var n = s.replace(/\/img\/[av]\//, t); if (n !== s) i.setAttribute('src', n); }
+    });
+  }
+  function setTheme(t) {
+    document.documentElement.setAttribute('data-theme', t);
+    try { localStorage.setItem(KEY, t); } catch (e) {}
+    swapImages();
+    document.querySelectorAll('.theme-sw').forEach(function (b) { b.setAttribute('aria-pressed', t === 'amber' ? 'true' : 'false'); b.title = t === 'amber' ? 'Switch to violet' : 'Switch to amber'; });
+    document.dispatchEvent(new CustomEvent('km-theme', { detail: t }));
+  }
   function fill(list, el, render, cls) {
     if (!el) return 0; var n = 0;
     (list || []).forEach(function (x) {
@@ -15,33 +32,37 @@
     return n;
   }
 
+  /* brain icon (Lucide "brain", ISC licence) */
+  var BRAIN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg>';
+
   /* ---------- shared fixed header ---------- */
   (function () {
     var h = document.getElementById('siteHeader'); if (!h) return;
     var act = h.getAttribute('data-active') || '', cta = S.cta || {};
-    var items = [['home', '', 'Home'], ['km', 'knowledge-mesh/', 'Knowledge Mesh'], ['pb', 'knowledge-mesh/playbook.html', 'Playbook'], ['writing', '#writing', 'Writing'], ['repos', '#repos-sec', 'Repositories']];
+    var items = [['home', '', 'Home'], ['read', 'knowledge-mesh/playbook.html', 'Read'], ['slides', 'knowledge-mesh/slides.html', 'Simple Slides'], ['km', 'knowledge-mesh/', 'Concepts']];
     var nav = items.map(function (it) {
-      var href = it[1].charAt(0) === '#' ? root + './' + it[1] : root + (it[1] || './');
-      return '<a href="' + href + '"' + (act === it[0] ? ' aria-current="page"' : '') + '>' + it[2] + '</a>';
+      return '<a href="' + root + (it[1] || './') + '"' + (act === it[0] ? ' aria-current="page"' : '') + '>' + it[2] + '</a>';
     }).join('');
     h.className = 'top';
     h.innerHTML = '<div class="wrap top-in">' +
-      '<a class="brand" href="' + (root || './') + '"><span class="mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="1.6"><path d="M2 2h10v10H2zM7 2v10M2 7h10"/></svg></span><span class="txt">Knowledge · AI</span></a>' +
+      '<a class="brand" href="' + (root || './') + '"><span class="mark">' + BRAIN + '</span><span class="txt">Knowledge Mesh Playbook</span></a>' +
       '<nav class="mainnav" aria-label="Main">' + nav + '</nav><span class="spacer"></span>' +
-      (S.owner && S.owner.linkedin ? '<a class="li-ico" href="' + S.owner.linkedin + '" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>' : '') +
-      (cta.url ? '<a class="btn btn-primary btn-sm cta-btn" href="' + root + cta.url + '" data-dl="' + (cta.dl || '') + '" download><span aria-hidden="true">◆</span> ' + esc(cta.label) + '</a>' : '') +
+      '<button class="theme-sw" type="button" aria-pressed="false" aria-label="Amber colours"><span class="sw-v" aria-hidden="true"></span><span class="sw-a" aria-hidden="true"></span><span class="sw-l">Violet / Amber</span></button>' +
+      (cta.url ? '<a class="btn btn-primary btn-sm cta-btn" href="' + root + cta.url + '" data-dl="' + (cta.dl || '') + '" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg><span class="cta-l">PDF</span></a>' : '') +
       '</div><nav class="subnav wrap" aria-label="Main (mobile)">' + nav + '</nav>';
+    h.querySelector('.theme-sw').addEventListener('click', function () { setTheme(theme() === 'amber' ? 'violet' : 'amber'); });
   })();
+  setTheme(theme());
+
   window.SITEKIT = {
-    esc: esc, fill: fill, preview: preview,
-    article: function (x) { return '<span class="m">' + (x.n ? '#' + esc(x.n) + ' · ' : '') + esc(x.date) + '</span><b>' + esc(x.title) + '</b>' + (x.blurb ? '<span class="d">' + esc(x.blurb) + '</span>' : ''); },
+    esc: esc, fill: fill, preview: preview, img: img, theme: theme, swapImages: swapImages, root: root,
+    article: function (x) { return '<span class="m">' + (x.n ? '#' + esc(x.n) + ' · ' : '') + esc(x.date) + '</span><b>' + esc(x.title) + '</b>'; },
     repo: function (x) { return '<span class="m">' + esc(x.kind) + ' · ' + esc(x.author) + (x.year ? ' · ' + esc(x.year) : '') + '</span><b>' + esc(x.name) + '</b><span class="d">' + esc(x.note) + '</span>'; }
   };
   document.addEventListener('DOMContentLoaded', function () {
-    var a = SITEKIT.fill(S.articles, document.getElementById('articles'), SITEKIT.article);
-    if (!a && document.getElementById('articlesTile')) document.getElementById('articlesTile').style.display = 'none';
-    var r = SITEKIT.fill(S.repos, document.getElementById('repos'), SITEKIT.repo);
-    if (!r && document.getElementById('reposTile')) document.getElementById('reposTile').style.display = 'none';
+    swapImages();
+    SITEKIT.fill(S.articles, document.getElementById('articles'), SITEKIT.article);
+    SITEKIT.fill(S.repos, document.getElementById('repos'), SITEKIT.repo);
     document.querySelectorAll('[data-linkedin]').forEach(function (el) {
       if (S.owner && S.owner.linkedin) el.href = S.owner.linkedin; else el.style.display = 'none';
     });

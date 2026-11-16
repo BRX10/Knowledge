@@ -25,6 +25,7 @@
     b.addEventListener('click', function () { open(c.id); });
     grid.appendChild(b);
   });
+  SITEKIT.swapImages();
 
   /* entrance animation */
   if ('IntersectionObserver' in window && !reduce) {
@@ -48,7 +49,7 @@
   });
 
   /* ---------- concept dialog ---------- */
-  var dlg = document.getElementById('dlg'), body = document.getElementById('dlgBody');
+  var dlg = document.getElementById('dlg'), body = document.getElementById('dlgBody'), scrim = document.getElementById('scrim');
   var cur = -1, lastFocus = null;
   function special(c) {
     if (c.special === 'failure') {
@@ -94,7 +95,7 @@
     if (c.special) h += special(c);
     else h += (c.body || []).map(function (p) { return /^<(ol|ul|table|blockquote)/.test(p) ? p : '<p>' + p + '</p>'; }).join('');
     body.innerHTML = h.replace(/<p><em>/g, '<em>').replace(/<\/em><\/p>/g, '</em>');
-    wire(c);
+    wire(c); SITEKIT.swapImages();
     var rd = document.getElementById('dlgRead'); rd.href = 'playbook.html#' + c.link; rd.textContent = 'Read ' + c.sec + ' in the playbook →';
     var p = seq[(i - 1 + seq.length) % seq.length], n = seq[(i + 1) % seq.length];
     document.querySelector('#dlgPrev span').textContent = p.title; document.querySelector('#dlgNext span').textContent = n.title;
@@ -104,9 +105,12 @@
   function open(id) {
     var i = seq.findIndex(function (c) { return c.id === id; }); if (i < 0) return;
     lastFocus = document.activeElement; render(i);
-    if (!dlg.open) { if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', ''); }
+    if (!dlg.open) { if (dlg.show) dlg.show(); else dlg.setAttribute('open', ''); }
+    scrim.classList.add('on'); document.body.style.overflow = 'hidden'; document.getElementById('dlgClose').focus();
   }
-  function close() { dlg.close ? dlg.close() : dlg.removeAttribute('open'); }
+  function close() { if (dlg.open) { dlg.close ? dlg.close() : dlg.removeAttribute('open'); } scrim.classList.remove('on'); document.body.style.overflow = ''; }
+  scrim.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && dlg.open) close(); });
   dlg.addEventListener('close', function () { if (history.replaceState) history.replaceState(null, '', location.pathname + location.search); if (lastFocus) lastFocus.focus(); });
   dlg.addEventListener('click', function (e) { if (e.target === dlg) close(); });
   document.getElementById('dlgClose').onclick = close;
@@ -119,18 +123,4 @@
   });
   if (location.hash.length > 1 && byId[location.hash.slice(1)]) open(location.hash.slice(1));
 
-  /* ---------- carousel viewer ---------- */
-  var cd = document.getElementById('carDlg'), tr = document.getElementById('carTrack'), cc = document.getElementById('carCount');
-  for (var s = 1; s <= 10; s++) { var im = document.createElement('img'); var n2 = (s < 10 ? '0' : '') + s;
-    im.src = '../assets/carousel/slide-' + n2 + '.jpg'; im.width = 1080; im.height = 1351; im.loading = 'lazy'; im.alt = 'Carousel slide ' + s + ' of 10'; tr.appendChild(im); }
-  function sw() { var f = tr.querySelector('img'); return f ? f.getBoundingClientRect().width + 16 : 300; }
-  var openCar = function () { cd.showModal ? cd.showModal() : cd.setAttribute('open', ''); tr.scrollLeft = 0; tr.focus(); };
-  document.getElementById('openCar').onclick = openCar; var oc2 = document.getElementById('openCar2'); if (oc2) oc2.onclick = openCar;
-  if (location.hash === '#carousel') setTimeout(openCar, 50);
-  document.getElementById('carClose').onclick = function () { cd.close(); };
-  cd.addEventListener('click', function (e) { if (e.target === cd) cd.close(); });
-  document.getElementById('carPrev').onclick = function () { tr.scrollBy({ left: -sw(), behavior: reduce ? 'auto' : 'smooth' }); };
-  document.getElementById('carNext').onclick = function () { tr.scrollBy({ left: sw(), behavior: reduce ? 'auto' : 'smooth' }); };
-  tr.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') { e.preventDefault(); document.getElementById('carNext').click(); } if (e.key === 'ArrowLeft') { e.preventDefault(); document.getElementById('carPrev').click(); } });
-  tr.addEventListener('scroll', function () { var i = Math.min(10, Math.max(1, Math.round(tr.scrollLeft / sw()) + 1)); cc.textContent = (i < 10 ? '0' : '') + i + ' / 10'; }, { passive: true });
 })();

@@ -12,13 +12,13 @@ window.KM_CONCEPTS = [
   /* ---------------- WHY ---------------- */
   { id: "pillar", zone: "why", size: 2, title: "The underestimated pillar",
     hook: "Data tells an agent what the company records. Knowledge tells it what the company means.",
-    art: "../assets/illus/pillars.png", artAlt: "Data and knowledge as two pillars under context engineering",
+    art: "../assets/img/v/pillars.png", artAlt: "Data and knowledge as two pillars under context engineering",
     body: [
       "Every company that has tried to put AI to work has learned the same lesson about data: garbage in, garbage out, even if it is not quite that simple. Data quality, ownership and governance are now standard items of any AI programme.",
       "Knowledge has received less attention. Knowledge, here, means what lets someone act well: the rule, the exception, the reason behind both, the trade-off made last year and why.",
       "<strong>Knowledge is a pillar of AI at scale, alongside data.</strong>"
     ],
-    fig: "../assets/illus/pillars.png", link: "underestimated-pillar", sec: "Section 1" },
+    fig: "../assets/img/v/pillars.png", link: "underestimated-pillar", sec: "Section 1" },
 
   { id: "failure-modes", zone: "why", size: 1, dark: true, title: "Eight failure modes",
     hook: "The same patterns recur when AI meets the real corpus. Which ones do you recognise?",
@@ -38,13 +38,13 @@ window.KM_CONCEPTS = [
   /* ---------------- FOUNDATIONS ---------------- */
   { id: "principle-zero", zone: "found", size: 2, title: "Principle zero",
     hook: "Managing knowledge is one job. Consuming it is another.",
-    art: "../assets/figures/figure-1.png", artAlt: "Managing and consuming planes",
+    art: "../assets/img/v/principle-zero.png", artAlt: "Managing and consuming planes",
     body: [
       "Think of an encyclopedia. Writing it and reading it are two different jobs. Editors choose the entries, check sources, settle disputes, retire what is wrong. Readers come with their own questions, in their own words, and never see the editorial process.",
       "<strong>One effort, many uses.</strong> Knowledge kept once serves a newcomer, a support agent and a generated report alike.",
       "<strong>A clear boundary.</strong> Consumers read; they do not rewrite while they work. What they run into, a gap or a contradiction, goes back to the management plane as a ticket.",
       "<em>It separates roles and rhythms, not teams.</em>"
-    ], fig: "../assets/figures/figure-1.png", link: "principle-zero", sec: "Section 2" },
+    ], fig: "../assets/img/v/principle-zero.png", link: "principle-zero", sec: "Section 2" },
 
   { id: "lineage", zone: "found", size: 1, title: "Two foundations",
     hook: "Its architecture from the Data Mesh. Its diagnosis from thirty years of knowledge management.",
@@ -57,31 +57,31 @@ window.KM_CONCEPTS = [
 
   { id: "tacit", zone: "found", size: 1, title: "Tacit and explicit",
     hook: "“We can know more than we can tell.” Michael Polanyi",
-    art: "../assets/figures/figure-2.png", artAlt: "What can be written, and where the rest lives",
+    art: "../assets/img/v/iceberg.png", artAlt: "What can be written, and where the rest lives",
     body: [
       "Part of what experts know will never be fully written down. A Knowledge Mesh aims to make explicit what can be, and to show clearly where the rest lives: with whom, in which community.",
       "AI excels at combination and is a strong ally for externalisation. Socialisation remains a human affair: people still learn from people.",
       "<em>A knowledge strategy that overlooks this produces clean pages and empty expertise.</em>"
-    ], fig: "../assets/figures/figure-2.png", link: "fundamentals", sec: "Section 4" },
+    ], fig: "../assets/img/v/iceberg.png", link: "fundamentals", sec: "Section 4" },
 
   { id: "lifecycle", zone: "found", size: 2, title: "Born, lives, dies",
     hook: "Six stages, from capture to retirement. The last one is the most often forgotten.",
-    art: "../assets/figures/figure-3.png", artAlt: "The six-stage lifecycle",
+    art: "../assets/img/v/lifecycle.png", artAlt: "The six-stage lifecycle",
     body: [
       "Knowledge is born, lives and dies. Six stages mark that life, and each has someone responsible for it:",
       "<ol><li><strong>Capture</strong>: bring in sources, legacy documents, interviews, decisions.</li><li><strong>Consolidate</strong>: deduplicate, link, structure into pages.</li><li><strong>Validate</strong>: the Knowledge Owner commits to what the page says.</li><li><strong>Serve</strong>: expose it to people and agents, according to rights.</li><li><strong>Review</strong>: refresh on a known cadence or when a source changes.</li><li><strong>Retire</strong>: withdraw what is obsolete, and say so.</li></ol>",
       "<em>An outdated document left in an index silently becomes a wrong answer. Living knowledge must be allowed to die.</em>"
-    ], fig: "../assets/figures/figure-3.png", link: "fundamentals", sec: "Section 4" },
+    ], fig: "../assets/img/v/lifecycle.png", link: "fundamentals", sec: "Section 4" },
 
   /* ---------------- MODEL ---------------- */
   { id: "knowledge-mesh", zone: "model", size: 2, title: "The Knowledge Mesh",
     hook: "A decentralised network of living knowledge bases, owned by business domains.",
-    art: "../assets/illus/mesh.png", artAlt: "Domains HR, Legal, Finance and more, linked by shared standards",
+    art: "../assets/img/v/mesh.png", artAlt: "Domains HR, Legal, Finance and more, linked by shared standards",
     body: [
       "<strong>A Knowledge Mesh</strong> is a decentralised network of living knowledge bases, owned by business domains, each described by a charter and built through auditable contributions from people and agents, federated by common standards so that everyone, human or agent, shares the same governed context.",
       "The <strong>Knowledge Mesh</strong> is the whole: the network, the platform and the common rules. The <strong>knowledge base</strong> is the unit: what a domain builds, owns and serves.",
       "<em>Centralise the means, decentralise the knowledge.</em>"
-    ], fig: "../assets/figures/figure-4.png", link: "knowledge-mesh", sec: "Section 5" },
+    ], fig: "../assets/img/v/multi-base.png", link: "knowledge-mesh", sec: "Section 5" },
 
   { id: "principles", zone: "model", size: 1, title: "Five principles",
     hook: "Four transposed from the Data Mesh, a fifth that extends it.",
@@ -98,42 +98,42 @@ window.KM_CONCEPTS = [
 
   { id: "knowledge-base", zone: "model", size: 1, title: "The knowledge base",
     hook: "A domain, a charter, an owner, sources, pages, a contract and states.",
-    art: "../assets/figures/figure-5.png", artAlt: "The seven parts of a knowledge base",
+    art: "../assets/img/v/seven-parts.png", artAlt: "The seven parts of a knowledge base",
     body: [
       "A knowledge base is the asset of the mesh. It is small enough to have one owner and one purpose, and complete enough to be useful on its own.",
       "<strong>An entry point.</strong> Preparing knowledge for an agent is, almost by accident, the first real audit of what the organisation knows.",
       "<strong>A destination.</strong> Today, the base is fed by documents. Tomorrow, documents will increasingly be produced from it.",
       "<em>The document is no longer the source of knowledge; it becomes one of its outputs.</em>"
-    ], fig: "../assets/figures/figure-5.png", link: "knowledge-base", sec: "Section 6" },
+    ], fig: "../assets/img/v/seven-parts.png", link: "knowledge-base", sec: "Section 6" },
 
   { id: "compiled", zone: "model", size: 2, title: "Compiled, not reassembled",
     hook: "Knowledge assembled once and kept up to date, rather than reassembled at every question.",
-    art: "../assets/illus/rag-vs-wiki.png", artAlt: "RAG reassembles at every question; a wiki is organised, sourced, owned, dated",
+    art: "../assets/img/v/rag-vs-wiki.png", artAlt: "RAG reassembles at every question; a wiki is organised, sourced, owned, dated",
     body: [
       "Pages are the consolidated knowledge, in an open, readable format, each page linked to its sources. This is the compiled layer Andrej Karpathy described as an “LLM wiki”: knowledge assembled once and kept up to date, rather than reassembled at every question.",
       "RAG, chat interfaces and agents all belong to the consumption plane. None of them is wrong. They simply need something upstream to read.",
       "<em>Bases coexist rather than merge: each keeps its owner, its charter and its pace.</em>"
-    ], fig: "../assets/illus/rag-vs-wiki.png", link: "knowledge-base", sec: "Section 6" },
+    ], fig: "../assets/img/v/rag-vs-wiki.png", link: "knowledge-base", sec: "Section 6" },
 
   /* ---------------- ROLES & USE ---------------- */
   { id: "knowledge-owner", zone: "roles", size: 2, title: "The Knowledge Owner",
     hook: "Authority, not probability. Knowledge needs a face.",
-    art: "../assets/figures/figure-6.png", artAlt: "Agents handle the clear-cut changes; the owner arbitrates and commits",
+    art: "../assets/img/v/owner-flow.png", artAlt: "Agents handle the clear-cut changes; the owner arbitrates and commits",
     body: [
       "A language model produces the most plausible answer. A company needs something else: an answer someone stands behind.",
       "In a Knowledge Mesh, agents take on most of the stewardship. The owner keeps what cannot be delegated: <strong>orient, arbitrate, commit, listen, retire</strong>. Clear-cut changes go through; the owner handles the exceptions.",
       "<blockquote>“This is what the company holds to be true, as of this date, and I answer for it.”</blockquote>",
       "<em>No owner, no authority.</em>"
-    ], fig: "../assets/figures/figure-6.png", link: "knowledge-owner", sec: "Section 7" },
+    ], fig: "../assets/img/v/owner-flow.png", link: "knowledge-owner", sec: "Section 7" },
 
   { id: "dynamic-context", zone: "roles", size: 2, title: "Dynamic context",
     hook: "Context assembled at the moment of use, from governed bases, within the user's rights.",
-    art: "../assets/illus/prompt-to-context.png", artAlt: "From a prompt written by hand to context assembled for each task",
+    art: "../assets/img/v/prompt-to-context.png", artAlt: "From a prompt written by hand to context assembled for each task",
     body: [
       "Dynamic context is context assembled at the moment of use, from governed knowledge bases, within the rights of the person on whose behalf the agent acts.",
       "<ul><li><strong>Assembled, not written.</strong> The agent selects the bases it needs, guided by their charters.</li><li><strong>Governed at the source.</strong> What enters the context has an owner, a date and a status.</li><li><strong>Rights follow the person.</strong> An agent sees what the person it serves is allowed to see, no more.</li><li><strong>Traceable.</strong> Every element of the context points back to a page, and every page to its sources and its owner.</li></ul>",
       "<em>The Knowledge Mesh adds the organisational side that context engineering calls for: where good context comes from, and who stands behind it.</em>"
-    ], fig: "../assets/illus/prompt-to-context.png", link: "dynamic-context", sec: "Section 8" },
+    ], fig: "../assets/img/v/prompt-to-context.png", link: "dynamic-context", sec: "Section 8" },
 
   { id: "grounding", zone: "roles", size: 1, dark: true, title: "No delegation without grounding",
     hook: "Decisions and actions anchored in knowledge the company holds to be true, not in what a model finds plausible.",
