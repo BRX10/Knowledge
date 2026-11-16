@@ -644,3 +644,12 @@ dialog.sheet .dlg-in{max-height:calc(100vh - 92px);box-shadow:0 40px 90px -30px 
 .why p{margin:0 0 14px;max-width:40em}
 .why p.lead{font:400 24px/1.35 var(--serif);color:var(--ink);margin-bottom:18px}
 .why b{font-weight:650}
+/* v9: about in the right column, above articles */
+.side21{display:grid;gap:26px}
+.side21 .ab-card{display:block;padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--paper);max-width:none;scroll-margin-top:90px}
+.side21 .ab-ph{width:96px;height:96px;float:left;margin:0 16px 8px 0}
+.side21 .ab-k{margin-top:10px}
+.side21 h3{font:400 24px/1.15 var(--serif);margin:0 0 10px}
+.side21 .ab-card p{font-size:15px;line-height:1.55;margin:0 0 10px;clear:none}
+.side21 .ab-card .btn{margin-top:4px}
+.side21 .ab-k{font:700 11px/1 var(--sans);letter-spacing:.2em}
