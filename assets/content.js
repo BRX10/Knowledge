@@ -11,7 +11,7 @@ window.SITE = {
   },
 
   /* Visit statistics: GoatCounter site code (e.g. "brx10" for brx10.goatcounter.com). Empty = not loaded. */
-  goatcounter: "",
+  goatcounter: "brx10",
 
   /* Download counter: each click on a PDF sends an anonymous ping (which file, which page) to this n8n webhook,
      which emails the owner with the running total. Empty = no ping at all. */
