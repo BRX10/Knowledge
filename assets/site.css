@@ -640,3 +640,7 @@ dialog.sheet .dlg-in{max-height:calc(100vh - 92px);box-shadow:0 40px 90px -30px 
 @media (max-width:820px){ .row21{grid-template-columns:1fr} }
 @media (max-width:640px){ .about .ab-card{grid-template-columns:1fr} .ab-ph{width:130px;height:130px} }
 .row21 h2{scroll-margin-top:96px}
+.why{font-size:17px;line-height:1.65}
+.why p{margin:0 0 14px;max-width:40em}
+.why p.lead{font:400 24px/1.35 var(--serif);color:var(--ink);margin-bottom:18px}
+.why b{font-weight:650}
