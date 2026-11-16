@@ -18,6 +18,10 @@ window.SITE = {
   counter: "https://n8n.knowhere.click/webhook/km-download",
 
   articles: [
+    { meta: "Webinar · Le Comptoir OCTO · YouTube",
+      title: "A project inspired by this playbook",
+      blurb: "Le Comptoir OCTO webinar presenting a project that draws on the Knowledge Mesh playbook.",
+      url: "https://www.youtube.com/watch?v=1Lt2dS_cWG4" },
     { series: "Knowledge Management in the Age of AI", n: 4, date: "21 October 2026",
       title: "Owning the learning loop: knowledge as the key to scaling AI with trust",
       blurb: "",
