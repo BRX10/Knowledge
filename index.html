@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en" data-root="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Knowledge in the age of AI</title>
+<meta name="description" content="Playbooks, articles and open work on knowledge management in the age of AI agents.">
+<meta name="author" content="Benoit Rousseaux">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f5f4fa">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Knowledge in the age of AI">
+<meta property="og:description" content="Playbooks, articles and open work on knowledge management in the age of AI agents. Featuring The Knowledge Mesh playbook.">
+<meta property="og:url" content="https://brx10.github.io/Knowledge/">
+<meta property="og:image" content="https://brx10.github.io/Knowledge/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%234f46e5'/%3E%3Cg stroke='%23fff' stroke-width='2.4' fill='none'%3E%3Cpath d='M9 9h14v14H9z'/%3E%3Cpath d='M16 9v14M9 16h14'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/ArchitectsDaughter.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.hub-intro{padding-top:64px;padding-bottom:34px;display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:end}
+.hub-intro h1{font:800 clamp(40px,6.6vw,84px)/.98 var(--sans);letter-spacing:-.045em;margin:0 0 18px}
+.hub-intro h1 .u{color:var(--accent)}
+.who{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:6px}
+.who b{font-size:16px}
+.section-h{display:flex;align-items:baseline;gap:12px;margin:46px 0 16px}
+.section-h h2{font:800 clamp(24px,3vw,32px)/1.1 var(--sans);letter-spacing:-.025em;margin:0}
+.section-h span{font:400 16px/1 var(--hand);color:var(--accent-ink)}
+.work{min-height:340px;padding-right:20px}
+.work .t-title{font-size:clamp(28px,3.6vw,42px)!important;letter-spacing:-.03em;line-height:1.02}
+.work .sub{font:600 17px/1.3 var(--sans);color:var(--ink)}
+.work .t-art{height:230px}
+.work .meta{font:400 15px/1 var(--hand);color:var(--accent-ink)}
+.work .go{margin-top:6px;display:flex;gap:8px;flex-wrap:wrap}
+.pill{font:600 12.5px/1 var(--sans);padding:7px 11px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink)}
+a.tile{cursor:pointer;text-decoration:none;color:inherit}
+a.tile:hover{transform:translateY(-4px);box-shadow:0 24px 50px -28px rgba(27,35,51,.45);border-color:#cfcbef}
+a.tile:hover .plus{background:var(--accent);color:#fff;border-color:var(--accent);transform:rotate(-45deg)}
+a.tile:hover .t-art img{transform:scale(1.04)}
+.art-tile .t-title{font-size:20px}
+.art-tile,#reposGrid .tile{min-height:190px}
+.soon{border-style:dashed;background:transparent;box-shadow:none;justify-content:center;align-items:flex-start}
+.soon .t-hook{font:400 18px/1.4 var(--hand);color:var(--muted)}
+@media (max-width:1020px){.hub-intro{grid-template-columns:1fr}.hub-intro .intro-art{display:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#start">Skip to content</a>
+<header id="siteHeader" data-active="home"></header>
+
+<main>
+  <section class="wrap hero3" aria-labelledby="h1">
+    <div>
+      <p class="label">The Knowledge Mesh · Playbook v2.5</p>
+      <h1 id="h1">If only the company knew what it <em>knows.</em></h1>
+      <p class="km-def"><b>The Knowledge Mesh</b> brings the right knowledge, in the right shape, to the right place at the right time, for people and AI agents alike.</p>
+      <p class="lede">Knowledge is a pillar of AI at scale, alongside data. It must be managed as infrastructure, separately from the way it is consumed.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" id="heroCta" href="#" download></a>
+        <a class="btn" href="knowledge-mesh/">Explore the 19 concepts →</a>
+      </div>
+      <p class="byline"><span>By <b id="ownerName"></b></span><a class="li" data-linkedin href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>Follow on LinkedIn</a></p>
+    </div>
+    <div class="cover-col">
+      <a class="book" id="coverLink" href="#" download aria-label="Download The Knowledge Mesh playbook (PDF)">
+        <span class="b-top">Playbook · Version 2.5</span>
+        <span class="b-title">The Knowledge Mesh</span>
+        <span class="b-sub">Bridging knowledge management and agentic AI at scale</span>
+        <span class="b-art"><img src="assets/illus/mesh.png" alt=""></span>
+        <span class="b-foot"><span>16 November 2026</span><span class="b-dl">↓ PDF</span></span>
+      </a>
+      <div class="formats" aria-label="Other formats">
+        <a href="knowledge-mesh/downloads/knowledge-mesh-playbook-v2.5.pdf" data-dl="playbook-pdf-text" download>PDF, text only</a>
+        <a href="knowledge-mesh/playbook.html">Read online</a>
+      </div>
+    </div>
+  </section>
+  <div class="wrap"><p class="ticker" id="ticker"></p></div>
+
+  <section class="wrap" id="start" aria-labelledby="start-h">
+    <div class="entry-h">
+      <div><p class="kicker" id="featType"></p><h2 id="start-h"></h2></div>
+      <p id="featSummary"></p>
+    </div>
+    <div class="entries" id="entries"></div>
+  </section>
+
+  <section class="wrap" id="works" aria-labelledby="w-h">
+    <div class="section-h"><h2 id="w-h">Playbooks &amp; studies</h2></div>
+    <div class="grid" id="worksGrid"></div>
+  </section>
+
+  <section class="wrap" id="writing" aria-labelledby="a-h">
+    <div class="section-h"><h2 id="a-h">Writing</h2><span id="aCount"></span></div>
+    <div class="grid" id="articlesGrid"></div>
+  </section>
+
+  <section class="wrap" id="repos-sec" aria-labelledby="r-h">
+    <div class="section-h"><h2 id="r-h">Recommended repositories</h2><span id="rCount"></span></div>
+    <div class="grid" id="reposGrid"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p id="footName"></p>
+    <a class="li" data-linkedin href="#" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</footer>
+
+<script src="assets/content.js"></script>
+<script src="assets/common.js"></script>
+<script>
+(function(){
+  var S=window.SITE||{}, K=window.SITEKIT, o=S.owner||{}, e=K.esc;
+    document.getElementById('ownerName').textContent=o.name||'';
+  document.getElementById('footName').textContent=(o.name?o.name+' · ':'')+'Knowledge in the age of AI';
+  var c=S.cta||{}, hc=document.getElementById('heroCta');
+  if(c.url){ hc.href=c.url; hc.setAttribute('data-dl',c.dl||''); hc.innerHTML='<span aria-hidden="true" style="font-size:11px;color:#c7c3ff">◆</span> '+e(c.label)+(c.note?' <span style="font-weight:500;opacity:.75;font-size:13px">· '+e(c.note)+'</span>':''); } else hc.remove();
+
+  var cl=document.getElementById('coverLink'); if(c.url){ cl.href=c.url; cl.setAttribute('data-dl',(c.dl||'')+'-cover'); }
+  /* latest: one line, newest item only */
+  var fw=(S.works||[]).filter(function(w){return w.featured;})[0]||{}, n0=(S.news||[]).filter(function(n){return n.url!==fw.url;})[0], tk=document.getElementById('ticker');
+  if(n0){ var ext=/^https?:/.test(n0.url||'');
+    tk.innerHTML='<span class="k">Latest</span><span class="d">'+e(n0.date)+'</span><a href="'+e(n0.url||'#')+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+e(n0.text)+'</a>'+((S.news||[]).length>1?'<a class="all" href="#writing">All writing ↓</a>':''); }
+  else tk.remove();
+
+  /* featured work and its deliverables */
+  function vis(l){ return (l||[]).filter(function(x){ return x.url || K.preview; }); }
+  var works=vis(S.works), f=works.filter(function(w){return w.featured;})[0]||works[0];
+  if(f){
+    document.getElementById('featType').textContent='Start here · '+(f.meta||'');
+    document.getElementById('start-h').innerHTML='Four ways into <em>'+e(f.title)+'</em>';
+    document.getElementById('featSummary').textContent='From a two-minute skim to the full argument: pick the depth you need.';
+    var en=document.getElementById('entries');
+    (f.deliverables||[]).forEach(function(d,i){
+      var a=document.createElement('a'); a.className='entry'; a.href=d.url;
+      var v;
+      if(d.visual==='slides') v='<div class="vis night slides"><img src="assets/carousel/slide-01.jpg" alt="" loading="lazy"><img src="assets/carousel/slide-05.jpg" alt="" loading="lazy"><img src="assets/carousel/slide-07.jpg" alt="" loading="lazy"></div>';
+      else if(d.visual==='files') v='<div class="vis"><div class="files"><span class="p">PDF</span><span class="w">PDF</span><span class="p">PDF</span></div></div>';
+      else v='<div class="vis"><img src="'+e(d.image)+'" alt="" loading="lazy"></div>';
+      a.innerHTML=v+'<div class="bd"><span class="n">0'+(i+1)+' · <span class="kk">'+e(d.kicker)+'</span></span><b>'+e(d.title)+'</b><span class="tx">'+e(d.text)+'</span><span class="go">'+e(d.link)+'</span></div>';
+      en.appendChild(a);
+    });
+  } else document.getElementById('start').style.display='none';
+
+  /* other works */
+  var PLUS='<span class="plus" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12 12 4M6 4h6v6"/></svg></span>';
+  function tile(x, html, cls){ var a=document.createElement(x.url?'a':'div'); a.className='tile '+(cls||'')+(x.url?'':' pending');
+    if(x.url){ a.href=x.url; if(/^https?:/.test(x.url)){a.target='_blank';a.rel='noopener';} } a.innerHTML=html+(x.url?PLUS:''); return a; }
+  var wg=document.getElementById('worksGrid'), others=works.filter(function(w){return w!==f;});
+  others.forEach(function(x){ wg.appendChild(tile(x,'<span class="tag"><i>'+e(x.type)+'</i>'+e(x.meta||'')+'</span><span class="t-title">'+e(x.title)+'</span>'+(x.summary?'<span class="t-hook">'+e(x.summary)+'</span>':'')+(x.image?'<span class="t-art"><img src="'+e(x.image)+'" alt="" loading="lazy"></span>':''),'span-2 has-art')); });
+  var soon=document.createElement('div'); soon.className='tile soon '+(others.length%2?'span-2':'span-4'); soon.style.minHeight='110px';
+  soon.innerHTML='<span class="t-hook">More playbooks and studies to come.</span>'; wg.appendChild(soon);
+
+  function count(id,n,w,pl){ document.getElementById(id).textContent=n+' '+(n>1?(pl||w+'s'):w); }
+  var ag=document.getElementById('articlesGrid'), arts=vis(S.articles);
+  arts.forEach(function(x){ ag.appendChild(tile(x,'<span class="tag"><i>'+(x.n?'#'+e(x.n):'')+'</i>'+e(x.series||'Article')+'</span><span class="t-title">'+e(x.title)+'</span>'+(x.blurb?'<span class="t-hook">'+e(x.blurb)+'</span>':'')+'<span class="hand" style="margin-top:auto;color:var(--accent-ink)">'+e(x.date)+' · LinkedIn</span>','art-tile span-2')); });
+  if(!arts.length) document.getElementById('writing').style.display='none'; else count('aCount',arts.length,'article');
+  var rg=document.getElementById('reposGrid'), reps=vis(S.repos);
+  reps.forEach(function(x){ rg.appendChild(tile(x,'<span class="tag"><i>'+e(x.kind)+'</i>'+e(x.author)+(x.year?' · '+e(x.year):'')+'</span><span class="t-title">'+e(x.name)+'</span><span class="t-hook">'+e(x.note)+'</span>','span-2')); });
+  if(!reps.length) document.getElementById('repos-sec').style.display='none'; else count('rCount',reps.length,'repository','repositories');
+})();
+</script>
+</body>
+</html>

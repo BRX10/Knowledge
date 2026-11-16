@@ -1,0 +1,1177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Knowledge Mesh · Playbook</title>
+<meta name="description" content="Bridging knowledge management and agentic AI at scale. A playbook to bring the right knowledge, in the right shape, to the right place at the right time, for people and AI agents alike.">
+<meta name="author" content="Benoit Rousseaux">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f7f6fb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12151f" media="(prefers-color-scheme: dark)">
+<!-- Open Graph / LinkedIn. Replace https://brx10.github.io with the final GitHub Pages address (see README). -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Knowledge Mesh: a playbook (v2.5)">
+<meta property="og:description" content="Bridging knowledge management and agentic AI at scale. Knowledge is a pillar of AI at scale, alongside data.">
+<meta property="og:url" content="https://brx10.github.io/Knowledge/knowledge-mesh/playbook.html">
+<meta property="og:image" content="https://brx10.github.io/Knowledge/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%234f46e5'/%3E%3Cg stroke='%23fff' stroke-width='2.4' fill='none'%3E%3Cpath d='M9 9h14v14H9z'/%3E%3Cpath d='M16 9v14M9 16h14'/%3E%3C/g%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#f7f6fb; --surface:#ffffff; --ink:#1b2333; --muted:#5b6475; --line:#e3e1ee;
+  --accent:#4f46e5; --accent-ink:#3f37c9; --accent-soft:#eeedfc; --tag:#c2410c;
+  --th:#1b2333; --th-ink:#ffffff; --zebra:#faf9fd; --shadow:0 1px 2px rgba(27,35,51,.05),0 8px 24px rgba(27,35,51,.06);
+  --sans:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --serif:"Iowan Old Style","Charter","Georgia",serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#12151f; --surface:#1a1e2b; --ink:#e7e8ef; --muted:#a2a8b8; --line:#2b3142;
+    --accent:#8b85ff; --accent-ink:#a7a2ff; --accent-soft:#232547; --tag:#fb923c;
+    --th:#2a2f45; --th-ink:#ffffff; --zebra:#1d2230; --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12151f; --surface:#1a1e2b; --ink:#e7e8ef; --muted:#a2a8b8; --line:#2b3142;
+  --accent:#8b85ff; --accent-ink:#a7a2ff; --accent-soft:#232547; --tag:#fb923c;
+  --th:#2a2f45; --th-ink:#ffffff; --zebra:#1d2230; --shadow:none;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17.5px/1.7 var(--sans);font-feature-settings:"cv11","ss01";-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--accent-ink);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--surface);padding:8px 12px;z-index:100}
+.skip:focus{left:8px}
+
+/* progress + top bar */
+.progress{position:fixed;inset:0 0 auto 0;height:3px;z-index:60;background:transparent}
+.progress span{display:block;height:100%;width:0;background:var(--accent);transition:width .1s linear}
+.topbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+.topbar.scrolled{border-bottom-color:var(--line)}
+.topbar-in{max-width:1180px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:650;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);text-decoration:none;white-space:nowrap}
+.brand-mark{width:22px;height:22px;border-radius:6px;background:var(--accent);display:grid;place-items:center}
+.brand-mark svg{width:14px;height:14px}
+.topbar .spacer{flex:1}
+.ver{font-size:12.5px;color:var(--muted);white-space:nowrap}
+.ver b{color:var(--tag);font-weight:650;letter-spacing:.08em}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 14px/1 var(--sans);padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none;cursor:pointer;white-space:nowrap}
+.btn:hover{border-color:var(--accent);color:var(--accent-ink)}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-ink);color:#fff}
+.btn svg{width:16px;height:16px;flex:none}
+.toc-btn{display:none}
+.ver-link{padding:9px 14px;font-size:13.5px}
+.theme-btn{padding:9px;border-radius:999px}
+
+/* hero */
+.hero{max-width:1180px;margin:0 auto;padding:56px 16px 40px;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.tag{display:inline-block;font:700 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--tag);padding:6px 9px;border-radius:3px}
+.hero .kicker{margin:22px 0 10px}
+.hero h1{font:750 clamp(34px,5.2vw,56px)/1.06 var(--sans);letter-spacing:-.025em;margin:0 0 20px;text-wrap:balance}
+.lede{font-size:clamp(18px,2vw,21px);line-height:1.55;color:var(--muted);margin:0 0 24px;max-width:36em;text-wrap:pretty}
+.lede em{font-style:normal;color:var(--ink)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:14px;color:var(--muted);margin:0 0 28px;padding:0;list-style:none}
+.meta b{color:var(--ink);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.hero-art{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)}
+.hero-art img{display:block;width:100%;height:auto}
+:root[data-theme="dark"] .hero-art,:root[data-theme="dark"] .fig a{background:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .hero-art,:root:not([data-theme="light"]) .fig a{background:#fff}}
+
+/* thesis band */
+.thesis{max-width:1180px;margin:0 auto 8px;padding:0 16px}
+.thesis-in{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:28px 0;display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:baseline}
+.thesis p{margin:0}
+.thesis p:not(.kicker){font:600 clamp(19px,2.3vw,24px)/1.45 var(--sans);letter-spacing:-.01em;text-wrap:balance}
+
+/* layout */
+.layout{max-width:1180px;margin:0 auto;padding:24px 16px 80px;display:grid;grid-template-columns:260px minmax(0,1fr);gap:56px}
+.toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;padding-right:6px;scrollbar-width:thin}
+.toc h2{font:700 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:8px 0 14px}
+.toc ol{list-style:none;margin:0;padding:0;border-left:1px solid var(--line)}
+.toc a{display:block;padding:7px 0 7px 14px;margin-left:-1px;border-left:2px solid transparent;text-decoration:none;color:var(--muted);font-size:14px;line-height:1.35}
+.toc a:hover{color:var(--ink)}
+.toc a.active{color:var(--ink);border-left-color:var(--accent)}
+.toc-k{display:block;font:700 10px/1.4 var(--sans);letter-spacing:.18em;color:var(--accent-ink);opacity:.85}
+.toc-t{display:block}
+.toc .dl{margin-top:22px;display:grid;gap:8px}
+.toc .dl a{border:0;padding:0;margin:0;font-size:13.5px;color:var(--accent-ink)}
+
+/* article */
+article{max-width:720px;min-width:0}
+.sec{padding-top:40px}
+.sec + .sec{border-top:1px solid var(--line);margin-top:48px}
+.kicker{font:700 12px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 12px}
+.kicker-sub{margin-top:48px}
+article h2{font:750 clamp(27px,3.4vw,36px)/1.15 var(--sans);letter-spacing:-.02em;margin:0 0 24px;text-wrap:balance}
+article h3{font:700 21px/1.3 var(--sans);letter-spacing:-.01em;margin:40px 0 12px;color:var(--ink)}
+article p{margin:0 0 1.05em;text-wrap:pretty}
+article ul,article ol{padding-left:1.3em;margin:0 0 1.2em}
+article li{margin:.35em 0}
+article li::marker{color:var(--accent)}
+article strong{font-weight:650}
+.signature{margin-top:24px}
+.signature p{font-weight:600}
+
+/* boxes */
+.box{border-radius:14px;padding:20px 22px;margin:28px 0;background:var(--accent-soft);border-left:4px solid var(--accent)}
+.box p:last-child{margin-bottom:0}
+.box-label{display:block;font:700 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:10px}
+.box.callout p,.box.definition p{font-size:18.5px;line-height:1.55;font-weight:500}
+.box.definition{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);box-shadow:var(--shadow)}
+.box.sources{background:transparent;border:1px dashed var(--line);border-left:4px solid var(--line);font-size:14.5px;line-height:1.55;color:var(--muted)}
+.box.sources p{margin:0 0 .55em}
+.box.sources strong{color:var(--ink);font-weight:600}
+.box.sources .box-label{color:var(--muted)}
+.cite-ref{text-decoration:none;font-variant-numeric:tabular-nums}
+
+/* tables */
+.table-wrap{overflow-x:auto;margin:22px 0 28px;border:1px solid var(--line);border-radius:12px;background:var(--surface);-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
+.cols-3 table{min-width:600px}
+th{background:var(--th);color:var(--th-ink);text-align:left;font-weight:600;font-size:13px;letter-spacing:.02em;padding:11px 14px;vertical-align:bottom}
+th strong{font-weight:600}
+td{padding:11px 14px;vertical-align:top;border-top:1px solid var(--line)}
+tbody tr:nth-child(even) td{background:var(--zebra)}
+td:first-child{font-weight:600}
+td:first-child strong{font-weight:650}
+
+/* figures */
+.fig{margin:32px 0 36px}
+.fig a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:var(--shadow);cursor:zoom-in}
+.fig img{display:block;width:100%;height:auto}
+figcaption{font-size:14.5px;line-height:1.5;color:var(--muted);margin-top:12px}
+.fig-num{font:700 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--accent-ink);margin-right:6px}
+
+/* epigraph */
+.epigraph{margin:8px 0 28px;padding:4px 0 4px 22px;border-left:3px solid var(--accent)}
+.epigraph p{font-family:var(--serif);font-size:22px;line-height:1.45;margin:0 0 6px}
+.epigraph p:nth-child(2){font-size:18px;color:var(--muted)}
+.epigraph .cite{font:500 13px/1 var(--sans);letter-spacing:.06em;color:var(--muted)}
+
+/* references */
+.refnum{display:inline-block;min-width:2.4em;font-weight:700;color:var(--accent-ink);font-variant-numeric:tabular-nums}
+#references blockquote{margin:-.4em 0 1.4em 0;padding:0 0 0 14px;border-left:2px solid var(--line);color:var(--muted);font-size:15.5px;line-height:1.6}
+#references blockquote p{margin:0}
+#references :target{background:var(--accent-soft);border-radius:4px}
+
+/* colophon */
+.colophon{margin-top:64px;padding:28px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.colophon h2{font-size:22px;margin:0 0 14px}
+.colophon p{font-size:15px;color:var(--muted)}
+.downloads{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0 26px}
+.dl-card{display:flex;gap:12px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:12px;text-decoration:none;color:var(--ink);background:var(--bg)}
+.dl-card:hover{border-color:var(--accent)}
+.dl-card svg{width:22px;height:22px;color:var(--accent);flex:none}
+.dl-card b{display:block;font-size:14.5px;font-weight:600}
+.dl-card span{display:block;font-size:12.5px;color:var(--muted)}
+.colophon table{min-width:440px}
+
+footer{border-top:1px solid var(--line);padding:28px 16px 40px;text-align:center;font-size:13px;color:var(--muted)}
+.to-top{position:fixed;right:16px;bottom:16px;z-index:40;opacity:0;pointer-events:none;transition:opacity .2s}
+.to-top.show{opacity:1;pointer-events:auto}
+
+/* mobile */
+@media (max-width: 980px){
+  .hero{grid-template-columns:1fr;gap:28px;padding-top:28px}
+  .hero-art{order:2}
+  .layout{grid-template-columns:1fr;gap:0}
+  .toc{position:fixed;inset:60px 12px auto 12px;max-height:calc(100vh - 80px);background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 18px 18px;box-shadow:0 20px 60px rgba(0,0,0,.18);z-index:55;display:none}
+  .toc.open{display:block}
+  .toc-btn{display:inline-flex}
+  .ver{display:none}
+  .thesis-in{grid-template-columns:1fr;gap:10px}
+}
+@media (max-width: 560px){
+  body{font-size:17px}
+  .brand-txt{display:none}
+  .topbar .btn-dl-label{display:none}
+  .downloads{grid-template-columns:1fr}
+  .box{padding:18px}
+  .fig a{padding:8px;border-radius:12px}
+  .cta .btn{flex:1 1 auto;justify-content:center}
+  table{font-size:14.5px}
+  .box.callout p,.box.definition p{font-size:17px}
+  th,td{padding:10px 12px}
+}
+@media print{
+  .topbar,.toc,.progress,.to-top,.hero-art,.cta{display:none!important}
+  .layout{display:block}
+  body{background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<div class="progress" aria-hidden="true"><span id="bar"></span></div>
+
+<header class="topbar" id="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../" aria-label="Home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="1.6"><path d="M2 2h10v10H2zM7 2v10M2 7h10"/></svg></span>
+      <span class="brand-txt">The Knowledge Mesh</span>
+    </a>
+    <span class="spacer"></span>
+    <a class="btn ver-link" href="./">← Concepts</a><span class="ver">Version 2.5 · 16 November 2026</span>
+    <button class="btn toc-btn" id="tocBtn" aria-controls="toc" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Contents
+    </button>
+    <a class="btn btn-primary" href="downloads/knowledge-mesh-playbook-v2.5-with-figures.pdf" download>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg><span class="btn-dl-label">PDF</span>
+    </a>
+    <button class="btn theme-btn" id="themeBtn" aria-label="Toggle dark mode">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div>
+      <p class="kicker">The Knowledge Mesh · Playbook</p>
+      <h1>Bridging knowledge management and agentic AI at scale</h1>
+      <p class="lede"><em>If only the company knew what it knows.</em> A playbook to bring the right knowledge, in the right shape, to the right place at the right time, for people and AI agents alike.</p>
+      <ul class="meta">
+        <li>Author <b>Benoit Rousseaux</b></li>
+        <li>Version <b>2.5</b></li>
+        <li>Date <b>16 November 2026</b></li>
+      </ul>
+      <div class="cta">
+        <a class="btn btn-primary" href="#foreword">Read online</a>
+        <a class="btn" href="downloads/knowledge-mesh-playbook-v2.5-with-figures.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Download PDF
+        </a>
+        <a class="btn" href="#downloads">All formats</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="../assets/illus/pillars.png" width="1400" height="1104" alt="Illustration: an AI agent takes actions and decisions on top of context engineering, which rests on two pillars, data (what the company records) and knowledge (what it means).">
+    </div>
+  </section>
+
+  <section class="thesis" aria-label="The thesis in one line">
+    <div class="thesis-in">
+      <p class="kicker">The thesis in one line</p>
+      <p>Knowledge is a pillar of AI at scale, alongside data. It must be managed as infrastructure, separately from the way it is consumed.</p>
+    </div>
+  </section>
+
+  <div class="layout">
+    <nav class="toc" id="toc" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+<li><a href="#foreword"><span class="toc-k">FOREWORD</span><span class="toc-t">Why this playbook</span></a></li>
+<li><a href="#overview"><span class="toc-k">OVERVIEW</span><span class="toc-t">Abstract and key concepts</span></a></li>
+<li><a href="#underestimated-pillar"><span class="toc-k">WHY</span><span class="toc-t">1. The underestimated pillar</span></a></li>
+<li><a href="#principle-zero"><span class="toc-k">FOUNDATION</span><span class="toc-t">2. Principle zero: separate managing knowledge from consuming it</span></a></li>
+<li><a href="#lineage"><span class="toc-k">LINEAGE</span><span class="toc-t">3. Where the Knowledge Mesh comes from</span></a></li>
+<li><a href="#fundamentals"><span class="toc-k">FOUNDATION</span><span class="toc-t">4. Fundamentals we build on</span></a></li>
+<li><a href="#knowledge-mesh"><span class="toc-k">MODEL</span><span class="toc-t">5. The Knowledge Mesh in brief</span></a></li>
+<li><a href="#knowledge-base"><span class="toc-k">MODEL</span><span class="toc-t">6. The knowledge base: entry point and destination</span></a></li>
+<li><a href="#knowledge-owner"><span class="toc-k">ROLES</span><span class="toc-t">7. The Knowledge Owner: authority, not probability</span></a></li>
+<li><a href="#dynamic-context"><span class="toc-k">CONSUMPTION</span><span class="toc-t">8. Dynamic context</span></a></li>
+<li><a href="#field-guide"><span class="toc-k">PLAYBOOK</span><span class="toc-t">9. Field guide: start, grow, avoid</span></a></li>
+<li><a href="#closing"><span class="toc-k">CLOSING</span><span class="toc-t">What it values, what stays open</span></a></li>
+<li><a href="#references"><span class="toc-k">REFERENCES</span><span class="toc-t">Annotated sources</span></a></li>
+      </ol>
+      <div class="dl">
+        <a href="#downloads">↓ Download PDF</a>
+      </div>
+    </nav>
+
+    <article id="content">
+      <section class="box callout" aria-label="How to read this playbook" style="margin-top:8px">
+        <span class="box-label">How to read this playbook</span>
+        <p>Sections 1 to 4 set the foundations: why knowledge is an underestimated pillar of AI at scale, the separation between management and consumption, and the research it builds on. Sections 5 to 8 describe the model, the challenges it must address and its roles. Section 9 is the field guide to start; the closing section sums up what the Knowledge Mesh values.</p>
+      </section>
+<section class="sec" id="foreword" aria-labelledby="foreword-h"><p class="kicker">FOREWORD</p><h2 id="foreword-h">Why this playbook</h2>
+<p>At the beginning of the generative AI era, my first retrieval-augmented generation (RAG) projects aimed to limit hallucinations, yet answers still missed the mark. The reflex was to fix them with the system prompt. Working on the knowledge itself felt too complex, and AI was still expected to solve everything without being told what to rely on. The real question was elsewhere: what does the AI actually know about the company? In other words, what context does it work from? One of the first avenues was to turn documents into question-and-answer pairs, to make visible what the AI sees. The gap with what people believed they had written was often a surprise, and a lesson. It demystified AI and shifted attention from documents to knowledge. Every project since has started from that question.</p>
+<p>Four observations stand out.</p>
+<p>The first is about trust. As AI moves from answering to acting, delegating to an AI agent at scale means accepting that it will act on people’s behalf, across many tasks, without every step being checked, while accountability remains human. Few will accept this on faith: trust requires understanding what the agent relies on. That is why scale starts with knowledge that can be read, owned and traced.</p>
+<p>The second is about organisation. An organisational gap cannot be fixed by prompt engineering alone. A better prompt does not give a document an owner, settle a contradiction or retire an outdated rule. Those are decisions people make, together.</p>
+<p>The third is about pace. Technology will keep moving fast, faster than any plan can anticipate. Staying agile means investing in what lasts: how an organisation knows what it knows, and who stands behind it. Knowledge management reflects an organisation, more than its tools.</p>
+<p>The fourth is about context. Getting the best from AI was first a matter of writing good prompts. It is becoming a matter of giving agents the right context, what practitioners now call context engineering. And context is only as good as the data and knowledge it is drawn from.</p>
+<p>From these observations comes an intuition: knowledge deserves to be managed as a pillar of AI, alongside data.</p>
+<p>The ambition of this playbook is to help align a shared vision. It offers a common foundation, the smallest set of principles that organisations, teams and technologies can share, so that each can translate it into its own context, at its own pace. Its success will show in the many ways it is adopted and adapted.</p>
+<div class="signature">
+<p><strong>Benoit Rousseaux</strong></p>
+</div>
+</section><section class="sec" id="overview" aria-labelledby="overview-h"><p class="kicker">OVERVIEW</p><h2 id="overview-h">Abstract</h2>
+<p>Knowledge management has thirty years of research, an international standard, dedicated roles and a market of tools. What is new is the reader. AI agents now consume a company’s knowledge directly, and act on it at scale. AI agents are systems built on AI models that pursue a goal, use tools and act on someone’s behalf; for short, the rest of this playbook calls them agents. What they do depends on the context they are given, and that context has to be steered and mastered, not left to chance. Yet when organisations prepare for AI, they invest in data, models and platforms, and often treat knowledge as a side issue. This playbook argues that knowledge deserves the same status as data: a pillar of AI at scale.</p>
+<p>It builds a bridge between what knowledge management already knows and what agentic AI now requires. Its organising principle is a separation: managing knowledge is one job, consuming it is another. Its operating model is the Knowledge Mesh, openly inspired by the Data Mesh: knowledge bases owned by domains, each with a charter and a Knowledge Owner who commits to what it says, federated by a few shared standards.</p>
+<p>The playbook borrows the rigour of an academic paper, sources and definitions, in plain language.</p>
+<div class="box callout">
+<p><span class="box-label">THE THESIS IN ONE LINE</span></p>
+<p>Knowledge is a pillar of AI at scale, alongside data. It must be managed as infrastructure, separately from the way it is consumed.</p>
+</div>
+<h3 id="what-this-playbook-builds-on-and-what-it-adds">What this playbook builds on, and what it adds</h3>
+<div class="table-wrap cols-2"><table>
+
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>It builds on</strong></th>
+<th style="text-align: left;"><strong>It adds</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Thirty years of knowledge management research, methods and tools, which remain valid</strong></td>
+<td style="text-align: left;">That knowledge has been underestimated as a success factor in deploying AI at scale</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>The tacit, human side of knowledge, which lives with people and communities</strong></td>
+<td style="text-align: left;">That agents change who consumes knowledge, and therefore what “well managed” must mean</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>The Data Mesh, whose architecture it openly transposes</strong></td>
+<td style="text-align: left;">An operating model for knowledge that fits agents, and that each organisation can adapt</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Today’s solutions, which already address many of the challenges described here</strong></td>
+<td style="text-align: left;">The fundamentals that let an organisation choose, combine and replace them, in a world where people and agents share the same knowledge</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="key-concepts-at-a-glance">Key concepts at a glance</h3>
+<div class="table-wrap cols-2"><table>
+
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Concept</strong></th>
+<th style="text-align: left;"><strong>Definition in this playbook</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Management and consumption</strong></td>
+<td style="text-align: left;">Two planes: knowledge is built, owned and governed in one, used by people and agents in the other</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Knowledge base</strong></td>
+<td style="text-align: left;">The unit of the mesh: a domain, a charter, an owner, sources, pages, a contract and states</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Knowledge Owner</strong></td>
+<td style="text-align: left;">The person who answers for a base: orients, arbitrates, commits and retires</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Dynamic context</strong></td>
+<td style="text-align: left;">Context assembled at the moment of use, from governed bases, within the user’s rights, and traceable; the organisational side of context engineering</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Knowledge Mesh</strong></td>
+<td style="text-align: left;">A network of domain-owned knowledge bases, federated by shared standards</td>
+</tr>
+</tbody>
+</table></div>
+<div class="box callout">
+<p><span class="box-label">HOW SOURCES ARE USED</span></p>
+<p>The playbook is written in its own words. Sources mark the landmarks and inspirations behind each part, and the few direct quotations appear in quotation marks. Each part closes with a short box naming the sources it draws on and what it takes from them. The full references, each with a two-sentence summary, are gathered at the end.</p>
+</div>
+</section><section class="sec" id="underestimated-pillar" aria-labelledby="underestimated-pillar-h"><p class="kicker">WHY</p><h2 id="underestimated-pillar-h">1. The underestimated pillar</h2>
+<p>“If only HP knew what HP knows, we would be three times more productive.” The sentence is attributed to Lew Platt, chief executive of Hewlett-Packard in the 1990s, long before generative AI. It named a gap every large organisation recognises: a company knows far more than it manages to use. Expertise stays in one corner, know-how does not travel, people spend their time searching.</p>
+<p>The ambition it expressed has not changed: bring the right knowledge, in the right shape and quality, to the right place at the right time. What has changed is who needs it. Platt was talking about people, who could still ask a colleague. An agent cannot. What a company knows but has not made accessible, an agent will simply never know. And an agent that is not grounded in that knowledge, anchored in facts the company stands behind, can only produce what is plausible, not what is reliable. The first stake is therefore context. To understand a situation, an agent needs to reach two things: data, what the company records, and knowledge, what it means and how to act on it. Together they make up the context it works in.</p>
+<p>Every company that has tried to put AI to work has learned the same lesson about data: garbage in, garbage out, even if it is not quite that simple. Data quality, ownership and governance are now standard items of any AI programme.</p>
+<p>AI also changes the volume. Language models multiply the capacity to produce content: drafts, summaries, reports, generated pages. More content does not mean more knowledge. The more content there is, the more it needs to be traced, qualified and sorted, so that what counts as knowledge can be told apart from what merely sounds right.</p>
+<p>Knowledge has received less attention. Knowledge, here, means what lets someone act well: the rule, the exception, the reason behind both, the trade-off made last year and why. The discipline exists; in most AI programmes, it simply had no seat at the table.</p>
+<h3 id="a-mature-discipline">A mature discipline</h3>
+<p>Knowledge management is a mature field. Its central insight dates back to the 1990s: knowledge is created between people, more than stored in documents, as tacit know-how is put into words, shared and learned again. Companies took the idea seriously, appointed knowledge officers and built repositories. Many were disappointed, and the lesson stuck: a tool can store information, but knowledge only lives through the people and communities who use it. The field has since matured, up to an international standard for knowledge management systems. The methods exist. So do solutions, but they are often costly and ambitious, with a return that is hard to measure. What they long lacked were tools that people truly adopt, adapted to daily work. AI changes that. Before it helps people and agents consume knowledge, it can help manage it: drafting pages, linking sources, flagging contradictions, keeping content current. Knowledge management finally has tools that match its methods.</p>
+<h3 id="why-it-was-underestimated-in-the-move-to-ai">Why it was underestimated in the move to AI</h3>
+<p>Four reasons stand out. They are a practitioner’s reading, not a measured finding.</p>
+<ul>
+<li><p><strong>The model seemed to know.</strong> Large language models answer fluently on almost any subject. It is easy to forget that they know nothing specific about your company until you give it to them.</p></li>
+<li><p><strong>Retrieval was treated as engineering.</strong> RAG made company documents accessible to a model, and the problem was framed as search: chunking, indexing, ranking. Questions of authority, freshness and contradiction were left to the sources, which often nobody owned.</p></li>
+<li><p><strong>Governance followed data.</strong> AI programmes inherited the data governance agenda (privacy, quality, lineage, bias) and often stopped there. Unstructured knowledge sat between data teams, IT and the business.</p></li>
+<li><p><strong>Knowledge management was out of the room.</strong> In many organisations, knowledge management had become a support function after earlier waves, and was rarely part of AI steering.</p></li>
+</ul>
+<p>The cost shows up at scale. A widely discussed MIT report finds that most organisations see no measurable return from generative AI, and points to systems that do not retain context or learn from feedback. Pilots run on clean, curated material; at scale, agents meet the real corpus.</p>
+<h3 id="eight-failure-modes">Eight failure modes</h3>
+<p>The same patterns recur when AI meets the real corpus. Each has a recognisable symptom, a specific cost for agents, and a principle of this playbook that answers it.</p>
+<div class="table-wrap cols-3"><table>
+
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Failure mode</strong></th>
+<th style="text-align: left;"><strong>What it looks like, and what it costs agents</strong></th>
+<th style="text-align: left;"><strong>What answers it</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Retrieval without curation</strong></td>
+<td style="text-align: left;">A retrieval layer is plugged into existing documents, and answers are corrected at the output, use case by use case. The same error is fixed ten times and never at the source.</td>
+<td style="text-align: left;">Principle zero: separate management from consumption</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>The central bottleneck</strong></td>
+<td style="text-align: left;">A central team, whether knowledge, IT or data, carries the work alone, while the people who hold the knowledge are out of the loop. The base ages faster than it is corrected.</td>
+<td style="text-align: left;">Domain ownership</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>The frozen snapshot</strong></td>
+<td style="text-align: left;">A base is built once, for a project, then left as it is. Nothing says it has gone stale; agents keep answering from it with the same confidence.</td>
+<td style="text-align: left;">The lifecycle, and a contract with a review date</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>The accumulation trap</strong></td>
+<td style="text-align: left;">Content keeps growing, generated content included, and nothing is ever retired. Every new page dilutes the ones that matter.</td>
+<td style="text-align: left;">Retirement as a step of the lifecycle</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>The tool-first programme</strong></td>
+<td style="text-align: left;">A platform is bought in place of an organisation. No one embodies the knowledge, practices do not change, and the tool fills with content no one stands behind.</td>
+<td style="text-align: left;">The Knowledge Owner, and the change in roles</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>The canonical model fantasy</strong></td>
+<td style="text-align: left;">A single taxonomy, a single vocabulary, a single model is imposed on every domain. Local meanings are flattened, and agents lose the nuance that made the knowledge useful.</td>
+<td style="text-align: left;">Composable bases under shared standards</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>The open door</strong></td>
+<td style="text-align: left;">Knowledge is exposed without regard to who may see it. Not all knowledge is meant for everyone: an agent that reads everything can show one person what was meant for another, or miss what they need.</td>
+<td style="text-align: left;">Rights that follow the person</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>The untraceable answer</strong></td>
+<td style="text-align: left;">The agent answers or acts without saying which source, which version or whose authority it relied on. No one can validate the answer, correct the source, or explain the action afterwards.</td>
+<td style="text-align: left;">Grounded context and traceable actions</td>
+</tr>
+</tbody>
+</table></div>
+<p>Each of these is a matter of organisation, which technology makes more visible, and more costly, once agents are involved. Each calls for an organisational answer, beyond prompt engineering or a better model.</p>
+<h3 id="what-genuinely-changes-with-ai-agents">What genuinely changes with AI agents</h3>
+<p>The fundamentals of knowledge management stay. Agents change three things around them. They change the reader: the main new consumer is a machine that knows only what has been made explicit. They change the scale: an error no longer misleads one colleague, it travels through every process an agent touches. And they change the economics: drafting and maintaining pages becomes cheap, so the effort moves to validation. Together, these raise the bar for what “well managed” means. The table sets what stays against what changes.</p>
+<div class="table-wrap cols-2"><table>
+
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>What stays</strong></th>
+<th style="text-align: left;"><strong>What changes with agents</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Knowledge is partly tacit and lives in people and communities</strong></td>
+<td style="text-align: left;">The main new consumer is a machine that knows only what has been made explicit</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Knowledge needs owners, a lifecycle and retirement</strong></td>
+<td style="text-align: left;">Authority, date and status must be readable by machines, not only by colleagues</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Codification has a cost</strong></td>
+<td style="text-align: left;">AI collapses the cost of drafting, linking and maintaining pages; the bottleneck moves to validation</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Errors in documentation mislead some readers</strong></td>
+<td style="text-align: left;">Errors propagate systematically, to every agent, in every process</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>People find their way around gaps</strong></td>
+<td style="text-align: left;">Agents do not call a colleague: gaps become wrong answers or wrong actions</td>
+</tr>
+</tbody>
+</table></div>
+<p>This is where the playbook sits: as a bridge. It builds on knowledge management and translates its lessons into the terms of agentic AI at scale, and asks for knowledge to be treated as a pillar, alongside data.</p>
+<div class="box callout">
+<p><span class="box-label">KEY IDEA</span></p>
+<p>Agents raise the bar upstream. The effort moves from consuming knowledge to building it: owned, validated, dated and traceable before any agent reads it.</p>
+</div>
+<div class="box sources">
+<p><span class="box-label">SOURCES &amp; INSPIRATIONS</span></p>
+<p><strong><a class="cite-ref" href="#ref-19">[19]</a> Platt, attributed (1990s)</strong> — the HP quote that frames the gap and the ambition</p>
+<p><strong><a class="cite-ref" href="#ref-16">[16]</a> ISO 30401 (2018)</strong> — shows that knowledge management is an established, standardised discipline</p>
+<p><strong><a class="cite-ref" href="#ref-4">[4]</a> Nonaka; Nonaka &amp; Takeuchi (1994, 1995)</strong> — the central insight that knowledge is created between people</p>
+<p><strong><a class="cite-ref" href="#ref-6">[6]</a> McDermott (1999)</strong> — the lesson of the first wave: tools alone do not deliver knowledge management</p>
+<p><strong><a class="cite-ref" href="#ref-18">[18]</a> MIT NANDA (2025)</strong> — evidence of the gap between AI investment and measurable return</p>
+<p><strong><a class="cite-ref" href="#ref-1">[1]</a> Dehghani (2019)</strong> — failure modes of centralised platforms, named one by one, as a model for the failure modes; the central bottleneck</p>
+<p><strong><a class="cite-ref" href="#ref-2">[2]</a> Dehghani (2020)</strong> — technology advances that address volume but not the other dimensions of scale, behind the tool-first programme; governance that embraces several contexts rather than one canonical model</p>
+</div>
+</section><section class="sec" id="principle-zero" aria-labelledby="principle-zero-h"><p class="kicker">FOUNDATION</p><h2 id="principle-zero-h">2. Principle zero: separate managing knowledge from consuming it</h2>
+<p>Think of an encyclopedia. Writing it and reading it are two different jobs. Editors choose the entries, check sources, settle disputes, retire what is wrong. Readers come with their own questions, in their own words, and never see the editorial process. The quality of the reading depends entirely on the writing, but the reader does not have to understand it.</p>
+<p>Classic knowledge management knows this distinction well. In daily practice, though, companies have rarely worked this way. To find something, you had to understand the logic of whoever filed it. Managing and consuming were the same gesture, and every filing scheme was a bet on how people would search. Research at Bellcore in the 1980s showed how fragile that bet is: two people rarely choose the same word for the same thing. AI breaks that link: we can now ask in our own words against a corpus organised once, consistently. The separation becomes possible. This playbook makes it a principle. The Data Mesh offers a precedent: it keeps operational and analytical data in two planes, described as integrated yet separate, because they serve different needs. Dehghani is equally clear that this technical separation should not separate the organisation, its teams and its people: the same domains look after both. The separation proposed here works the same way. It separates roles and rhythms, not teams.</p>
+<div class="table-wrap cols-3"><table>
+
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: left;"><strong>Management plane</strong></th>
+<th style="text-align: left;"><strong>Consumption plane</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Purpose</strong></td>
+<td style="text-align: left;">Build, validate, keep alive, retire</td>
+<td style="text-align: left;">Answer, assist, act, produce</td>
+</tr>
+<tr class="even">
+<td><strong>Who</strong></td>
+<td style="text-align: left;">Knowledge Owners, helped by agents</td>
+<td style="text-align: left;">Employees, assistants, business agents, document generators</td>
+</tr>
+<tr class="odd">
+<td><strong>Pace</strong></td>
+<td style="text-align: left;">Deliberate: reviewed, versioned, dated</td>
+<td style="text-align: left;">Instant: at the moment of the question</td>
+</tr>
+<tr class="even">
+<td><strong>Key question</strong></td>
+<td style="text-align: left;">What do we hold to be true, and who answers for it?</td>
+<td style="text-align: left;">What does this person or agent need, right now?</td>
+</tr>
+<tr class="odd">
+<td><strong>Measured by</strong></td>
+<td style="text-align: left;">Coverage, freshness, contradictions resolved</td>
+<td style="text-align: left;">Usefulness, adoption, time saved</td>
+</tr>
+</tbody>
+</table></div>
+<p>Three consequences make the approach pragmatic in a world where people and agents work side by side.</p>
+<ul>
+<li><p><strong>Each plane can change without breaking the other.</strong> Models, chat tools and agent frameworks will change many times. A well-managed knowledge base survives them all. Conversely, a new use case does not require reorganising the knowledge.</p></li>
+<li><p><strong>One effort, many uses.</strong> Knowledge kept once serves a newcomer, a support agent and a generated report alike. The investment is made in the management plane and pays off in every consumption.</p></li>
+<li><p><strong>A clear boundary.</strong> Consumers read; they do not rewrite while they work. What they run into, a gap or a contradiction, goes back to the management plane as a ticket. The base learns from its use without feeding on its own answers.</p></li>
+</ul>
+<figure class="fig" id="figure-1"><a href="../assets/figures/figure-1.png" class="fig-link"><img src="../assets/figures/figure-1.png" alt="Figure 1: Principle zero. One effort in the management plane serves every use in the consumption plane; what consumers run into, gaps or errors, goes back to the owner." loading="lazy" decoding="async" width="1600" height="969"></a><figcaption><span class="fig-num">Figure 1</span> Principle zero. One effort in the management plane serves every use in the consumption plane; what consumers run into, gaps or errors, goes back to the owner.</figcaption></figure>
+<p>RAG, chat interfaces and agents all belong to the consumption plane. None of them is wrong. They simply need something upstream to read. The same holds for the many ways of bringing knowledge to a model, a list that keeps growing: what the model learned in training, retrieval (RAG), web search, fine-tuning or distillation. Each has its value, its cost and its prerequisites, depending on the use; knowledge built into a model’s weights is also tied to that model and hard to trace back to a source. Whatever the mode, what an agent can rely on depends on the quality and traceability of the knowledge it draws from: a matter of construction before consumption.</p>
+<div class="box sources">
+<p><span class="box-label">SOURCES &amp; INSPIRATIONS</span></p>
+<p><strong><a class="cite-ref" href="#ref-20">[20]</a> Furnas, Landauer, Gomez &amp; Dumais (1987)</strong> — the vocabulary problem, which shows why filing and finding had to be decoupled</p>
+<p><strong><a class="cite-ref" href="#ref-2">[2]</a> Dehghani (2020)</strong> — operational and analytical data as two planes, integrated yet separate, a precedent for separating management and consumption</p>
+</div>
+</section><section class="sec" id="lineage" aria-labelledby="lineage-h"><p class="kicker">LINEAGE</p><h2 id="lineage-h">3. Where the Knowledge Mesh comes from</h2>
+<p>The Knowledge Mesh openly stands on two foundations. It borrows its architecture from the Data Mesh, and its diagnosis from thirty years of research and practice in knowledge management. Being explicit about both is what makes it solid.</p>
+<h3 id="the-data-mesh-started-from-the-limits-of-centralisation">The Data Mesh started from the limits of centralisation</h3>
+<p>In 2019, Zhamak Dehghani described what many data teams had lived through: a central data lake, run by a team of highly specialised engineers, cut off from the business domains that produce and understand the data. The central team became a bottleneck, with frustrated consumers competing for a place in its backlog, while the people who knew the data had no ownership of it. Her answer was not a better lake but a paradigm shift, in architecture and organisation alike; technology, she wrote, is not the limitation. In 2020 she formalised it in four principles: domain-oriented decentralised data ownership and architecture, data as a product, self-serve data infrastructure as a platform, and federated computational governance. She presented them as a technology-agnostic model: existing tools appear in her texts as examples, and she expected practices and technologies to vary while the principles remain.</p>
+<p>One point matters for knowledge. Dehghani is explicit that the mesh is not a landscape of fragmented, inaccessible silos: it is an intentionally designed distribution, held together by shared standards for interoperability and a common platform.</p>
+<h3 id="knowledge-management-research-had-reached-the-same-diagnosis-earlier">Knowledge management research had reached the same diagnosis earlier</h3>
+<p>Haridimos Tsoukas described the firm in 1996 as a distributed knowledge system: no one, not even management, can grasp it as a whole. Ikujiro Nonaka showed that knowledge is created close to practice, in the interplay between people, not in a central repository. Etienne Wenger located it in communities of practice. In 1999, Richard McDermott explained why the first wave of knowledge management tools disappointed: technology could store information, but knowledge depends on the people who use it and the communities that keep it alive. The same year, Morten Hansen, Nitin Nohria and Thomas Tierney distinguished two strategies: codification, which stores knowledge in documents, and personalisation, which connects the people who hold it. Most companies, they argued, should choose a dominant one.</p>
+<p>AI changes that last trade-off. When agents can draft, link and maintain pages, codification no longer has to come at the expense of the people who know: the expert stays in charge, the machine does the clerical work.</p>
+<p>It loosens another constraint. Organising knowledge has often meant heavy upfront work on classification and ontology before anything could be used. Ideally, both exist. But a base no longer has to wait for them: they can be built in parallel, with agents proposing structures and people validating them, so that the structure does not merely mirror the machine’s own reading. This fits the stance below: work starts on small perimeters, fragments are brought together at the moment of use and enriched in the meantime.</p>
+<div class="box callout">
+<p><span class="box-label">THE STANCE</span></p>
+<p>Accept fragmentation and organise it, rather than pursue the single base. Knowledge is fragmented because it is distributed, situated and alive. Centralising it fights its nature; organising the fragments works with it.</p>
+</div>
+<div class="box sources">
+<p><span class="box-label">SOURCES &amp; INSPIRATIONS</span></p>
+<p><strong><a class="cite-ref" href="#ref-1">[1]</a> Dehghani (2019)</strong> — the diagnosis of the limits of centralised data platforms</p>
+<p><strong><a class="cite-ref" href="#ref-2">[2]</a> Dehghani (2020)</strong> — the four principles of the Data Mesh, transposed in section 5</p>
+<p><strong><a class="cite-ref" href="#ref-3">[3]</a> Tsoukas (1996)</strong> — the firm as a distributed knowledge system</p>
+<p><strong><a class="cite-ref" href="#ref-4">[4]</a> Nonaka (1994)</strong> — knowledge created close to practice</p>
+<p><strong><a class="cite-ref" href="#ref-5">[5]</a> Wenger (1998)</strong> — knowledge located in communities of practice</p>
+<p><strong><a class="cite-ref" href="#ref-6">[6]</a> McDermott (1999)</strong> — why technology alone did not deliver</p>
+<p><strong><a class="cite-ref" href="#ref-7">[7]</a> Hansen, Nohria &amp; Tierney (1999)</strong> — the codification versus personalisation trade-off that AI now loosens</p>
+</div>
+</section><section class="sec" id="fundamentals" aria-labelledby="fundamentals-h"><p class="kicker">FOUNDATION</p><h2 id="fundamentals-h">4. Fundamentals we build on</h2>
+<p>What is known about knowledge still holds with AI. Four established ideas become directly operational once agents are the readers.</p>
+<h3 id="data-information-knowledge">Data, information, knowledge</h3>
+<p>The distinction is simple to state. Data records facts, information gives them meaning in a given context, and knowledge is what lets someone act on them. Thomas Davenport and Laurence Prusak described knowledge as “a fluid mix of framed experience, values, contextual information, and expert insight”. That is why knowledge cannot be reduced to well-organised data. The classic pyramid, which stacks data, information, knowledge and wisdom as successive refinements, is a useful picture, but it has been rightly criticised for that very shortcut. Knowledge carries judgement, and judgement always belongs to someone.</p>
+<div class="box callout">
+<p><span class="box-label">KEY IDEA</span></p>
+<p>Data tells an agent what the company records. Knowledge tells it what the company means.</p>
+</div>
+<h3 id="tacit-and-explicit">Tacit and explicit</h3>
+<p>“We can know more than we can tell,” wrote Michael Polanyi. Part of what experts know will never be fully written down. A Knowledge Mesh aims to make explicit what can be, and to show clearly where the rest lives: with whom, in which community.</p>
+<figure class="fig" id="figure-2"><a href="../assets/figures/figure-2.png" class="fig-link"><img src="../assets/figures/figure-2.png" alt="Figure 2: What can be written, and where the rest lives." loading="lazy" decoding="async" width="1600" height="849"></a><figcaption><span class="fig-num">Figure 2</span> What can be written, and where the rest lives.</figcaption></figure>
+<h3 id="the-knowledge-creation-cycle">The knowledge creation cycle</h3>
+<p>Nonaka and Takeuchi showed that knowledge is created as it moves between its tacit and explicit forms. People share know-how by working together, which they called socialisation. They put it into words, which is externalisation. Explicit pieces are then assembled into larger wholes, which is combination. And people make that explicit knowledge their own by using it, which is internalisation.</p>
+<p>Read with agents in mind, the cycle is uneven. AI excels at combination and is a strong ally for externalisation: an interview, a meeting or a recorded walkthrough can become a draft page. Socialisation remains a human affair: people still learn from people. A knowledge strategy that overlooks this produces clean pages and empty expertise.</p>
+<h3 id="the-lifecycle">The lifecycle</h3>
+<p>Knowledge is born, lives and dies. Managing it means following it through that whole life, from the moment it enters a base to the moment it is withdrawn. Six stages mark that life, and each has someone responsible for it:</p>
+<ol type="1">
+<li><p><strong>Capture</strong>: bring in sources, legacy documents, interviews, decisions.</p></li>
+<li><p><strong>Consolidate</strong>: deduplicate, link, structure into pages.</p></li>
+<li><p><strong>Validate</strong>: the Knowledge Owner commits to what the page says.</p></li>
+<li><p><strong>Serve</strong>: expose it to people and agents, according to rights.</p></li>
+<li><p><strong>Review</strong>: refresh on a known cadence or when a source changes.</p></li>
+<li><p><strong>Retire</strong>: withdraw what is obsolete, and say so.</p></li>
+</ol>
+<figure class="fig" id="figure-3"><a href="../assets/figures/figure-3.png" class="fig-link"><img src="../assets/figures/figure-3.png" alt="Figure 3: Six stages, shared between agents and the Knowledge Owner (in indigo). Review loops back to capture." loading="lazy" decoding="async" width="1600" height="1225"></a><figcaption><span class="fig-num">Figure 3</span> Six stages, shared between agents and the Knowledge Owner (in indigo). Review loops back to capture.</figcaption></figure>
+<p>The last stage is the one most often forgotten. An outdated document left in an index silently becomes a wrong answer. Living knowledge must be allowed to die.</p>
+<div class="box sources">
+<p><span class="box-label">SOURCES &amp; INSPIRATIONS</span></p>
+<p><strong><a class="cite-ref" href="#ref-8">[8]</a> Davenport &amp; Prusak (1998)</strong> — working definition of knowledge, quoted</p>
+<p><strong><a class="cite-ref" href="#ref-9">[9]</a> Ackoff (1989); Frické (2009)</strong> — the DIKW pyramid and its critique</p>
+<p><strong><a class="cite-ref" href="#ref-10">[10]</a> Polanyi (1966)</strong> — tacit knowledge, quoted</p>
+<p><strong><a class="cite-ref" href="#ref-4">[4]</a> Nonaka &amp; Takeuchi (1995)</strong> — the SECI cycle, reread with agents in mind</p>
+</div>
+</section><section class="sec" id="knowledge-mesh" aria-labelledby="knowledge-mesh-h"><p class="kicker">MODEL</p><h2 id="knowledge-mesh-h">5. The Knowledge Mesh in brief</h2>
+<div class="box definition">
+<p><span class="box-label">DEFINITION</span></p>
+<p>A Knowledge Mesh is a decentralised network of living knowledge bases, owned by business domains, each described by a charter and built through auditable contributions from people and agents, federated by common standards so that everyone, human or agent, shares the same governed context.</p>
+</div>
+<p>Five principles. The first four transpose those of the Data Mesh. The fifth extends the way the Data Mesh treats quality, which it entrusts to the domains, with explicit quality metrics, rather than to the central certification of “golden” datasets.</p>
+<div class="table-wrap cols-3"><table>
+
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Data Mesh principle</strong></th>
+<th style="text-align: left;"><strong>Knowledge Mesh principle</strong></th>
+<th><strong>What changes for knowledge</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Domain-oriented ownership</strong></td>
+<td style="text-align: left;">Domain knowledge ownership</td>
+<td>Knowledge is embodied and partly tacit: the owner answers for it, not just stores it</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Data as a product</strong></td>
+<td style="text-align: left;">Knowledge as a self-describing product</td>
+<td>Two kinds of consumers, people and agents; no base without a charter</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Self-serve data platform</strong></td>
+<td style="text-align: left;">Self-serve knowledge platform</td>
+<td>AI is not only hosted on the platform, it works inside it: drafts, links, flags contradictions</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Federated computational governance</strong></td>
+<td style="text-align: left;">Federated knowledge governance</td>
+<td>The goal is not to merge bases but to make them composable: shared identifiers, metadata, open access protocols</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Data product quality, assured by the domain</strong></td>
+<td style="text-align: left;">Auditable knowledge construction</td>
+<td>Where data quality is measured by metrics and service levels, knowledge quality is read through traceability: who proposed each change, who validated it, from which sources, and how to revert it</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="the-challenges-a-knowledge-mesh-must-address">The challenges a Knowledge Mesh must address</h3>
+<p>The principles say what a Knowledge Mesh is. The challenges say what it must make possible. They are stated as questions, because each organisation will answer them in its own way. They fall into three families, one for each side of the mesh: managing knowledge, consuming it, and federating the bases.</p>
+<p><strong>Managing knowledge.</strong> The first family concerns the management plane: how knowledge enters a base, how someone commits to it, and how it stays true over time.</p>
+<div class="table-wrap cols-2"><table>
+
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Challenge</strong></th>
+<th style="text-align: left;"><strong>What it asks</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Compiling the legacy</strong></td>
+<td style="text-align: left;">How do scattered documents become sourced, consolidated pages?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Committing</strong></td>
+<td style="text-align: left;">Who validates, and how is that commitment visible to people and machines?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Keeping it alive</strong></td>
+<td style="text-align: left;">How are contradictions, staleness and gaps detected, and by whom?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Lifecycle</strong></td>
+<td style="text-align: left;">How is knowledge reviewed, quarantined and retired?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Auditable construction</strong></td>
+<td style="text-align: left;">How is every contribution proposed, reviewed, merged and reversed?</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Consuming knowledge.</strong> The second family concerns the consumption plane: how people and agents draw on knowledge at the moment they need it, within the right limits, and with a trace of what they relied on.</p>
+<div class="table-wrap cols-2"><table>
+
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Challenge</strong></th>
+<th style="text-align: left;"><strong>What it asks</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Assembling context</strong></td>
+<td style="text-align: left;">How does an agent select and combine the right bases at the moment of use?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Rights</strong></td>
+<td style="text-align: left;">How do access rights follow the person an agent acts for?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Traceability</strong></td>
+<td style="text-align: left;">How can any answer or action be traced to the knowledge it relied on?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Reaching the tacit</strong></td>
+<td style="text-align: left;">How are the people who hold what is not written found and connected?</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Federating the mesh.</strong> The third family concerns the mesh itself: how bases owned by different domains are found, live side by side, and keep their value as tools change.</p>
+<div class="table-wrap cols-2"><table>
+
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Challenge</strong></th>
+<th style="text-align: left;"><strong>What it asks</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Discovery</strong></td>
+<td style="text-align: left;">How are bases, their charters and their owners found?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Coexistence</strong></td>
+<td style="text-align: left;">How can bases be consumed alone or in combination, and analysed side by side, without being merged?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Shared standards</strong></td>
+<td style="text-align: left;">Which identifiers, metadata and protocols let bases compose?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Quality</strong></td>
+<td style="text-align: left;">How is the health of a base measured against its contract and its evaluation set?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Portability</strong></td>
+<td style="text-align: left;">How does knowledge outlive the tools that built it?</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="fundamentals-before-solutions">Fundamentals before solutions</h3>
+<p>Solutions already address many of these challenges, and new ones appear every month: enterprise search, verified knowledge bases, content platforms with built-in agents, semantic layers. Many of them are useful, and some are very good. This playbook deliberately starts one step earlier, with the fundamentals that let an organisation choose, combine and replace them. In an agentic and hybrid world, where people and agents work from the same knowledge, one question comes first: what must be true of knowledge for both to rely on it? The answer shapes the choice of tools, and outlasts it.</p>
+<p>Two vocabulary choices, to avoid confusion later. The <strong>Knowledge Mesh</strong> is the whole: the network, the platform and the common rules. The <strong>knowledge base</strong> is the unit: what a domain builds, owns and serves. One does not exist without the other.</p>
+<figure class="fig" id="figure-4"><a href="../assets/figures/figure-4.png" class="fig-link"><img src="../assets/figures/figure-4.png" alt="Figure 4: From raw sources to use cases. Each base, owned by a domain, compiles traced sources, converted to markdown, into a wiki; a common access layer serves people and agents by use case." loading="lazy" decoding="async" width="1600" height="1092"></a><figcaption><span class="fig-num">Figure 4</span> From raw sources to use cases. Each base, owned by a domain, compiles traced sources, converted to markdown, into a wiki; a common access layer serves people and agents by use case.</figcaption></figure>
+<div class="box sources">
+<p><span class="box-label">SOURCES &amp; INSPIRATIONS</span></p>
+<p><strong><a class="cite-ref" href="#ref-2">[2]</a> Dehghani (2020)</strong> — the four principles, mapped one by one; quality assured by the domains rather than by central certification of golden datasets, basis of the fifth principle; governance that embraces multiple interpretive contexts rather than one canonical model</p>
+<p><strong><a class="cite-ref" href="#ref-1">[1]</a> Dehghani (2019)</strong> — data products that are discoverable and interoperable, behind the federation challenges</p>
+</div>
+</section><section class="sec" id="knowledge-base" aria-labelledby="knowledge-base-h"><p class="kicker">MODEL</p><h2 id="knowledge-base-h">6. The knowledge base: entry point and destination</h2>
+<p>A knowledge base is the asset of the mesh. It is small enough to have one owner and one purpose, and complete enough to be useful on its own. It has seven parts:</p>
+<ul>
+<li><p><strong>A domain and a purpose</strong>: what it covers, for whom, and what it deliberately does not cover.</p></li>
+<li><p><strong>A charter</strong>: its purpose, its owner, its audience, how it is built. The charter commits the owner, guides the agent that drafts the pages and tells other agents when to consult the base.</p></li>
+<li><p><strong>A Knowledge Owner</strong>: the person who answers for it (section 7).</p></li>
+<li><p><strong>Sources</strong>: the documents, sites and contributions it is built from, each inventoried.</p></li>
+<li><p><strong>Pages</strong>: the consolidated knowledge, in an open, readable format, each page linked to its sources. This is the compiled layer Andrej Karpathy described as an “LLM wiki”: knowledge assembled once and kept up to date, rather than reassembled at every question.</p></li>
+<li><p><strong>A contract</strong>: how often it is reviewed, how fast a change in a source reaches the pages, what minimum quality it guarantees. Its health is measured against that contract.</p></li>
+<li><p><strong>States</strong>: active, under review, quarantined, retired. A page or a whole base can be withdrawn from use without stopping everything else.</p></li>
+</ul>
+<figure class="fig" id="figure-5"><a href="../assets/figures/figure-5.png" class="fig-link"><img src="../assets/figures/figure-5.png" alt="Figure 5: The seven parts of a knowledge base." loading="lazy" decoding="async" width="1600" height="781"></a><figcaption><span class="fig-num">Figure 5</span> The seven parts of a knowledge base.</figcaption></figure>
+<h3 id="an-entry-point">An entry point</h3>
+<p>Every organisation sits on years of legacy documents: slides built for a talk no one gives anymore, scanned procedures, notes formatted three different ways. Building a base turns that sediment into an asset. And the exercise has a value of its own before any question is asked: it reveals the gaps, the duplicates and the contradictions no one could see. Preparing knowledge for an agent is, almost by accident, the first real audit of what the organisation knows.</p>
+<h3 id="a-destination">A destination</h3>
+<p>Today, the base is fed by documents. Tomorrow, documents will increasingly be produced from it: an onboarding guide, a policy summary, a client brief, generated on demand as a view of what the base holds. The logic is inverted. One safeguard follows: what is generated from the base never flows back into it without going through the management plane. Otherwise the base ends up learning from itself.</p>
+<div class="box callout">
+<p><span class="box-label">KEY IDEA</span></p>
+<p>The document is no longer the source of knowledge; it becomes one of its outputs.</p>
+</div>
+<p>Between entry and destination, a single base becomes an enabler for many use cases: a support assistant, a business agent, a training path, a decision memo. That is where the return on investment lies. Not in one more chatbot, but in an asset that every use draws on.</p>
+<h3 id="bases-that-coexist">Bases that coexist</h3>
+<p>As bases multiply, a further question appears: how do they live together? The answer is coexistence rather than fusion. Each base keeps its owner, its charter and its pace. What bases share are identifiers, metadata and a common way to be reached.</p>
+<p>Coexistence opens several uses at once. Some agents will consume a base for what it contains, to answer a question or carry out a task. Others will analyse a base on its own, to measure its coverage, its freshness or its gaps. Others again will read several bases in a combined context of use, where overlaps and contradictions between domains become visible and can be sent back to the owners concerned. Merging the bases would lose that view; letting them coexist keeps it.</p>
+<div class="box sources">
+<p><span class="box-label">SOURCES &amp; INSPIRATIONS</span></p>
+<p><strong><a class="cite-ref" href="#ref-12">[12]</a> Karpathy (2026)</strong> — the compiled “LLM wiki” layer behind the pages of a base</p>
+<p><strong><a class="cite-ref" href="#ref-1">[1]</a> Dehghani (2019)</strong> — data products that are discoverable, trustworthy and self-describing, with service level objectives: basis of the charter and the contract of a base</p>
+</div>
+</section><section class="sec" id="knowledge-owner" aria-labelledby="knowledge-owner-h"><p class="kicker">ROLES</p><h2 id="knowledge-owner-h">7. The Knowledge Owner: authority, not probability</h2>
+<p>A language model produces the most plausible answer. A company needs something else: an answer someone stands behind. That is the role of the Knowledge Owner, and it is the central idea of this playbook. <strong>Knowledge needs a face.</strong></p>
+<p>Embodiment is what makes governance real. A base can be governed because someone decides for it, and audited because someone answers for it. Without that person, rules apply to no one and an audit finds no one to question. The Knowledge Owner embodies the base: its scope, its choices and its limits.</p>
+<p>The Knowledge Owner is the person accountable for a base. Data management already separates two roles: the owner, accountable for an asset, and the steward, who looks after it day to day. In a Knowledge Mesh, agents take on most of the stewardship. They draft pages, check sources, flag contradictions and assess freshness. The owner keeps what cannot be delegated:</p>
+<div class="table-wrap cols-2"><table>
+
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Responsibility</strong></th>
+<th style="text-align: left;"><strong>What it means</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Orient</strong></td>
+<td style="text-align: left;">Decide what the base is for, what it covers and what it does not</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Arbitrate</strong></td>
+<td style="text-align: left;">Settle contradictions and ambiguous cases, which agents escalate with a diagnosis</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Commit</strong></td>
+<td style="text-align: left;">Validate what the base says, and put their name on it</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Listen</strong></td>
+<td style="text-align: left;">Receive what consumers report, agents and people alike: drift, gaps, errors, unanswered questions</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Retire</strong></td>
+<td style="text-align: left;">Decide what is no longer valid</td>
+</tr>
+</tbody>
+</table></div>
+<p>The owner does not reread everything. Clear-cut changes go through; the owner handles the exceptions. That is what keeps the role sustainable.</p>
+<figure class="fig" id="figure-6"><a href="../assets/figures/figure-6.png" class="fig-link"><img src="../assets/figures/figure-6.png" alt="Figure 6: Agents handle the clear-cut changes; the Knowledge Owner arbitrates what is escalated, and commits." loading="lazy" decoding="async" width="1600" height="1071"></a><figcaption><span class="fig-num">Figure 6</span> Agents handle the clear-cut changes; the Knowledge Owner arbitrates what is escalated, and commits.</figcaption></figure>
+<p>Listening matters as much as deciding. Agents that consume a base are its most attentive readers: they notice when answers drift, when a question finds no page, when two pages disagree. Their signals, together with those of people, flow back to the owner, so that the base improves through its use without feeding on its own answers.</p>
+<h3 id="a-commitment-dated-and-open-to-challenge">A commitment, dated and open to challenge</h3>
+<p>Review does not guarantee truth, and pretending otherwise would be dishonest. What the owner commits to is narrower and more useful: “this is what the company holds to be true, as of this date, and I answer for it.” The statement is dated, sourced and open to challenge. It can be corrected, and the correction is traced. A probable answer, improvised at the moment of the question, offers none of that. This is also what makes delegation possible: people entrust an agent with a task when they can see whose knowledge it acts on.</p>
+<div class="box callout">
+<p><span class="box-label">KEY IDEA</span></p>
+<p>The owner turns a probability into a commitment. That is what an organisation can build on, and what an agent can be held to.</p>
+</div>
+<p>No owner, no authority. A base without an owner is just one more document, cleaner perhaps, but just as orphaned. And one condition is not negotiable: the time an owner spends on a base must be recognised as part of their job. Otherwise the role becomes a chore, and the base slowly dies.</p>
+<div class="box sources">
+<p><span class="box-label">SOURCES &amp; INSPIRATIONS</span></p>
+<p><strong><a class="cite-ref" href="#ref-1">[1]</a> Dehghani (2019)</strong> — the data product owner, responsible for the lifecycle of the domain’s data, including when to revise and retire it</p>
+<p><strong><a class="cite-ref" href="#ref-11">[11]</a> DAMA-DMBOK (2017)</strong> — the distinction between an accountable owner and a day-to-day steward</p>
+</div>
+</section><section class="sec" id="dynamic-context" aria-labelledby="dynamic-context-h"><p class="kicker">CONSUMPTION</p><h2 id="dynamic-context-h">8. Dynamic context</h2>
+<h3 id="the-need-for-grounding">The need for grounding</h3>
+<p>Before an agent can decide or act, it needs to stand on solid ground: facts, rules and reasons that are established, dated and owned. Linguists Herbert Clark and Susan Brennan called the process of building that shared basis grounding: the mutual knowledge on which any joint action rests. The same word is now used in AI for anchoring an answer in sources. The overlap is not a coincidence. Whether between two people or between a company and its agents, nobody can act together without first agreeing on what is taken to be true.</p>
+<p>Grounding is what separates an answer that sounds right from a decision that can be defended. It requires two things: knowledge that someone stands behind, which is the work of the management plane, and a way to bring it to the agent at the moment it acts, which is the work of dynamic context.</p>
+<div class="box callout">
+<p><span class="box-label">KEY IDEA</span></p>
+<p>No delegation without grounding. Decisions and actions must be anchored in knowledge the company holds to be true, not in what a model finds plausible.</p>
+</div>
+<h3 id="from-prompt-to-dynamic-context">From prompt to dynamic context</h3>
+<p>Since the advent of generative AI, getting the best out of a language model has been a matter of good practice, gathered under the name of prompt engineering: a role, a mission, a few paragraphs of background written by hand into a prompt. Since 2025, practitioners have moved on to context engineering, the discipline of choosing what goes into a model’s working memory. The shift is right about one thing: the quality of an answer depends on the context more than on the model.</p>
+<p>The Knowledge Mesh adds the organisational side that context engineering calls for: where good context comes from, and who stands behind it.</p>
+<div class="box definition">
+<p><span class="box-label">DEFINITION</span></p>
+<p>Dynamic context is context assembled at the moment of use, from governed knowledge bases, within the rights of the person on whose behalf the agent acts.</p>
+</div>
+<p>Four properties distinguish it from a prompt:</p>
+<ul>
+<li><p><strong>Assembled, not written.</strong> The agent selects the bases it needs, guided by their charters, and combines them at the point of use. A cross-functional question draws on several domains without a global model having been negotiated upfront.</p></li>
+<li><p><strong>Governed at the source.</strong> What enters the context has an owner, a date and a status. A quarantined page simply does not appear.</p></li>
+<li><p><strong>Rights follow the person.</strong> An agent sees what the person it serves is allowed to see, no more.</p></li>
+<li><p><strong>Traceable.</strong> Every element of the context points back to a page, and every page to its sources and its owner. Whatever an agent relied on to act can be inspected afterwards.</p></li>
+</ul>
+<p>Regulation points the same way, within a narrower scope. For high-risk AI systems, the European AI Act requires automatic logging to ensure the traceability of how a system functions, effective human oversight, and the retention of logs by those who deploy it. Most knowledge agents will not fall into that category. It is still reasonable to aim for the same capability everywhere: being able to trace what an agent did, and which knowledge it relied on, is what makes it possible to understand, validate and trust the adoption of agents at scale.</p>
+<p>This requires standard access. Open protocols such as the Model Context Protocol, introduced in 2024, let any agent query any base in the same way. The protocol may change; the principle will remain.</p>
+<p>This is where principle zero pays off. Dynamic context is the consumption plane at its most demanding. It is only as reliable as the management plane behind it.</p>
+<div class="box sources">
+<p><span class="box-label">SOURCES &amp; INSPIRATIONS</span></p>
+<p><strong><a class="cite-ref" href="#ref-17">[17]</a> EU AI Act, Arts. 12, 14 and 26 (2024)</strong> — traceability and human oversight required for high-risk systems, extended here as good practice for all agents</p>
+<p><strong><a class="cite-ref" href="#ref-21">[21]</a> Clark &amp; Brennan (1991)</strong> — grounding as the shared basis for joint action, applied to agents</p>
+<p><strong><a class="cite-ref" href="#ref-13">[13]</a> Anthropic (2025)</strong> — the notion of context engineering, which dynamic context extends</p>
+<p><strong><a class="cite-ref" href="#ref-14">[14]</a> Anthropic (2024)</strong> — the Model Context Protocol, as an example of open access standard</p>
+</div>
+</section><section class="sec" id="field-guide" aria-labelledby="field-guide-h"><p class="kicker">PLAYBOOK</p><h2 id="field-guide-h">9. Field guide: start, grow, avoid</h2>
+<h3 id="start-small-and-real">Start small, and real</h3>
+<p>Whatever the tools, the first steps look alike in most organisations. They aim at a first base that is useful quickly, owned by someone and measured from the start, so that what is learned on one domain can serve the next.</p>
+<ol type="1">
+<li><p><strong>Pick one domain</strong> with a real pain: questions asked again and again, answers that vary from one person to the next.</p></li>
+<li><p><strong>Name one Knowledge Owner</strong> who wants the role, and give them time for it.</p></li>
+<li><p><strong>Write the charter</strong> in one page: purpose, audience, scope, what is out of scope.</p></li>
+<li><p><strong>Compile the legacy</strong>: let agents turn the existing documents into a first set of sourced pages, then let the owner validate them. Expect to discover gaps; that is part of the value.</p></li>
+<li><p><strong>Build an evaluation set</strong>: the questions the domain actually receives, with the answers the owner expects. Every change, of content or of model, is then measured against it.</p></li>
+</ol>
+<h3 id="the-mesh-is-a-trajectory">The mesh is a trajectory</h3>
+<p>No company starts with a mesh. It usually starts with a common foundation: one platform, a few standards, the first bases, often run by a small central team. That is consistent with the mesh: Dehghani herself treats the self-serve platform as a precondition of it. Much of that platform can be assembled from existing tools; what has to be built is the way they are composed, and the standards that let bases move between them. The mesh appears as domains take ownership one after another, and as the central team moves from building bases to providing the platform and the rules. Starting centrally is a sound first step; the aim is to move beyond it.</p>
+<div class="box callout">
+<p><span class="box-label">RULE OF THUMB</span></p>
+<p>Centralise the means, decentralise the knowledge.</p>
+</div>
+<h3 id="interoperability">Interoperability</h3>
+<p>A knowledge base is built to last longer than the technologies that serve it. Models, agent frameworks and access protocols will change several times over its life, and knowledge must be able to follow without starting over each time. That calls for simple, open and evolvable formats: readable text pages, explicit metadata, stable identifiers, links that make sense to a person as well as to a machine, and access through open protocols rather than proprietary connectors.</p>
+<p>The test is simple: if the tool that built a base disappeared tomorrow, could the knowledge be read, moved and served by another one? If the answer is no, the company does not own its knowledge; its tool does.</p>
+<h3 id="three-levels-of-delegation">Three levels of delegation</h3>
+<p>Delegating to agents is a gradual decision, taken domain by domain. Trust grows as people understand what agents rely on and see results hold over time. Three levels mark that progression, and each is reached on evidence.</p>
+<div class="table-wrap cols-3"><table>
+
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Level</strong></th>
+<th style="text-align: left;"><strong>Who decides</strong></th>
+<th style="text-align: left;"><strong>Condition to move on</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Assistance</strong></td>
+<td style="text-align: left;">People read the answer and remain the filter</td>
+<td style="text-align: left;">Base validated, sources traced</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Delegation</strong></td>
+<td style="text-align: left;">Agents act; every action is traceable to the knowledge it relied on</td>
+<td style="text-align: left;">Evaluation results stable over time; owner arbitrates exceptions</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Autopilot</strong></td>
+<td style="text-align: left;">Sources flow into the base without human review, under continuous quality monitoring</td>
+<td style="text-align: left;">Proven quality on the domain; ability to quarantine instantly</td>
+</tr>
+</tbody>
+</table></div>
+<p>An agent may always protect on its own, for instance by quarantining a doubtful page. It should never loosen a rule on its own.</p>
+<div class="box sources">
+<p><span class="box-label">SOURCES &amp; INSPIRATIONS</span></p>
+<p><strong><a class="cite-ref" href="#ref-2">[2]</a> Dehghani (2020)</strong> — the self-serve platform as the condition for domain autonomy, basis of the trajectory; success measured by use across the mesh rather than volume governed</p>
+<p><strong><a class="cite-ref" href="#ref-1">[1]</a> Dehghani (2019)</strong> — interoperability governed by global standards as a foundational pillar of distributed systems</p>
+</div>
+</section><section class="sec" id="closing" aria-labelledby="closing-h"><p class="kicker">CLOSING</p><h2 id="closing-h">What it values, what stays open</h2>
+<p>This playbook started from a diagnosis: the failure modes that appear when agents meet a company’s real knowledge, from retrieval without curation to the untraceable answer. Each of them is a matter of organisation more than of technology. The playbook answered with a separation between managing and consuming knowledge, five principles transposed from the Data Mesh, and a map of the challenges every organisation will meet. Five preferences sum up that answer: each one favours a way of working, without dismissing the alternative.</p>
+<h3 id="five-things-the-knowledge-mesh-values">Five things the Knowledge Mesh values</h3>
+<div class="table-wrap cols-3"><table>
+
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>The Knowledge Mesh values…</strong></th>
+<th style="text-align: left;"><strong>…more than</strong></th>
+<th style="text-align: left;"><strong>Because</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Curating the source</strong></td>
+<td style="text-align: left;">Correcting the answer</td>
+<td style="text-align: left;">A correction made once, upstream, serves every use downstream</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Committed knowledge</strong></td>
+<td style="text-align: left;">Plausible answers</td>
+<td style="text-align: left;">An agent can rely on what someone stands behind; from the rest, it can only guess</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Owned bases</strong></td>
+<td style="text-align: left;">A single repository</td>
+<td style="text-align: left;">Knowledge stays close to those who hold it, and bases coexist rather than merge</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Retiring knowledge</strong></td>
+<td style="text-align: left;">Accumulating content</td>
+<td style="text-align: left;">What is withdrawn on time protects every answer that follows</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Traceable action</strong></td>
+<td style="text-align: left;">Opaque assistance</td>
+<td style="text-align: left;">What can be traced can be understood, corrected and trusted</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>The second column still has value: answers will always need some correction, and a shared repository can be useful. The Knowledge Mesh simply puts the first column first.</em></p>
+<h3 id="what-stays-open">What stays open</h3>
+<p>This playbook is meant to be read alongside the knowledge management literature, and extended by those who put it to work. Four questions remain open:</p>
+<ul>
+<li><p>How can the value of a living knowledge base be measured by its use, rather than by the volume of pages it holds?</p></li>
+<li><p>How can the Knowledge Owner role become a form of recognition rather than one more duty, and how far can stewardship be handed to agents while keeping the human judgement that makes a base worth trusting?</p></li>
+<li><p>How can the approach stay simple, and rely on open standards rather than build its own?</p></li>
+<li><p>On the consumption side, how can fragmented knowledge be consumed through a simple, single entry point, without recentralising how it is managed?</p></li>
+</ul>
+<p>The aim is a shared vision more than a single recipe: a common foundation, the smallest set of principles from which each organisation can build its own Knowledge Mesh, with its own tools and at its own pace. Its value will show in the variety of its adoptions.</p>
+<p class="kicker kicker-sub">A well-made mind</p>
+<p><em>« Plutôt la tête bien faite que bien pleine. »</em></p>
+<p><em>A well-made mind rather than a well-filled one.</em></p>
+<p>Michel de Montaigne, Essais, I, 26</p>
+<p>For Montaigne, a well-made mind is not the one that holds the most. It is the one that can judge, sort and order what it knows, and put it to use. He does not dismiss knowledge: a well-made mind is not built in a vacuum. He ranks the qualities of the mind, and places discernment above accumulation.</p>
+<p>Companies have spent decades filling their heads: drives, intranets, document libraries. Agents now ask them for a well-made one: knowledge that is sorted, organised, owned and kept alive, so that it can be used with judgement. That is a matter of organisation more than of tools: of ownership, and of someone willing to say: this is what we hold to be true, and I answer for it.</p>
+<div class="box sources">
+<p><span class="box-label">SOURCES &amp; INSPIRATIONS</span></p>
+<p><strong><a class="cite-ref" href="#ref-15">[15]</a> Montaigne (1580)</strong> — the well-made mind, quoted: discernment and order above accumulation</p>
+</div>
+</section><section class="sec" id="references" aria-labelledby="references-h"><p class="kicker">REFERENCES</p><h2 id="references-h">Annotated sources</h2>
+<p>This playbook deliberately draws on several disciplines. Knowledge is only partly a technical question: it is also social, cognitive and organisational, and the sources reflect that balance. Twenty-one references span eight families, from the sociology of organisations to the current practice of AI.</p>
+<div class="table-wrap cols-3"><table>
+
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Family</strong></th>
+<th style="text-align: left;"><strong>What it brings to the playbook</strong></th>
+<th style="text-align: left;"><strong>Sources</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Sociology and organisation</strong></td>
+<td style="text-align: left;">Knowledge as distributed, social and lived in communities; why tools alone did not deliver</td>
+<td style="text-align: left;"><a class="cite-ref" href="#ref-3">[3]</a> <a class="cite-ref" href="#ref-4">[4]</a> <a class="cite-ref" href="#ref-5">[5]</a> <a class="cite-ref" href="#ref-6">[6]</a> <a class="cite-ref" href="#ref-7">[7]</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Philosophy</strong></td>
+<td style="text-align: left;">The limits of what can be written down; the well-made mind over the full one</td>
+<td style="text-align: left;"><a class="cite-ref" href="#ref-10">[10]</a> <a class="cite-ref" href="#ref-15">[15]</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Language and cognition</strong></td>
+<td style="text-align: left;">Grounding as the shared basis of joint action; why filing and finding diverge</td>
+<td style="text-align: left;"><a class="cite-ref" href="#ref-20">[20]</a> <a class="cite-ref" href="#ref-21">[21]</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Information science</strong></td>
+<td style="text-align: left;">What distinguishes knowledge from data and information</td>
+<td style="text-align: left;"><a class="cite-ref" href="#ref-8">[8]</a> <a class="cite-ref" href="#ref-9">[9]</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Data architecture and management</strong></td>
+<td style="text-align: left;">The mesh model, ownership and stewardship</td>
+<td style="text-align: left;"><a class="cite-ref" href="#ref-1">[1]</a> <a class="cite-ref" href="#ref-2">[2]</a> <a class="cite-ref" href="#ref-11">[11]</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Standards and regulation</strong></td>
+<td style="text-align: left;">Knowledge management as a recognised discipline; traceability of agents</td>
+<td style="text-align: left;"><a class="cite-ref" href="#ref-16">[16]</a> <a class="cite-ref" href="#ref-17">[17]</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>AI practice and field evidence</strong></td>
+<td style="text-align: left;">Compiled knowledge, context engineering, open protocols, and the gap at scale</td>
+<td style="text-align: left;"><a class="cite-ref" href="#ref-12">[12]</a> <a class="cite-ref" href="#ref-13">[13]</a> <a class="cite-ref" href="#ref-14">[14]</a> <a class="cite-ref" href="#ref-18">[18]</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Management practice</strong></td>
+<td style="text-align: left;">The gap between what a company knows and what it uses</td>
+<td style="text-align: left;"><a class="cite-ref" href="#ref-19">[19]</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Each source is summarised in two sentences, to show what this playbook takes from it.</p>
+<p><span id="ref-1" class="refnum">[1]</span> Dehghani, Z., <a href="https://martinfowler.com/articles/data-monolith-to-mesh.html" target="_blank" rel="noopener"><u>How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh</u></a>, martinfowler.com (20 May 2019).</p>
+<blockquote>
+<p>Describes the failure modes of centralised data platforms: monolithic, organised around pipeline stages, and run by hyper-specialised teams cut off from the business domains. Proposes a data mesh in which domains own and serve their data as discoverable, trustworthy, self-describing products, on a self-serve platform, under global standards for interoperability.</p>
+</blockquote>
+<p><span id="ref-2" class="refnum">[2]</span> Dehghani, Z., <a href="https://martinfowler.com/articles/data-mesh-principles.html" target="_blank" rel="noopener"><u>Data Mesh Principles and Logical Architecture</u></a>, martinfowler.com (3 December 2020).</p>
+<blockquote>
+<p>Formalises the four principles of the Data Mesh: domain-oriented decentralised data ownership and architecture, data as a product, self-serve data infrastructure as a platform, and federated computational governance. Keeps operational and analytical data as separate planes and describes a governance that seeks interoperability rather than a single canonical model.</p>
+</blockquote>
+<p><span id="ref-3" class="refnum">[3]</span> Tsoukas, H., The Firm as a Distributed Knowledge System: A Constructionist Approach, <em>Strategic Management Journal</em> 17(S2), 11–25 (1996).</p>
+<blockquote>
+<p>Argues that a firm’s knowledge is inherently distributed and cannot be surveyed or held as a whole by any single mind, management included. The managerial task is therefore to connect and coordinate knowledge rather than to centralise it.</p>
+</blockquote>
+<p><span id="ref-4" class="refnum">[4]</span> Nonaka, I., A Dynamic Theory of Organizational Knowledge Creation, <em>Organization Science</em> 5(1), 14–37 (1994); Nonaka, I. and Takeuchi, H., <em>The Knowledge-Creating Company</em>, Oxford University Press (1995).</p>
+<blockquote>
+<p>Theorises organisational knowledge creation as a continuous conversion between tacit and explicit knowledge, through socialisation, externalisation, combination and internalisation (SECI). The book illustrates it with Japanese companies and shows the role of middle managers in turning individual insight into organisational knowledge.</p>
+</blockquote>
+<p><span id="ref-5" class="refnum">[5]</span> Wenger, E., <em>Communities of Practice: Learning, Meaning, and Identity</em>, Cambridge University Press (1998).</p>
+<blockquote>
+<p>Presents learning as social participation within communities of practice that share a domain, a practice and a repertoire. Knowledge, in this view, lives in practice and in the communities that sustain it, not only in documents.</p>
+</blockquote>
+<p><span id="ref-6" class="refnum">[6]</span> McDermott, R., Why Information Technology Inspired but Cannot Deliver Knowledge Management, <em>California Management Review</em> 41(4) (1999), doi:10.2307/41166012.</p>
+<blockquote>
+<p>Explains why early knowledge management systems disappointed: information technology can store and move information, but knowledge is tied to people, their thinking and their communities. Recommends building communities and combining human and technical systems rather than relying on repositories alone.</p>
+</blockquote>
+<p><span id="ref-7" class="refnum">[7]</span> Hansen, M., Nohria, N. and Tierney, T., What’s Your Strategy for Managing Knowledge?, <em>Harvard Business Review</em> (1999).</p>
+<blockquote>
+<p>Distinguishes two knowledge management strategies: codification, which stores knowledge in documents for reuse, and personalisation, which connects people who hold it. Argues that firms should pursue one predominantly, in line with their competitive strategy.</p>
+</blockquote>
+<p><span id="ref-8" class="refnum">[8]</span> Davenport, T. and Prusak, L., <em>Working Knowledge: How Organizations Manage What They Know</em>, Harvard Business School Press (1998).</p>
+<blockquote>
+<p>Offers a practical definition of knowledge as framed experience, values, contextual information and expert insight, distinct from data and information. Describes how organisations generate, codify and transfer knowledge, and why culture matters as much as technology.</p>
+</blockquote>
+<p><span id="ref-9" class="refnum">[9]</span> Ackoff, R., From Data to Wisdom, <em>Journal of Applied Systems Analysis</em> 16 (1989); Frické, M., The Knowledge Pyramid: A Critique of the DIKW Hierarchy, <em>Journal of Information Science</em> 35(2) (2009), doi:10.1177/0165551508094050.</p>
+<blockquote>
+<p>Ackoff popularised the hierarchy from data to information, knowledge and wisdom. Frické criticises it as unsound, arguing that knowledge is not obtained by simply refining data.</p>
+</blockquote>
+<p><span id="ref-10" class="refnum">[10]</span> Polanyi, M., <em>The Tacit Dimension</em>, Doubleday (1966).</p>
+<blockquote>
+<p>Introduces tacit knowledge with the observation that “we can know more than we can tell”. Shows that all explicit knowledge rests on a tacit foundation of skills and judgement that resists full articulation.</p>
+</blockquote>
+<p><span id="ref-11" class="refnum">[11]</span> DAMA International, <em>DAMA-DMBOK: Data Management Body of Knowledge</em>, 2nd ed., Technics Publications (2017).</p>
+<blockquote>
+<p>Reference framework for the data management profession, covering governance, quality, metadata and architecture. It defines the governance roles, including owners accountable for data and stewards responsible for its day-to-day care.</p>
+</blockquote>
+<p><span id="ref-12" class="refnum">[12]</span> Karpathy, A., <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank" rel="noopener"><u>LLM Wiki</u></a> (gist, 4 April 2026).</p>
+<blockquote>
+<p>Describes a pattern in which a language model reads raw sources and integrates them into a persistent, interlinked Markdown wiki, noting contradictions and checking for stale claims, while a human curates sources and asks questions. Knowledge is compiled once and kept current, rather than retrieved and re-derived at every query, for personal as well as team use.</p>
+</blockquote>
+<p><span id="ref-13" class="refnum">[13]</span> Anthropic, <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" target="_blank" rel="noopener"><u>Effective context engineering for AI agents</u></a> (29 September 2025).</p>
+<blockquote>
+<p>Frames context as a finite resource that must be curated for each step an agent takes, beyond the writing of a good prompt. Discusses techniques such as just-in-time retrieval, compaction and structured note-taking to keep context relevant.</p>
+</blockquote>
+<p><span id="ref-14" class="refnum">[14]</span> Anthropic, <a href="https://www.anthropic.com/news/model-context-protocol" target="_blank" rel="noopener"><u>Introducing the Model Context Protocol</u></a> (25 November 2024).</p>
+<blockquote>
+<p>Announces an open standard that lets AI applications connect to data sources and tools through a common client-server protocol. It aims to replace one-off integrations with a single, interoperable way for agents to access context.</p>
+</blockquote>
+<p><span id="ref-15" class="refnum">[15]</span> Montaigne, M. de, <em>Essais</em>, I, 26, “De l’institution des enfants” (1580).</p>
+<blockquote>
+<p>Essay on the education of children, in which Montaigne prefers a well-formed judgement to an accumulation of learning. It is the origin of the phrase “plutôt la tête bien faite que bien pleine”.</p>
+</blockquote>
+<p><span id="ref-16" class="refnum">[16]</span> ISO, <em>ISO 30401:2018 Knowledge management systems — Requirements</em> (November 2018; amended 2022 and 2024, revision in progress).</p>
+<blockquote>
+<p>International standard that sets requirements for establishing, maintaining and improving a knowledge management system in an organisation. It treats knowledge management as a managed system with leadership, roles and continual improvement, like quality or information security.</p>
+</blockquote>
+<p><span id="ref-17" class="refnum">[17]</span> European Union, Regulation (EU) 2024/1689 (Artificial Intelligence Act), Article 12 (Record-keeping), Article 14 (Human oversight) and Article 26 (Obligations of deployers of high-risk AI systems) (2024).</p>
+<blockquote>
+<p>Requires high-risk AI systems to log events automatically over their lifetime, to ensure a level of traceability of their functioning, and to be designed so that people can oversee, override or stop them; deployers must keep the logs for at least six months. These obligations apply to high-risk systems only; the playbook extends the principle to all agents as good practice, not as a legal requirement.</p>
+</blockquote>
+<p><span id="ref-18" class="refnum">[18]</span> MIT Media Lab, Project NANDA, <em>The GenAI Divide: State of AI in Business 2025</em> (preliminary report, July 2025).</p>
+<blockquote>
+<p>Reports that most organisations studied see no measurable return from their generative AI initiatives despite significant investment. It attributes the gap largely to systems that do not retain context, adapt or learn from feedback.</p>
+</blockquote>
+<p><span id="ref-19" class="refnum">[19]</span> Attributed to Platt, L., chief executive of Hewlett-Packard (1990s): “If only HP knew what HP knows, we would be three times more productive.” Widely reported; the title of O’Dell, C. and Grayson, C. J., If Only We Knew What We Know: Identification and Transfer of Internal Best Practices, <em>California Management Review</em> 40(3) (1998), echoes it.</p>
+<blockquote>
+<p>An attributed quotation, reported in several variants (“productive”, “profitable”), with no primary source located. It has become a slogan of knowledge management; O’Dell and Grayson’s article on the internal transfer of best practices takes up its formula in its title.</p>
+</blockquote>
+<p><span id="ref-20" class="refnum">[20]</span> Furnas, G., Landauer, T., Gomez, L. and Dumais, S., The Vocabulary Problem in Human-System Communication, <em>Communications of the ACM</em> 30(11), 964–971 (1987).</p>
+<blockquote>
+<p>Shows experimentally that two people choose the same word for the same object less than 20% of the time. Concludes that systems relying on a single designer’s vocabulary fail most users, and calls for many access routes to the same item.</p>
+</blockquote>
+<p><span id="ref-21" class="refnum">[21]</span> Clark, H. and Brennan, S., Grounding in Communication, in Resnick, L., Levine, J. and Teasley, S. (eds.), <em>Perspectives on Socially Shared Cognition</em>, American Psychological Association, 127–149 (1991).</p>
+<blockquote>
+<p>Defines grounding as the collective process by which participants in a conversation build common ground, the mutual knowledge and beliefs that joint action requires. Shows that the effort needed depends on the purpose and the medium of communication.</p>
+</blockquote>
+</section>
+
+      <section class="colophon" id="downloads" aria-labelledby="dl-h">
+        <p class="kicker">Download</p>
+        <h2 id="dl-h">Take the playbook with you</h2>
+        <div class="downloads">
+          <a class="dl-card" href="downloads/knowledge-mesh-playbook-v2.5-with-figures.pdf" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M12 11v6m0 0-2.5-2.5M12 17l2.5-2.5"/></svg>
+            <div><b>PDF, with figures</b><span>1.7 MB</span></div>
+          </a>
+          <a class="dl-card" href="downloads/knowledge-mesh-playbook-v2.5.pdf" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M12 11v6m0 0-2.5-2.5M12 17l2.5-2.5"/></svg>
+            <div><b>PDF, text only</b><span>314 KB</span></div>
+          </a>
+        </div>
+      </section>
+    </article>
+  </div>
+</main>
+
+<footer>
+  The Knowledge Mesh · A playbook · Version 2.5, 16 November 2026
+</footer>
+
+<a class="btn to-top" id="toTop" href="#top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5m0 0-6 6m6-6 6 6"/></svg>
+</a>
+
+<script>
+(function(){
+  var root=document.documentElement, bar=document.getElementById('bar'), top=document.getElementById('topbar'), toTop=document.getElementById('toTop');
+  try{var t=localStorage.getItem('km-theme'); if(t) root.setAttribute('data-theme',t);}catch(e){}
+  document.getElementById('themeBtn').addEventListener('click',function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme')==='dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    var next = dark ? 'light' : 'dark'; root.setAttribute('data-theme',next);
+    try{localStorage.setItem('km-theme',next);}catch(e){}
+  });
+  function onScroll(){
+    var h=document.documentElement, max=h.scrollHeight-h.clientHeight;
+    bar.style.width=(max>0? (h.scrollTop/max*100):0)+'%';
+    top.classList.toggle('scrolled',h.scrollTop>8);
+    toTop.classList.toggle('show',h.scrollTop>1200);
+  }
+  addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  var toc=document.getElementById('toc'), btn=document.getElementById('tocBtn');
+  function closeToc(){toc.classList.remove('open');btn.setAttribute('aria-expanded','false');}
+  btn.addEventListener('click',function(e){e.stopPropagation();var o=toc.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');});
+  toc.addEventListener('click',function(e){if(e.target.closest('a')) closeToc();});
+  document.addEventListener('click',function(e){if(!toc.contains(e.target)&&e.target!==btn) closeToc();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape') closeToc();});
+
+  var links={}; toc.querySelectorAll('ol a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a;});
+  var secs=[].slice.call(document.querySelectorAll('section.sec')), last=null, tick=false;
+  function spy(){ tick=false; var cur=null; for(var i=0;i<secs.length;i++){ if(secs[i].getBoundingClientRect().top<180) cur=secs[i].id; else break; }
+    if(cur!==last){ if(links[last]) links[last].classList.remove('active'); if(links[cur]) links[cur].classList.add('active'); last=cur; } }
+  addEventListener('scroll',function(){ if(!tick){tick=true;requestAnimationFrame(spy);} },{passive:true}); spy();
+})();
+</script>
+</body>
+</html>
