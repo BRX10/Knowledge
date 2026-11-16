@@ -1,4 +1,4 @@
-/* Shared: fixed header on every page, violet/amber theme, lists from content.js, optional download counter. */
+/* Shared: fixed header on every page, violet/amber theme, lists from content.js, anonymous download counter. */
 (function () {
   var S = window.SITE || {}, preview = /[?&]preview\b/.test(location.search);
   var root = document.documentElement.getAttribute('data-root') || '';
@@ -38,7 +38,7 @@
   /* ---------- shared fixed header ---------- */
   (function () {
     var h = document.getElementById('siteHeader'); if (!h) return;
-    var act = h.getAttribute('data-active') || '', cta = S.cta || {};
+    var act = h.getAttribute('data-active') || '';
     var items = [['home', '', 'Home'], ['read', 'knowledge-mesh/playbook.html', 'Read'], ['slides', 'knowledge-mesh/slides.html', 'Simple Slides'], ['km', 'knowledge-mesh/', 'Concepts'], ['about', '#about', 'About']];
     var nav = items.map(function (it) {
       return '<a href="' + (it[1].charAt(0) === '#' ? root + './' + it[1] : root + (it[1] || './')) + '"' + (act === it[0] ? ' aria-current="page"' : '') + '>' + it[2] + '</a>';
@@ -48,7 +48,6 @@
       '<a class="brand" href="' + (root || './') + '"><span class="mark">' + BRAIN + '</span><span class="txt">Knowledge Mesh Playbook</span></a>' +
       '<nav class="mainnav" aria-label="Main">' + nav + '</nav><span class="spacer"></span>' +
       '<button class="theme-sw" type="button" aria-pressed="false" aria-label="Switch colours: violet or amber"><span class="sw-v" aria-hidden="true"></span><span class="sw-a" aria-hidden="true"></span></button>' +
-      (cta.url ? '<a class="btn btn-primary btn-sm cta-btn" href="' + root + cta.url + '" data-dl="' + (cta.dl || '') + '" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg><span class="cta-l">PDF</span></a>' : '') +
       '</div><nav class="subnav wrap" aria-label="Main (mobile)">' + nav + '</nav>';
     h.querySelector('.theme-sw').addEventListener('click', function () { setTheme(theme() === 'amber' ? 'violet' : 'amber'); });
   })();
@@ -67,13 +66,13 @@
       if (S.owner && S.owner.linkedin) el.href = S.owner.linkedin; else el.style.display = 'none';
     });
   });
-  if (S.goatcounter) {
-    var sc = document.createElement('script'); sc.async = true; sc.src = 'https://gc.zgo.at/count.js';
-    sc.setAttribute('data-goatcounter', 'https://' + S.goatcounter + '.goatcounter.com/count');
-    document.head.appendChild(sc);
+  /* Download counter: one anonymous ping per PDF click (file key + page path only), to the owner's n8n. */
+  if (S.counter) {
     document.addEventListener('click', function (e) {
-      var t = e.target.closest && e.target.closest('[data-dl]');
-      if (t && window.goatcounter && goatcounter.count) goatcounter.count({ path: 'download-' + t.getAttribute('data-dl'), title: t.textContent.trim(), event: true });
+      var t = e.target.closest && e.target.closest('[data-dl]'); if (!t) return;
+      var u = S.counter + '?f=' + encodeURIComponent(t.getAttribute('data-dl')) + '&p=' + encodeURIComponent(location.pathname);
+      try { if (navigator.sendBeacon && navigator.sendBeacon(u, '')) return; } catch (err) {}
+      try { fetch(u, { method: 'POST', mode: 'no-cors', keepalive: true }); } catch (err) {}
     });
   }
 })();

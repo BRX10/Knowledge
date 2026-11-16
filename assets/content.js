@@ -10,12 +10,9 @@ window.SITE = {
     linkedin: "https://www.linkedin.com/in/benoitrousseaux/"
   },
 
-  /* Download counter (GoatCounter). Empty = no tracker loaded at all.
-     To enable: create a site on goatcounter.com and put its code here, e.g. "brxpr". */
-  goatcounter: "",
-
-  /* PDF button in the header. */
-  cta: { label: "Download the playbook", url: "knowledge-mesh/downloads/knowledge-mesh-playbook-v2.5-with-figures.pdf", dl: "playbook-pdf-figures", note: "PDF · 1.7 MB" },
+  /* Download counter: each click on a PDF sends an anonymous ping (which file, which page) to this n8n webhook,
+     which emails the owner with the running total. Empty = no ping at all. */
+  counter: "https://n8n.knowhere.click/webhook/km-download",
 
   articles: [
     { series: "Knowledge Management in the Age of AI", n: 4, date: "21 October 2026",
