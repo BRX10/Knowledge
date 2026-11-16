@@ -66,6 +66,16 @@
       if (S.owner && S.owner.linkedin) el.href = S.owner.linkedin; else el.style.display = 'none';
     });
   });
+  /* Visit statistics (GoatCounter: no cookies, no personal data). Loaded only when a site code is set. */
+  if (S.goatcounter) {
+    var sc = document.createElement('script'); sc.async = true; sc.src = 'https://gc.zgo.at/count.js';
+    sc.setAttribute('data-goatcounter', 'https://' + S.goatcounter + '.goatcounter.com/count');
+    document.head.appendChild(sc);
+    document.addEventListener('click', function (e) {
+      var t = e.target.closest && e.target.closest('[data-dl]');
+      if (t && window.goatcounter && goatcounter.count) goatcounter.count({ path: 'download-' + t.getAttribute('data-dl'), title: 'Download: ' + t.getAttribute('data-dl'), event: true });
+    });
+  }
   /* Download counter: one anonymous ping per PDF click (file key + page path only), to the owner's n8n. */
   if (S.counter) {
     document.addEventListener('click', function (e) {
