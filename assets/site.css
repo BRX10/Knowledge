@@ -754,3 +754,5 @@ dialog.dl-dlg,dialog.dl-dlg[open]{max-width:min(420px,calc(100vw - 32px));height
 /* v16 opinions disclaimer */
 .foot .foot-note{flex-basis:100%;font-size:12.5px;line-height:1.5}
 .ab-note{font-size:13px;color:var(--muted);font-style:italic}
+/* v17 podcast AI disclosure */
+.pod-ai{font-size:12.5px;color:var(--muted);margin:2px 0 0}
