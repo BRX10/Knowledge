@@ -728,27 +728,20 @@ dialog.sheet .dlg-in{max-height:calc(100vh - 92px);box-shadow:0 40px 90px -30px 
 .side .kw-browse small{color:var(--accent-ink);font-weight:700;margin-left:2px}
 .kw-body a{overflow-wrap:anywhere}
 
-/* v13 — compact podcast player */
-.pod-mini{display:flex;align-items:center;gap:12px;max-width:440px;margin:14px 0 2px;padding:8px 12px 8px 8px;border-radius:16px;border:1px solid var(--line);background:var(--paper)}
-.pm-play{width:36px;height:36px;border-radius:50%;border:0;background:var(--accent);color:var(--on-accent,#fff);display:grid;place-items:center;cursor:pointer;flex:none}
-.pm-play svg{width:16px;height:16px}.pm-play .i-play{margin-left:2px}
-.pm-play .i-pause,.pod-mini.on .pm-play .i-play{display:none}
-.pod-mini.on .pm-play .i-pause{display:block}
-.pm-mid{flex:1;min-width:0}
-.pm-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.pm-top b{font:600 13.5px/1.2 var(--sans)}
-.pm-lang{display:inline-flex;gap:2px}
-.pm-lang button{font:700 10.5px/1 var(--sans);letter-spacing:.08em;padding:4px 7px;border-radius:6px;border:0;background:transparent;color:var(--muted);cursor:pointer}
-.pm-lang button[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent-ink)}
-.pm-seek{-webkit-appearance:none;appearance:none;display:block;width:100%;height:3px;border-radius:99px;margin:7px 0 5px;background:linear-gradient(to right,var(--accent) var(--p,0%),var(--line) var(--p,0%));cursor:pointer}
-.pm-seek::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;border-radius:50%;background:var(--accent)}
-.pm-seek::-moz-range-thumb{width:11px;height:11px;border:0;border-radius:50%;background:var(--accent)}
-.pm-meta{display:block;font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.pm-speed{font:700 11.5px/1 var(--sans);padding:5px 7px;border-radius:7px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;display:none}
-.pod-mini.used .pm-speed{display:inline-block}
-.bk-txt{min-width:0}.pod-mini{width:100%;box-sizing:border-box}
-.pm-lang{gap:6px}
-.pm-lang button{padding:2px;border-radius:4px;line-height:0;opacity:.45;filter:grayscale(.6);transition:opacity .15s,filter .15s}
-.pm-lang button svg{display:block;width:22px;height:14px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.12)}
-.pm-lang button:hover{opacity:.85;filter:none}
-.pm-lang button[aria-pressed="true"]{opacity:1;filter:none;background:transparent;box-shadow:0 0 0 2px var(--accent)}
+/* v14 — two compact podcast players */
+.pod-duo{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 4px}
+.pod-pill{position:relative;display:inline-flex;align-items:center;gap:11px;padding:7px 18px 7px 7px;border-radius:999px;background:var(--accent-soft);border:1px solid transparent;overflow:hidden;transition:border-color .2s}
+.pod-pill:hover,.pod-pill.used{border-color:var(--accent)}
+.pp-play{width:36px;height:36px;border-radius:50%;border:0;padding:0;background:var(--accent);color:var(--on-accent,#fff);display:grid;place-items:center;cursor:pointer;flex:none}
+.pp-play svg{width:16px;height:16px}.pp-play .i-play{margin-left:2px}
+.pp-play .i-pause,.pod-pill.on .pp-play .i-play{display:none}
+.pod-pill.on .pp-play .i-pause{display:block}
+.pp-tx{display:block;min-width:0}
+.pp-tx b{display:flex;align-items:center;gap:7px;font:700 14px/1.2 var(--sans);color:var(--ink);white-space:nowrap}
+.pp-flag svg{display:block;width:18px;height:12px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.15)}
+.pp-meta{display:block;font-size:12px;color:var(--muted);margin-top:2px;font-variant-numeric:tabular-nums}
+.pp-seek{position:absolute;left:0;right:0;bottom:0;width:100%;height:3px;margin:0;-webkit-appearance:none;appearance:none;background:linear-gradient(to right,var(--accent) var(--p,0%),transparent var(--p,0%));cursor:pointer;display:none}
+.pod-pill.used .pp-seek{display:block}
+.pp-seek::-webkit-slider-thumb{-webkit-appearance:none;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.pp-seek::-moz-range-thumb{width:10px;height:10px;border:0;border-radius:50%;background:var(--accent)}
+.bk-txt{min-width:0}

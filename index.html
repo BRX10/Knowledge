@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234f46e5'/%3E%3Cg transform='translate%285 5%29 scale%28.917%29' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z'/%3E%3Cpath d='M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z'/%3E%3Cpath d='M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4'/%3E%3Cpath d='M17.599 6.5a3 3 0 0 0 .399-1.375'/%3E%3Cpath d='M6.003 5.125A3 3 0 0 0 6.401 6.5'/%3E%3Cpath d='M3.477 10.896a4 4 0 0 1 .585-.396'/%3E%3Cpath d='M19.938 10.5a4 4 0 0 1 .585.396'/%3E%3Cpath d='M6 18a4 4 0 0 1-1.967-.516'/%3E%3Cpath d='M19.967 17.484A4 4 0 0 1 18 18'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preload" href="assets/fonts/ArchitectsDaughter.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/site.css?v=20261117c">
 </head>
 <body>
 <header id="siteHeader" data-active="home"></header>
@@ -36,15 +36,19 @@
         <a class="btn btn-dark" href="knowledge-mesh/downloads/knowledge-mesh-carousel.pdf" data-dl="carousel-pdf" download>Download the slide version <span aria-hidden="true">→</span></a>
         <a class="btn" href="wiki/">Explore the wiki <span aria-hidden="true">→</span></a>
       </div>
-      <div class="pod-mini" id="podcast" data-key="en" aria-label="Podcast player">
-        <button class="pm-play" type="button" aria-label="Play the podcast"><svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
-        <div class="pm-mid">
-          <div class="pm-top"><b class="pm-title">Listen to the podcast in English</b><span class="pm-lang" role="group" aria-label="Language"><button type="button" aria-pressed="true" data-lang="en" data-label="Listen to the podcast in English" data-src="assets/audio/knowledge-mesh-podcast-en.m4a" data-dur="1345" title="In English: Why Enterprise AI Needs Knowledge Mesh" aria-label="English"><svg viewBox="0 0 60 30" aria-hidden="true"><clipPath id="ukc"><path d="M0 0v30h60V0z"/></clipPath><clipPath id="ukt"><path d="M30 15h30v15zv15H0zH0V0zV0h30z"/></clipPath><g clip-path="url(#ukc)"><path d="M0 0v30h60V0z" fill="#012169"/><path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30m0-30L0 30" clip-path="url(#ukt)" stroke="#C8102E" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></g></svg></button><button type="button" aria-pressed="false" data-lang="fr" data-label="Listen to the podcast in French" data-src="assets/audio/knowledge-mesh-podcast-fr.m4a" data-dur="853" title="In French: Fiabiliser l'IA grâce au Knowledge Mesh" aria-label="French"><svg viewBox="0 0 3 2" aria-hidden="true"><path fill="#002654" d="M0 0h1v2H0z"/><path fill="#fff" d="M1 0h1v2H1z"/><path fill="#CE1126" d="M2 0h1v2H2z"/></svg></button></span></div>
-          <input class="pm-seek" type="range" min="0" max="1345" value="0" step="1" aria-label="Position in the podcast">
-          <small class="pm-meta"><span class="pm-cur">0:00</span> / <span class="pm-dur">22:25</span> · streaming · NotebookLM audio</small>
+      <div class="pod-duo" id="podcast" aria-label="Podcast, audio overviews generated with NotebookLM">
+        <div class="pod-pill" data-key="en" data-dur="1345">
+          <button class="pp-play" type="button" aria-label="Play the podcast in English" title="Why Enterprise AI Needs Knowledge Mesh"><svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+          <span class="pp-tx"><b>Listen to the podcast in English <span class="pp-flag"><svg viewBox="0 0 60 30" aria-hidden="true"><clipPath id="ukc"><path d="M0 0v30h60V0z"/></clipPath><clipPath id="ukt"><path d="M30 15h30v15zv15H0zH0V0zV0h30z"/></clipPath><g clip-path="url(#ukc)"><path d="M0 0v30h60V0z" fill="#012169"/><path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30m0-30L0 30" clip-path="url(#ukt)" stroke="#C8102E" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></g></svg></span></b><small class="pp-meta">22 min · streaming</small></span>
+          <input class="pp-seek" type="range" min="0" max="1345" value="0" step="1" aria-label="Position in the English podcast">
+          <audio preload="none" src="assets/audio/knowledge-mesh-podcast-en.m4a"></audio>
         </div>
-        <button class="pm-speed" type="button" aria-label="Playback speed">1×</button>
-        <audio preload="none" src="assets/audio/knowledge-mesh-podcast-en.m4a"></audio>
+        <div class="pod-pill" data-key="fr" data-dur="853">
+          <button class="pp-play" type="button" aria-label="Play the podcast in French" title="Fiabiliser l'IA grâce au Knowledge Mesh"><svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+          <span class="pp-tx"><b>Listen to the podcast in French <span class="pp-flag"><svg viewBox="0 0 3 2" aria-hidden="true"><path fill="#002654" d="M0 0h1v2H0z"/><path fill="#fff" d="M1 0h1v2H1z"/><path fill="#CE1126" d="M2 0h1v2H2z"/></svg></span></b><small class="pp-meta">14 min · streaming</small></span>
+          <input class="pp-seek" type="range" min="0" max="853" value="0" step="1" aria-label="Position in the French podcast">
+          <audio preload="none" src="assets/audio/knowledge-mesh-podcast-fr.m4a"></audio>
+        </div>
       </div>
       <p class="fmt">PDF only · playbook 2.1 MB (also <a href="knowledge-mesh/downloads/knowledge-mesh-playbook-v2.5.pdf" data-dl="playbook-pdf" download>text only</a>) · slides 1.6 MB · or read <a href="knowledge-mesh/playbook.html">the playbook</a> and <a href="knowledge-mesh/slides.html">the slides</a> online</p>
       <dl class="stats">
@@ -85,34 +89,27 @@
     <a class="li" data-linkedin href="#" target="_blank" rel="noopener">LinkedIn</a>
   </div>
 </footer>
-<script src="assets/content.js"></script>
-<script src="assets/common.js"></script>
+<script src="assets/content.js?v=20261117c"></script>
+<script src="assets/common.js?v=20261117c"></script>
 <script>
 (function(){
-  var pl=document.querySelector('.pod-mini'); if(!pl) return;
-  var a=pl.querySelector('audio'), btn=pl.querySelector('.pm-play'), seek=pl.querySelector('.pm-seek'), cur=pl.querySelector('.pm-cur'), dur=pl.querySelector('.pm-dur'), sp=pl.querySelector('.pm-speed');
-  var tabs=[].slice.call(pl.querySelectorAll('.pm-lang [data-lang]')), counted={}, dragging=false, speeds=[1,1.25,1.5,0.75], si=0;
+  var pills=[].slice.call(document.querySelectorAll('.pod-pill'));
   function fmt(s){ s=Math.max(0,Math.floor(s||0)); return Math.floor(s/60)+':'+('0'+s%60).slice(-2); }
-  function paint(){ var m=+seek.max||1; seek.style.setProperty('--p',(100*seek.value/m)+'%'); }
-  tabs.forEach(function(tab){ tab.addEventListener('click',function(){
-    if(pl.dataset.key===tab.dataset.lang) return;
-    var playing=!a.paused; a.pause(); a.src=tab.dataset.src; pl.dataset.key=tab.dataset.lang;
-    seek.max=tab.dataset.dur; seek.value=0; cur.textContent='0:00'; dur.textContent=fmt(+tab.dataset.dur); paint();
-    tabs.forEach(function(x){ x.setAttribute('aria-pressed', x===tab?'true':'false'); });
-    pl.querySelector('.pm-title').textContent=tab.dataset.label;
-    if(playing) a.play();
-  }); });
-  btn.addEventListener('click',function(){ if(a.paused){ a.play(); } else a.pause(); });
-  a.addEventListener('play',function(){ pl.classList.add('on','used'); btn.setAttribute('aria-label','Pause the podcast'); a.playbackRate=speeds[si];
-    var k=pl.dataset.key; if(!counted[k]){ counted[k]=true; try{ if(window.goatcounter&&goatcounter.count) goatcounter.count({path:'podcast-play-'+k,title:'Podcast play: '+k,event:true}); }catch(e){} } });
-  a.addEventListener('pause',function(){ pl.classList.remove('on'); btn.setAttribute('aria-label','Play the podcast'); });
-  a.addEventListener('loadedmetadata',function(){ if(isFinite(a.duration)){ seek.max=Math.floor(a.duration); dur.textContent=fmt(a.duration); } });
-  a.addEventListener('timeupdate',function(){ if(!dragging){ seek.value=Math.floor(a.currentTime); paint(); } cur.textContent=fmt(a.currentTime); });
-  a.addEventListener('ended',function(){ seek.value=0; paint(); });
-  seek.addEventListener('input',function(){ dragging=true; cur.textContent=fmt(seek.value); paint(); });
-  seek.addEventListener('change',function(){ dragging=false; a.currentTime=+seek.value; });
-  sp.addEventListener('click',function(){ si=(si+1)%speeds.length; a.playbackRate=speeds[si]; sp.textContent=String(speeds[si]).replace('0.','.')+'×'; });
-  paint();
+  pills.forEach(function(pl){
+    var a=pl.querySelector('audio'), btn=pl.querySelector('.pp-play'), seek=pl.querySelector('.pp-seek'), meta=pl.querySelector('.pp-meta'), base=meta.textContent, counted=false, dragging=false;
+    function paint(){ seek.style.setProperty('--p',(100*seek.value/(+seek.max||1))+'%'); }
+    function show(){ meta.textContent=fmt(a.currentTime)+' / '+fmt(+seek.max); }
+    btn.addEventListener('click',function(){ if(a.paused){ pills.forEach(function(o){ if(o!==pl) o.querySelector('audio').pause(); }); a.play(); } else a.pause(); });
+    a.addEventListener('play',function(){ pl.classList.add('on','used'); btn.setAttribute('aria-label',btn.getAttribute('aria-label').replace('Play','Pause'));
+      if(!counted){ counted=true; try{ if(window.goatcounter&&goatcounter.count) goatcounter.count({path:'podcast-play-'+pl.dataset.key,title:'Podcast play: '+pl.dataset.key,event:true}); }catch(e){} } });
+    a.addEventListener('pause',function(){ pl.classList.remove('on'); btn.setAttribute('aria-label',btn.getAttribute('aria-label').replace('Pause','Play')); });
+    a.addEventListener('loadedmetadata',function(){ if(isFinite(a.duration)) seek.max=Math.floor(a.duration); });
+    a.addEventListener('timeupdate',function(){ if(!dragging){ seek.value=Math.floor(a.currentTime); paint(); } show(); });
+    a.addEventListener('ended',function(){ seek.value=0; paint(); pl.classList.remove('used'); meta.textContent=base; });
+    seek.addEventListener('input',function(){ dragging=true; meta.textContent=fmt(seek.value)+' / '+fmt(+seek.max); paint(); });
+    seek.addEventListener('change',function(){ dragging=false; a.currentTime=+seek.value; });
+    paint();
+  });
 })();
 </script>
 </body>
