@@ -745,3 +745,9 @@ dialog.sheet .dlg-in{max-height:calc(100vh - 92px);box-shadow:0 40px 90px -30px 
 .pp-seek::-webkit-slider-thumb{-webkit-appearance:none;width:10px;height:10px;border-radius:50%;background:var(--accent)}
 .pp-seek::-moz-range-thumb{width:10px;height:10px;border:0;border-radius:50%;background:var(--accent)}
 .bk-txt{min-width:0}
+/* v15 download confirmation */
+dialog.dl-dlg,dialog.dl-dlg[open]{max-width:min(420px,calc(100vw - 32px));height:fit-content;max-height:calc(100dvh - 32px);margin:auto}
+.dl-in{background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:20px;padding:22px 22px 18px}
+.dl-t{font:700 18px/1.3 var(--sans);margin:0 0 6px;letter-spacing:-.01em}
+.dl-f{margin:0 0 18px;color:var(--muted);font-size:15px;line-height:1.5}
+.dl-act{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}

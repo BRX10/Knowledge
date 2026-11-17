@@ -71,18 +71,58 @@
     var sc = document.createElement('script'); sc.async = true; sc.src = 'https://gc.zgo.at/count.js';
     sc.setAttribute('data-goatcounter', 'https://' + S.goatcounter + '.goatcounter.com/count');
     document.head.appendChild(sc);
-    document.addEventListener('click', function (e) {
-      var t = e.target.closest && e.target.closest('[data-dl]');
-      if (t && window.goatcounter && goatcounter.count) goatcounter.count({ path: 'download-' + t.getAttribute('data-dl'), title: 'Download: ' + t.getAttribute('data-dl'), event: true });
-    });
   }
-  /* Download counter: one anonymous ping per PDF click (file key + page path only), to the owner's n8n. */
-  if (S.counter) {
-    document.addEventListener('click', function (e) {
-      var t = e.target.closest && e.target.closest('[data-dl]'); if (!t) return;
-      var u = S.counter + '?f=' + encodeURIComponent(t.getAttribute('data-dl')) + '&p=' + encodeURIComponent(location.pathname);
-      try { if (navigator.sendBeacon && navigator.sendBeacon(u, '')) return; } catch (err) {}
-      try { fetch(u, { method: 'POST', mode: 'no-cors', keepalive: true }); } catch (err) {}
-    });
+  /* Downloads: a small confirmation first (avoids accidental downloads), then counting only on confirmation,
+     then a quiet LinkedIn suggestion. Counting = GoatCounter event + one anonymous ping (file key + page path) to n8n. */
+  var DL = {
+    'playbook-pdf-cover': 'The playbook (PDF, 2.1 MB, with figures)',
+    'playbook-pdf-figures': 'The playbook (PDF, 2.1 MB, with figures)',
+    'playbook-pdf': 'The playbook, text only (PDF, 0.8 MB, 28 pages)',
+    'carousel-pdf': 'The slide version (PDF, 1.6 MB, 11 slides)'
+  };
+  function countDl(key) {
+    if (window.goatcounter && goatcounter.count) try { goatcounter.count({ path: 'download-' + key, title: 'Download: ' + key, event: true }); } catch (err) {}
+    if (!S.counter) return;
+    var u = S.counter + '?f=' + encodeURIComponent(key) + '&p=' + encodeURIComponent(location.pathname);
+    try { if (navigator.sendBeacon && navigator.sendBeacon(u, '')) return; } catch (err) {}
+    try { fetch(u, { method: 'POST', mode: 'no-cors', keepalive: true }); } catch (err) {}
   }
+  var dlg, cur;
+  function dlDialog() {
+    if (dlg) return dlg;
+    dlg = document.createElement('dialog'); dlg.className = 'dl-dlg'; dlg.setAttribute('aria-labelledby', 'dl-t');
+    dlg.innerHTML = '<div class="dl-in">' +
+      '<div class="dl-ask"><p class="dl-t" id="dl-t">Start the download?</p><p class="dl-f"></p>' +
+      '<div class="dl-act"><button type="button" class="btn btn-ghost btn-sm" data-x>Cancel</button>' +
+      '<button type="button" class="btn btn-primary btn-sm" data-go>Start the download</button></div></div>' +
+      '<div class="dl-done" hidden><p class="dl-t">Your download has started.</p>' +
+      '<p class="dl-f dl-who">If you found this useful, you can follow new work on LinkedIn.</p>' +
+      '<div class="dl-act"><button type="button" class="btn btn-ghost btn-sm" data-x>Close</button>' +
+      '<a class="btn btn-sm dl-li" target="_blank" rel="noopener">Follow on LinkedIn</a></div></div></div>';
+    document.body.appendChild(dlg);
+    var li = dlg.querySelector('.dl-li');
+    if (S.owner && S.owner.linkedin) li.href = S.owner.linkedin; else { li.style.display = 'none'; dlg.querySelector('.dl-who').style.display = 'none'; }
+    if (S.owner && S.owner.name) dlg.querySelector('.dl-who').textContent = 'If you found this useful, you can follow ' + S.owner.name + ' on LinkedIn.';
+    dlg.addEventListener('click', function (e) {
+      if (e.target === dlg || e.target.closest('[data-x]')) return dlg.close();
+      if (e.target.closest('.dl-li')) return setTimeout(function () { dlg.close(); }, 0);
+      if (!e.target.closest('[data-go]') || !cur) return;
+      countDl(cur.getAttribute('data-dl'));
+      var a = document.createElement('a'); a.href = cur.href; a.setAttribute('download', '');
+      a.setAttribute('data-ok', ''); document.body.appendChild(a); a.click(); a.remove();
+      dlg.querySelector('.dl-ask').hidden = true; dlg.querySelector('.dl-done').hidden = false;
+      dlg.querySelector('.dl-done [data-x]').focus();
+    });
+    return dlg;
+  }
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest && e.target.closest('[data-dl]');
+    if (!t || e.defaultPrevented) return;
+    var d = dlDialog();
+    if (!d.showModal) return countDl(t.getAttribute('data-dl')); /* very old browsers: plain download */
+    e.preventDefault(); cur = t;
+    d.querySelector('.dl-ask .dl-f').textContent = DL[t.getAttribute('data-dl')] || 'PDF file';
+    d.querySelector('.dl-ask').hidden = false; d.querySelector('.dl-done').hidden = true;
+    d.showModal(); d.querySelector('[data-go]').focus();
+  });
 })();
