@@ -1,0 +1,3356 @@
+{
+ "name": "The Knowledge Mesh Wiki",
+ "version": "2.5",
+ "built": "2026-11-17",
+ "pages": 88,
+ "schema": "https://brx10.github.io/Knowledge/wiki/SCHEMA.md",
+ "nodes": [
+  {
+   "id": "auditable-knowledge-construction",
+   "type": "concept",
+   "title": "Auditable knowledge construction"
+  },
+  {
+   "id": "codification-vs-personalisation",
+   "type": "concept",
+   "title": "Codification vs personalisation"
+  },
+  {
+   "id": "coexisting-bases",
+   "type": "concept",
+   "title": "Bases that coexist"
+  },
+  {
+   "id": "compiled-knowledge",
+   "type": "concept",
+   "title": "Compiled knowledge (LLM wiki)"
+  },
+  {
+   "id": "context-engineering",
+   "type": "concept",
+   "title": "Context engineering"
+  },
+  {
+   "id": "data-information-knowledge",
+   "type": "concept",
+   "title": "Data, information, knowledge"
+  },
+  {
+   "id": "data-mesh",
+   "type": "concept",
+   "title": "Data Mesh"
+  },
+  {
+   "id": "dated-commitment",
+   "type": "concept",
+   "title": "Authority, not probability"
+  },
+  {
+   "id": "delegation-levels",
+   "type": "concept",
+   "title": "Three levels of delegation"
+  },
+  {
+   "id": "distributed-knowledge",
+   "type": "concept",
+   "title": "Distributed knowledge"
+  },
+  {
+   "id": "document-as-output",
+   "type": "concept",
+   "title": "The document as output"
+  },
+  {
+   "id": "domain-knowledge-ownership",
+   "type": "concept",
+   "title": "Domain knowledge ownership"
+  },
+  {
+   "id": "dynamic-context",
+   "type": "concept",
+   "title": "Dynamic context"
+  },
+  {
+   "id": "failure-modes",
+   "type": "concept",
+   "title": "Eight failure modes"
+  },
+  {
+   "id": "federated-knowledge-governance",
+   "type": "concept",
+   "title": "Federated knowledge governance"
+  },
+  {
+   "id": "five-principles",
+   "type": "concept",
+   "title": "The five principles"
+  },
+  {
+   "id": "fundamentals-before-solutions",
+   "type": "concept",
+   "title": "Fundamentals before solutions"
+  },
+  {
+   "id": "grounding",
+   "type": "concept",
+   "title": "Grounding"
+  },
+  {
+   "id": "knowledge-as-a-pillar",
+   "type": "concept",
+   "title": "Knowledge as a pillar of AI"
+  },
+  {
+   "id": "knowledge-as-a-product",
+   "type": "concept",
+   "title": "Knowledge as a self-describing product"
+  },
+  {
+   "id": "knowledge-base",
+   "type": "concept",
+   "title": "Knowledge base"
+  },
+  {
+   "id": "knowledge-lifecycle",
+   "type": "concept",
+   "title": "Knowledge lifecycle"
+  },
+  {
+   "id": "knowledge-mesh",
+   "type": "concept",
+   "title": "Knowledge Mesh"
+  },
+  {
+   "id": "knowledge-owner",
+   "type": "concept",
+   "title": "Knowledge Owner"
+  },
+  {
+   "id": "mesh-challenges",
+   "type": "concept",
+   "title": "The challenges of a Knowledge Mesh"
+  },
+  {
+   "id": "mesh-trajectory",
+   "type": "concept",
+   "title": "The mesh is a trajectory"
+  },
+  {
+   "id": "mesh-values",
+   "type": "concept",
+   "title": "What the Knowledge Mesh values"
+  },
+  {
+   "id": "open-questions",
+   "type": "concept",
+   "title": "What stays open"
+  },
+  {
+   "id": "organised-fragmentation",
+   "type": "concept",
+   "title": "Organised fragmentation"
+  },
+  {
+   "id": "portability",
+   "type": "concept",
+   "title": "Interoperability and portability"
+  },
+  {
+   "id": "principle-zero",
+   "type": "concept",
+   "title": "Principle zero"
+  },
+  {
+   "id": "seci-cycle",
+   "type": "concept",
+   "title": "Knowledge creation cycle (SECI)"
+  },
+  {
+   "id": "self-serve-knowledge-platform",
+   "type": "concept",
+   "title": "Self-serve knowledge platform"
+  },
+  {
+   "id": "start-small",
+   "type": "concept",
+   "title": "Start small, and real"
+  },
+  {
+   "id": "tacit-and-explicit",
+   "type": "concept",
+   "title": "Tacit and explicit knowledge"
+  },
+  {
+   "id": "traceability",
+   "type": "concept",
+   "title": "Traceability"
+  },
+  {
+   "id": "underestimation-reasons",
+   "type": "concept",
+   "title": "Why knowledge was underestimated"
+  },
+  {
+   "id": "what-agents-change",
+   "type": "concept",
+   "title": "What agents change"
+  },
+  {
+   "id": "andrej-karpathy",
+   "type": "entity",
+   "title": "Andrej Karpathy"
+  },
+  {
+   "id": "anthropic",
+   "type": "entity",
+   "title": "Anthropic"
+  },
+  {
+   "id": "eu-ai-act",
+   "type": "entity",
+   "title": "EU AI Act"
+  },
+  {
+   "id": "ikujiro-nonaka",
+   "type": "entity",
+   "title": "Ikujiro Nonaka"
+  },
+  {
+   "id": "iso-30401",
+   "type": "entity",
+   "title": "ISO 30401"
+  },
+  {
+   "id": "lew-platt",
+   "type": "entity",
+   "title": "Lew Platt"
+  },
+  {
+   "id": "michael-polanyi",
+   "type": "entity",
+   "title": "Michael Polanyi"
+  },
+  {
+   "id": "michel-de-montaigne",
+   "type": "entity",
+   "title": "Michel de Montaigne"
+  },
+  {
+   "id": "model-context-protocol",
+   "type": "entity",
+   "title": "Model Context Protocol"
+  },
+  {
+   "id": "zhamak-dehghani",
+   "type": "entity",
+   "title": "Zhamak Dehghani"
+  },
+  {
+   "id": "fig-1-principle-zero",
+   "type": "figure",
+   "title": "Figure 1: Principle zero"
+  },
+  {
+   "id": "fig-2-tacit-and-explicit",
+   "type": "figure",
+   "title": "Figure 2: What can be written, and where the rest lives"
+  },
+  {
+   "id": "fig-3-lifecycle",
+   "type": "figure",
+   "title": "Figure 3: The lifecycle"
+  },
+  {
+   "id": "fig-4-multi-base",
+   "type": "figure",
+   "title": "Figure 4: From raw sources to use cases"
+  },
+  {
+   "id": "fig-5-seven-parts",
+   "type": "figure",
+   "title": "Figure 5: The seven parts of a knowledge base"
+  },
+  {
+   "id": "fig-6-owner-flow",
+   "type": "figure",
+   "title": "Figure 6: Agents and the Knowledge Owner"
+  },
+  {
+   "id": "knowledge-mesh-playbook",
+   "type": "overview",
+   "title": "The Knowledge Mesh Playbook"
+  },
+  {
+   "id": "sec-1-underestimated-pillar",
+   "type": "section",
+   "title": "1. The underestimated pillar"
+  },
+  {
+   "id": "sec-2-principle-zero",
+   "type": "section",
+   "title": "2. Principle zero"
+  },
+  {
+   "id": "sec-3-lineage",
+   "type": "section",
+   "title": "3. Where the Knowledge Mesh comes from"
+  },
+  {
+   "id": "sec-4-fundamentals",
+   "type": "section",
+   "title": "4. Fundamentals we build on"
+  },
+  {
+   "id": "sec-5-knowledge-mesh",
+   "type": "section",
+   "title": "5. The Knowledge Mesh in brief"
+  },
+  {
+   "id": "sec-6-knowledge-base",
+   "type": "section",
+   "title": "6. The knowledge base"
+  },
+  {
+   "id": "sec-7-knowledge-owner",
+   "type": "section",
+   "title": "7. The Knowledge Owner"
+  },
+  {
+   "id": "sec-8-dynamic-context",
+   "type": "section",
+   "title": "8. Dynamic context"
+  },
+  {
+   "id": "sec-9-field-guide",
+   "type": "section",
+   "title": "9. Field guide"
+  },
+  {
+   "id": "sec-closing",
+   "type": "section",
+   "title": "What it values, what stays open"
+  },
+  {
+   "id": "sec-foreword",
+   "type": "section",
+   "title": "Why this playbook"
+  },
+  {
+   "id": "src-00-playbook-v2.5",
+   "type": "source",
+   "title": "Knowledge Mesh Playbook v2.5 (primary source)"
+  },
+  {
+   "id": "src-01-dehghani-2019",
+   "type": "source",
+   "title": "Dehghani (2019), monolithic data lake to data mesh"
+  },
+  {
+   "id": "src-02-dehghani-2020",
+   "type": "source",
+   "title": "Dehghani (2020), Data Mesh principles"
+  },
+  {
+   "id": "src-03-tsoukas-1996",
+   "type": "source",
+   "title": "Tsoukas (1996), the firm as a distributed knowledge system"
+  },
+  {
+   "id": "src-04-nonaka-1994-1995",
+   "type": "source",
+   "title": "Nonaka (1994); Nonaka & Takeuchi (1995)"
+  },
+  {
+   "id": "src-05-wenger-1998",
+   "type": "source",
+   "title": "Wenger (1998), Communities of Practice"
+  },
+  {
+   "id": "src-06-mcdermott-1999",
+   "type": "source",
+   "title": "McDermott (1999), why IT cannot deliver KM"
+  },
+  {
+   "id": "src-07-hansen-1999",
+   "type": "source",
+   "title": "Hansen, Nohria & Tierney (1999), strategies for managing knowledge"
+  },
+  {
+   "id": "src-08-davenport-prusak-1998",
+   "type": "source",
+   "title": "Davenport & Prusak (1998), Working Knowledge"
+  },
+  {
+   "id": "src-09-ackoff-fricke",
+   "type": "source",
+   "title": "Ackoff (1989); Frické (2009), the DIKW pyramid and its critique"
+  },
+  {
+   "id": "src-10-polanyi-1966",
+   "type": "source",
+   "title": "Polanyi (1966), The Tacit Dimension"
+  },
+  {
+   "id": "src-11-dama-dmbok-2017",
+   "type": "source",
+   "title": "DAMA-DMBOK (2017)"
+  },
+  {
+   "id": "src-12-karpathy-2026",
+   "type": "source",
+   "title": "Karpathy (2026), LLM Wiki"
+  },
+  {
+   "id": "src-13-anthropic-2025",
+   "type": "source",
+   "title": "Anthropic (2025), context engineering"
+  },
+  {
+   "id": "src-14-anthropic-2024",
+   "type": "source",
+   "title": "Anthropic (2024), Model Context Protocol"
+  },
+  {
+   "id": "src-15-montaigne-1580",
+   "type": "source",
+   "title": "Montaigne (1580), Essais I, 26"
+  },
+  {
+   "id": "src-16-iso-30401",
+   "type": "source",
+   "title": "ISO 30401 (2018)"
+  },
+  {
+   "id": "src-17-eu-ai-act",
+   "type": "source",
+   "title": "EU AI Act (2024), Arts. 12, 14 and 26"
+  },
+  {
+   "id": "src-18-mit-nanda-2025",
+   "type": "source",
+   "title": "MIT NANDA (2025), The GenAI Divide"
+  },
+  {
+   "id": "src-19-platt-hp",
+   "type": "source",
+   "title": "Platt, attributed (1990s)"
+  },
+  {
+   "id": "src-20-furnas-1987",
+   "type": "source",
+   "title": "Furnas et al. (1987), The Vocabulary Problem"
+  },
+  {
+   "id": "src-21-clark-brennan-1991",
+   "type": "source",
+   "title": "Clark & Brennan (1991), Grounding in Communication"
+  }
+ ],
+ "edges": [
+  {
+   "from": "auditable-knowledge-construction",
+   "to": "mesh-challenges",
+   "kind": "link"
+  },
+  {
+   "from": "auditable-knowledge-construction",
+   "to": "traceability",
+   "kind": "related"
+  },
+  {
+   "from": "auditable-knowledge-construction",
+   "to": "five-principles",
+   "kind": "related"
+  },
+  {
+   "from": "auditable-knowledge-construction",
+   "to": "knowledge-owner",
+   "kind": "related"
+  },
+  {
+   "from": "auditable-knowledge-construction",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "auditable-knowledge-construction",
+   "to": "src-02-dehghani-2020",
+   "kind": "source"
+  },
+  {
+   "from": "codification-vs-personalisation",
+   "to": "start-small",
+   "kind": "link"
+  },
+  {
+   "from": "codification-vs-personalisation",
+   "to": "distributed-knowledge",
+   "kind": "related"
+  },
+  {
+   "from": "codification-vs-personalisation",
+   "to": "compiled-knowledge",
+   "kind": "related"
+  },
+  {
+   "from": "codification-vs-personalisation",
+   "to": "organised-fragmentation",
+   "kind": "related"
+  },
+  {
+   "from": "codification-vs-personalisation",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "codification-vs-personalisation",
+   "to": "src-07-hansen-1999",
+   "kind": "source"
+  },
+  {
+   "from": "coexisting-bases",
+   "to": "federated-knowledge-governance",
+   "kind": "related"
+  },
+  {
+   "from": "coexisting-bases",
+   "to": "organised-fragmentation",
+   "kind": "related"
+  },
+  {
+   "from": "coexisting-bases",
+   "to": "knowledge-base",
+   "kind": "related"
+  },
+  {
+   "from": "coexisting-bases",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "compiled-knowledge",
+   "to": "knowledge-base",
+   "kind": "related"
+  },
+  {
+   "from": "compiled-knowledge",
+   "to": "andrej-karpathy",
+   "kind": "related"
+  },
+  {
+   "from": "compiled-knowledge",
+   "to": "principle-zero",
+   "kind": "related"
+  },
+  {
+   "from": "compiled-knowledge",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "compiled-knowledge",
+   "to": "src-12-karpathy-2026",
+   "kind": "source"
+  },
+  {
+   "from": "context-engineering",
+   "to": "dynamic-context",
+   "kind": "related"
+  },
+  {
+   "from": "context-engineering",
+   "to": "anthropic",
+   "kind": "related"
+  },
+  {
+   "from": "context-engineering",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "context-engineering",
+   "to": "src-13-anthropic-2025",
+   "kind": "source"
+  },
+  {
+   "from": "data-information-knowledge",
+   "to": "src-09-ackoff-fricke",
+   "kind": "link"
+  },
+  {
+   "from": "data-information-knowledge",
+   "to": "knowledge-owner",
+   "kind": "related"
+  },
+  {
+   "from": "data-information-knowledge",
+   "to": "knowledge-as-a-pillar",
+   "kind": "related"
+  },
+  {
+   "from": "data-information-knowledge",
+   "to": "tacit-and-explicit",
+   "kind": "related"
+  },
+  {
+   "from": "data-information-knowledge",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "data-information-knowledge",
+   "to": "src-08-davenport-prusak-1998",
+   "kind": "source"
+  },
+  {
+   "from": "data-information-knowledge",
+   "to": "src-09-ackoff-fricke",
+   "kind": "source"
+  },
+  {
+   "from": "data-mesh",
+   "to": "zhamak-dehghani",
+   "kind": "related"
+  },
+  {
+   "from": "data-mesh",
+   "to": "knowledge-mesh",
+   "kind": "related"
+  },
+  {
+   "from": "data-mesh",
+   "to": "five-principles",
+   "kind": "related"
+  },
+  {
+   "from": "data-mesh",
+   "to": "distributed-knowledge",
+   "kind": "related"
+  },
+  {
+   "from": "data-mesh",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "data-mesh",
+   "to": "src-01-dehghani-2019",
+   "kind": "source"
+  },
+  {
+   "from": "data-mesh",
+   "to": "src-02-dehghani-2020",
+   "kind": "source"
+  },
+  {
+   "from": "dated-commitment",
+   "to": "delegation-levels",
+   "kind": "related"
+  },
+  {
+   "from": "dated-commitment",
+   "to": "knowledge-owner",
+   "kind": "related"
+  },
+  {
+   "from": "dated-commitment",
+   "to": "grounding",
+   "kind": "related"
+  },
+  {
+   "from": "dated-commitment",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "delegation-levels",
+   "to": "dated-commitment",
+   "kind": "related"
+  },
+  {
+   "from": "delegation-levels",
+   "to": "traceability",
+   "kind": "related"
+  },
+  {
+   "from": "delegation-levels",
+   "to": "grounding",
+   "kind": "related"
+  },
+  {
+   "from": "delegation-levels",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "distributed-knowledge",
+   "to": "knowledge-mesh",
+   "kind": "link"
+  },
+  {
+   "from": "distributed-knowledge",
+   "to": "ikujiro-nonaka",
+   "kind": "link"
+  },
+  {
+   "from": "distributed-knowledge",
+   "to": "seci-cycle",
+   "kind": "related"
+  },
+  {
+   "from": "distributed-knowledge",
+   "to": "data-mesh",
+   "kind": "related"
+  },
+  {
+   "from": "distributed-knowledge",
+   "to": "organised-fragmentation",
+   "kind": "related"
+  },
+  {
+   "from": "distributed-knowledge",
+   "to": "codification-vs-personalisation",
+   "kind": "related"
+  },
+  {
+   "from": "distributed-knowledge",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "distributed-knowledge",
+   "to": "src-03-tsoukas-1996",
+   "kind": "source"
+  },
+  {
+   "from": "distributed-knowledge",
+   "to": "src-04-nonaka-1994-1995",
+   "kind": "source"
+  },
+  {
+   "from": "distributed-knowledge",
+   "to": "src-05-wenger-1998",
+   "kind": "source"
+  },
+  {
+   "from": "distributed-knowledge",
+   "to": "src-06-mcdermott-1999",
+   "kind": "source"
+  },
+  {
+   "from": "document-as-output",
+   "to": "principle-zero",
+   "kind": "related"
+  },
+  {
+   "from": "document-as-output",
+   "to": "knowledge-base",
+   "kind": "related"
+  },
+  {
+   "from": "document-as-output",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "domain-knowledge-ownership",
+   "to": "tacit-and-explicit",
+   "kind": "related"
+  },
+  {
+   "from": "domain-knowledge-ownership",
+   "to": "failure-modes",
+   "kind": "link"
+  },
+  {
+   "from": "domain-knowledge-ownership",
+   "to": "knowledge-owner",
+   "kind": "related"
+  },
+  {
+   "from": "domain-knowledge-ownership",
+   "to": "five-principles",
+   "kind": "related"
+  },
+  {
+   "from": "domain-knowledge-ownership",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "domain-knowledge-ownership",
+   "to": "src-02-dehghani-2020",
+   "kind": "source"
+  },
+  {
+   "from": "domain-knowledge-ownership",
+   "to": "src-01-dehghani-2019",
+   "kind": "source"
+  },
+  {
+   "from": "dynamic-context",
+   "to": "traceability",
+   "kind": "related"
+  },
+  {
+   "from": "dynamic-context",
+   "to": "model-context-protocol",
+   "kind": "related"
+  },
+  {
+   "from": "dynamic-context",
+   "to": "principle-zero",
+   "kind": "related"
+  },
+  {
+   "from": "dynamic-context",
+   "to": "grounding",
+   "kind": "related"
+  },
+  {
+   "from": "dynamic-context",
+   "to": "context-engineering",
+   "kind": "related"
+  },
+  {
+   "from": "dynamic-context",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "dynamic-context",
+   "to": "src-13-anthropic-2025",
+   "kind": "source"
+  },
+  {
+   "from": "dynamic-context",
+   "to": "src-14-anthropic-2024",
+   "kind": "source"
+  },
+  {
+   "from": "dynamic-context",
+   "to": "src-17-eu-ai-act",
+   "kind": "source"
+  },
+  {
+   "from": "failure-modes",
+   "to": "principle-zero",
+   "kind": "related"
+  },
+  {
+   "from": "failure-modes",
+   "to": "domain-knowledge-ownership",
+   "kind": "link"
+  },
+  {
+   "from": "failure-modes",
+   "to": "knowledge-lifecycle",
+   "kind": "link"
+  },
+  {
+   "from": "failure-modes",
+   "to": "knowledge-owner",
+   "kind": "link"
+  },
+  {
+   "from": "failure-modes",
+   "to": "federated-knowledge-governance",
+   "kind": "link"
+  },
+  {
+   "from": "failure-modes",
+   "to": "dynamic-context",
+   "kind": "link"
+  },
+  {
+   "from": "failure-modes",
+   "to": "traceability",
+   "kind": "link"
+  },
+  {
+   "from": "failure-modes",
+   "to": "zhamak-dehghani",
+   "kind": "link"
+  },
+  {
+   "from": "failure-modes",
+   "to": "underestimation-reasons",
+   "kind": "related"
+  },
+  {
+   "from": "failure-modes",
+   "to": "mesh-values",
+   "kind": "related"
+  },
+  {
+   "from": "failure-modes",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "failure-modes",
+   "to": "src-01-dehghani-2019",
+   "kind": "source"
+  },
+  {
+   "from": "failure-modes",
+   "to": "src-02-dehghani-2020",
+   "kind": "source"
+  },
+  {
+   "from": "federated-knowledge-governance",
+   "to": "failure-modes",
+   "kind": "link"
+  },
+  {
+   "from": "federated-knowledge-governance",
+   "to": "coexisting-bases",
+   "kind": "related"
+  },
+  {
+   "from": "federated-knowledge-governance",
+   "to": "portability",
+   "kind": "related"
+  },
+  {
+   "from": "federated-knowledge-governance",
+   "to": "five-principles",
+   "kind": "related"
+  },
+  {
+   "from": "federated-knowledge-governance",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "federated-knowledge-governance",
+   "to": "src-02-dehghani-2020",
+   "kind": "source"
+  },
+  {
+   "from": "federated-knowledge-governance",
+   "to": "src-01-dehghani-2019",
+   "kind": "source"
+  },
+  {
+   "from": "five-principles",
+   "to": "domain-knowledge-ownership",
+   "kind": "link"
+  },
+  {
+   "from": "five-principles",
+   "to": "knowledge-as-a-product",
+   "kind": "link"
+  },
+  {
+   "from": "five-principles",
+   "to": "self-serve-knowledge-platform",
+   "kind": "link"
+  },
+  {
+   "from": "five-principles",
+   "to": "federated-knowledge-governance",
+   "kind": "link"
+  },
+  {
+   "from": "five-principles",
+   "to": "auditable-knowledge-construction",
+   "kind": "link"
+  },
+  {
+   "from": "five-principles",
+   "to": "knowledge-mesh",
+   "kind": "related"
+  },
+  {
+   "from": "five-principles",
+   "to": "mesh-challenges",
+   "kind": "link"
+  },
+  {
+   "from": "five-principles",
+   "to": "data-mesh",
+   "kind": "related"
+  },
+  {
+   "from": "five-principles",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "five-principles",
+   "to": "src-02-dehghani-2020",
+   "kind": "source"
+  },
+  {
+   "from": "fundamentals-before-solutions",
+   "to": "mesh-challenges",
+   "kind": "related"
+  },
+  {
+   "from": "fundamentals-before-solutions",
+   "to": "portability",
+   "kind": "related"
+  },
+  {
+   "from": "fundamentals-before-solutions",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "grounding",
+   "to": "dated-commitment",
+   "kind": "related"
+  },
+  {
+   "from": "grounding",
+   "to": "dynamic-context",
+   "kind": "related"
+  },
+  {
+   "from": "grounding",
+   "to": "knowledge-as-a-pillar",
+   "kind": "related"
+  },
+  {
+   "from": "grounding",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "grounding",
+   "to": "src-21-clark-brennan-1991",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-as-a-pillar",
+   "to": "lew-platt",
+   "kind": "link"
+  },
+  {
+   "from": "knowledge-as-a-pillar",
+   "to": "grounding",
+   "kind": "link"
+  },
+  {
+   "from": "knowledge-as-a-pillar",
+   "to": "data-information-knowledge",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-as-a-pillar",
+   "to": "underestimation-reasons",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-as-a-pillar",
+   "to": "iso-30401",
+   "kind": "link"
+  },
+  {
+   "from": "knowledge-as-a-pillar",
+   "to": "what-agents-change",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-as-a-pillar",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-as-a-pillar",
+   "to": "src-19-platt-hp",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-as-a-pillar",
+   "to": "src-16-iso-30401",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-as-a-pillar",
+   "to": "src-18-mit-nanda-2025",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-as-a-product",
+   "to": "knowledge-base",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-as-a-product",
+   "to": "five-principles",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-as-a-product",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-as-a-product",
+   "to": "src-02-dehghani-2020",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-as-a-product",
+   "to": "src-01-dehghani-2019",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-base",
+   "to": "knowledge-owner",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-base",
+   "to": "compiled-knowledge",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-base",
+   "to": "document-as-output",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-base",
+   "to": "coexisting-bases",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-base",
+   "to": "fig-5-seven-parts",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-base",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-base",
+   "to": "src-12-karpathy-2026",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-base",
+   "to": "src-01-dehghani-2019",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-lifecycle",
+   "to": "knowledge-owner",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-lifecycle",
+   "to": "failure-modes",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-lifecycle",
+   "to": "knowledge-base",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-lifecycle",
+   "to": "fig-3-lifecycle",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-lifecycle",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-mesh",
+   "to": "data-mesh",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-mesh",
+   "to": "distributed-knowledge",
+   "kind": "link"
+  },
+  {
+   "from": "knowledge-mesh",
+   "to": "five-principles",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-mesh",
+   "to": "mesh-challenges",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-mesh",
+   "to": "knowledge-base",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-mesh",
+   "to": "mesh-trajectory",
+   "kind": "link"
+  },
+  {
+   "from": "knowledge-mesh",
+   "to": "fig-4-multi-base",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-mesh",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-mesh",
+   "to": "src-01-dehghani-2019",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-mesh",
+   "to": "src-02-dehghani-2020",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-owner",
+   "to": "dated-commitment",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-owner",
+   "to": "fig-6-owner-flow",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-owner",
+   "to": "domain-knowledge-ownership",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-owner",
+   "to": "knowledge-base",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-owner",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-owner",
+   "to": "src-01-dehghani-2019",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-owner",
+   "to": "src-11-dama-dmbok-2017",
+   "kind": "source"
+  },
+  {
+   "from": "mesh-challenges",
+   "to": "principle-zero",
+   "kind": "link"
+  },
+  {
+   "from": "mesh-challenges",
+   "to": "knowledge-mesh",
+   "kind": "related"
+  },
+  {
+   "from": "mesh-challenges",
+   "to": "five-principles",
+   "kind": "related"
+  },
+  {
+   "from": "mesh-challenges",
+   "to": "fundamentals-before-solutions",
+   "kind": "related"
+  },
+  {
+   "from": "mesh-challenges",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "mesh-challenges",
+   "to": "src-01-dehghani-2019",
+   "kind": "source"
+  },
+  {
+   "from": "mesh-trajectory",
+   "to": "self-serve-knowledge-platform",
+   "kind": "related"
+  },
+  {
+   "from": "mesh-trajectory",
+   "to": "start-small",
+   "kind": "related"
+  },
+  {
+   "from": "mesh-trajectory",
+   "to": "knowledge-mesh",
+   "kind": "related"
+  },
+  {
+   "from": "mesh-trajectory",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "mesh-trajectory",
+   "to": "src-02-dehghani-2020",
+   "kind": "source"
+  },
+  {
+   "from": "mesh-values",
+   "to": "failure-modes",
+   "kind": "related"
+  },
+  {
+   "from": "mesh-values",
+   "to": "principle-zero",
+   "kind": "related"
+  },
+  {
+   "from": "mesh-values",
+   "to": "open-questions",
+   "kind": "related"
+  },
+  {
+   "from": "mesh-values",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "open-questions",
+   "to": "michel-de-montaigne",
+   "kind": "related"
+  },
+  {
+   "from": "open-questions",
+   "to": "mesh-values",
+   "kind": "related"
+  },
+  {
+   "from": "open-questions",
+   "to": "knowledge-owner",
+   "kind": "related"
+  },
+  {
+   "from": "open-questions",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "open-questions",
+   "to": "src-15-montaigne-1580",
+   "kind": "source"
+  },
+  {
+   "from": "organised-fragmentation",
+   "to": "distributed-knowledge",
+   "kind": "related"
+  },
+  {
+   "from": "organised-fragmentation",
+   "to": "data-mesh",
+   "kind": "link"
+  },
+  {
+   "from": "organised-fragmentation",
+   "to": "dynamic-context",
+   "kind": "link"
+  },
+  {
+   "from": "organised-fragmentation",
+   "to": "coexisting-bases",
+   "kind": "related"
+  },
+  {
+   "from": "organised-fragmentation",
+   "to": "mesh-values",
+   "kind": "related"
+  },
+  {
+   "from": "organised-fragmentation",
+   "to": "knowledge-mesh",
+   "kind": "related"
+  },
+  {
+   "from": "organised-fragmentation",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "organised-fragmentation",
+   "to": "src-03-tsoukas-1996",
+   "kind": "source"
+  },
+  {
+   "from": "portability",
+   "to": "federated-knowledge-governance",
+   "kind": "related"
+  },
+  {
+   "from": "portability",
+   "to": "fundamentals-before-solutions",
+   "kind": "related"
+  },
+  {
+   "from": "portability",
+   "to": "model-context-protocol",
+   "kind": "related"
+  },
+  {
+   "from": "portability",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "portability",
+   "to": "src-01-dehghani-2019",
+   "kind": "source"
+  },
+  {
+   "from": "principle-zero",
+   "to": "src-20-furnas-1987",
+   "kind": "link"
+  },
+  {
+   "from": "principle-zero",
+   "to": "data-mesh",
+   "kind": "link"
+  },
+  {
+   "from": "principle-zero",
+   "to": "fig-1-principle-zero",
+   "kind": "related"
+  },
+  {
+   "from": "principle-zero",
+   "to": "dynamic-context",
+   "kind": "related"
+  },
+  {
+   "from": "principle-zero",
+   "to": "document-as-output",
+   "kind": "related"
+  },
+  {
+   "from": "principle-zero",
+   "to": "mesh-values",
+   "kind": "related"
+  },
+  {
+   "from": "principle-zero",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "principle-zero",
+   "to": "src-20-furnas-1987",
+   "kind": "source"
+  },
+  {
+   "from": "principle-zero",
+   "to": "src-02-dehghani-2020",
+   "kind": "source"
+  },
+  {
+   "from": "seci-cycle",
+   "to": "ikujiro-nonaka",
+   "kind": "related"
+  },
+  {
+   "from": "seci-cycle",
+   "to": "tacit-and-explicit",
+   "kind": "related"
+  },
+  {
+   "from": "seci-cycle",
+   "to": "distributed-knowledge",
+   "kind": "related"
+  },
+  {
+   "from": "seci-cycle",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "seci-cycle",
+   "to": "src-04-nonaka-1994-1995",
+   "kind": "source"
+  },
+  {
+   "from": "self-serve-knowledge-platform",
+   "to": "mesh-trajectory",
+   "kind": "related"
+  },
+  {
+   "from": "self-serve-knowledge-platform",
+   "to": "portability",
+   "kind": "link"
+  },
+  {
+   "from": "self-serve-knowledge-platform",
+   "to": "five-principles",
+   "kind": "related"
+  },
+  {
+   "from": "self-serve-knowledge-platform",
+   "to": "compiled-knowledge",
+   "kind": "related"
+  },
+  {
+   "from": "self-serve-knowledge-platform",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "self-serve-knowledge-platform",
+   "to": "src-02-dehghani-2020",
+   "kind": "source"
+  },
+  {
+   "from": "start-small",
+   "to": "knowledge-owner",
+   "kind": "related"
+  },
+  {
+   "from": "start-small",
+   "to": "mesh-trajectory",
+   "kind": "related"
+  },
+  {
+   "from": "start-small",
+   "to": "knowledge-base",
+   "kind": "related"
+  },
+  {
+   "from": "start-small",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "tacit-and-explicit",
+   "to": "michael-polanyi",
+   "kind": "related"
+  },
+  {
+   "from": "tacit-and-explicit",
+   "to": "what-agents-change",
+   "kind": "related"
+  },
+  {
+   "from": "tacit-and-explicit",
+   "to": "mesh-challenges",
+   "kind": "link"
+  },
+  {
+   "from": "tacit-and-explicit",
+   "to": "fig-2-tacit-and-explicit",
+   "kind": "related"
+  },
+  {
+   "from": "tacit-and-explicit",
+   "to": "seci-cycle",
+   "kind": "related"
+  },
+  {
+   "from": "tacit-and-explicit",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "tacit-and-explicit",
+   "to": "src-10-polanyi-1966",
+   "kind": "source"
+  },
+  {
+   "from": "traceability",
+   "to": "failure-modes",
+   "kind": "link"
+  },
+  {
+   "from": "traceability",
+   "to": "auditable-knowledge-construction",
+   "kind": "related"
+  },
+  {
+   "from": "traceability",
+   "to": "dynamic-context",
+   "kind": "related"
+  },
+  {
+   "from": "traceability",
+   "to": "mesh-values",
+   "kind": "related"
+  },
+  {
+   "from": "traceability",
+   "to": "eu-ai-act",
+   "kind": "related"
+  },
+  {
+   "from": "traceability",
+   "to": "delegation-levels",
+   "kind": "related"
+  },
+  {
+   "from": "traceability",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "traceability",
+   "to": "src-17-eu-ai-act",
+   "kind": "source"
+  },
+  {
+   "from": "underestimation-reasons",
+   "to": "failure-modes",
+   "kind": "related"
+  },
+  {
+   "from": "underestimation-reasons",
+   "to": "knowledge-as-a-pillar",
+   "kind": "related"
+  },
+  {
+   "from": "underestimation-reasons",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "underestimation-reasons",
+   "to": "src-18-mit-nanda-2025",
+   "kind": "source"
+  },
+  {
+   "from": "what-agents-change",
+   "to": "tacit-and-explicit",
+   "kind": "related"
+  },
+  {
+   "from": "what-agents-change",
+   "to": "knowledge-as-a-pillar",
+   "kind": "related"
+  },
+  {
+   "from": "what-agents-change",
+   "to": "compiled-knowledge",
+   "kind": "related"
+  },
+  {
+   "from": "what-agents-change",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "andrej-karpathy",
+   "to": "knowledge-base",
+   "kind": "related"
+  },
+  {
+   "from": "andrej-karpathy",
+   "to": "compiled-knowledge",
+   "kind": "related"
+  },
+  {
+   "from": "andrej-karpathy",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "andrej-karpathy",
+   "to": "src-12-karpathy-2026",
+   "kind": "source"
+  },
+  {
+   "from": "anthropic",
+   "to": "context-engineering",
+   "kind": "related"
+  },
+  {
+   "from": "anthropic",
+   "to": "dynamic-context",
+   "kind": "related"
+  },
+  {
+   "from": "anthropic",
+   "to": "model-context-protocol",
+   "kind": "related"
+  },
+  {
+   "from": "anthropic",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "anthropic",
+   "to": "src-13-anthropic-2025",
+   "kind": "source"
+  },
+  {
+   "from": "anthropic",
+   "to": "src-14-anthropic-2024",
+   "kind": "source"
+  },
+  {
+   "from": "eu-ai-act",
+   "to": "traceability",
+   "kind": "related"
+  },
+  {
+   "from": "eu-ai-act",
+   "to": "dynamic-context",
+   "kind": "related"
+  },
+  {
+   "from": "eu-ai-act",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "eu-ai-act",
+   "to": "src-17-eu-ai-act",
+   "kind": "source"
+  },
+  {
+   "from": "ikujiro-nonaka",
+   "to": "distributed-knowledge",
+   "kind": "related"
+  },
+  {
+   "from": "ikujiro-nonaka",
+   "to": "seci-cycle",
+   "kind": "related"
+  },
+  {
+   "from": "ikujiro-nonaka",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "ikujiro-nonaka",
+   "to": "src-04-nonaka-1994-1995",
+   "kind": "source"
+  },
+  {
+   "from": "iso-30401",
+   "to": "knowledge-as-a-pillar",
+   "kind": "related"
+  },
+  {
+   "from": "iso-30401",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "iso-30401",
+   "to": "src-16-iso-30401",
+   "kind": "source"
+  },
+  {
+   "from": "lew-platt",
+   "to": "knowledge-as-a-pillar",
+   "kind": "related"
+  },
+  {
+   "from": "lew-platt",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "lew-platt",
+   "to": "src-19-platt-hp",
+   "kind": "source"
+  },
+  {
+   "from": "michael-polanyi",
+   "to": "tacit-and-explicit",
+   "kind": "related"
+  },
+  {
+   "from": "michael-polanyi",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "michael-polanyi",
+   "to": "src-10-polanyi-1966",
+   "kind": "source"
+  },
+  {
+   "from": "michel-de-montaigne",
+   "to": "mesh-values",
+   "kind": "related"
+  },
+  {
+   "from": "michel-de-montaigne",
+   "to": "open-questions",
+   "kind": "related"
+  },
+  {
+   "from": "michel-de-montaigne",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "michel-de-montaigne",
+   "to": "src-15-montaigne-1580",
+   "kind": "source"
+  },
+  {
+   "from": "model-context-protocol",
+   "to": "dynamic-context",
+   "kind": "related"
+  },
+  {
+   "from": "model-context-protocol",
+   "to": "portability",
+   "kind": "related"
+  },
+  {
+   "from": "model-context-protocol",
+   "to": "fig-4-multi-base",
+   "kind": "related"
+  },
+  {
+   "from": "model-context-protocol",
+   "to": "anthropic",
+   "kind": "related"
+  },
+  {
+   "from": "model-context-protocol",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "model-context-protocol",
+   "to": "src-14-anthropic-2024",
+   "kind": "source"
+  },
+  {
+   "from": "zhamak-dehghani",
+   "to": "data-mesh",
+   "kind": "related"
+  },
+  {
+   "from": "zhamak-dehghani",
+   "to": "failure-modes",
+   "kind": "link"
+  },
+  {
+   "from": "zhamak-dehghani",
+   "to": "principle-zero",
+   "kind": "link"
+  },
+  {
+   "from": "zhamak-dehghani",
+   "to": "five-principles",
+   "kind": "related"
+  },
+  {
+   "from": "zhamak-dehghani",
+   "to": "auditable-knowledge-construction",
+   "kind": "link"
+  },
+  {
+   "from": "zhamak-dehghani",
+   "to": "knowledge-owner",
+   "kind": "link"
+  },
+  {
+   "from": "zhamak-dehghani",
+   "to": "knowledge-base",
+   "kind": "link"
+  },
+  {
+   "from": "zhamak-dehghani",
+   "to": "mesh-trajectory",
+   "kind": "link"
+  },
+  {
+   "from": "zhamak-dehghani",
+   "to": "portability",
+   "kind": "link"
+  },
+  {
+   "from": "zhamak-dehghani",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "zhamak-dehghani",
+   "to": "src-01-dehghani-2019",
+   "kind": "source"
+  },
+  {
+   "from": "zhamak-dehghani",
+   "to": "src-02-dehghani-2020",
+   "kind": "source"
+  },
+  {
+   "from": "fig-1-principle-zero",
+   "to": "principle-zero",
+   "kind": "related"
+  },
+  {
+   "from": "fig-1-principle-zero",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "fig-2-tacit-and-explicit",
+   "to": "tacit-and-explicit",
+   "kind": "related"
+  },
+  {
+   "from": "fig-2-tacit-and-explicit",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "fig-3-lifecycle",
+   "to": "knowledge-lifecycle",
+   "kind": "related"
+  },
+  {
+   "from": "fig-3-lifecycle",
+   "to": "knowledge-owner",
+   "kind": "related"
+  },
+  {
+   "from": "fig-3-lifecycle",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "fig-4-multi-base",
+   "to": "knowledge-mesh",
+   "kind": "related"
+  },
+  {
+   "from": "fig-4-multi-base",
+   "to": "compiled-knowledge",
+   "kind": "related"
+  },
+  {
+   "from": "fig-4-multi-base",
+   "to": "model-context-protocol",
+   "kind": "related"
+  },
+  {
+   "from": "fig-4-multi-base",
+   "to": "coexisting-bases",
+   "kind": "related"
+  },
+  {
+   "from": "fig-4-multi-base",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "fig-5-seven-parts",
+   "to": "knowledge-base",
+   "kind": "related"
+  },
+  {
+   "from": "fig-5-seven-parts",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "fig-6-owner-flow",
+   "to": "knowledge-owner",
+   "kind": "related"
+  },
+  {
+   "from": "fig-6-owner-flow",
+   "to": "dated-commitment",
+   "kind": "related"
+  },
+  {
+   "from": "fig-6-owner-flow",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "knowledge-as-a-pillar",
+   "kind": "link"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "principle-zero",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "knowledge-mesh",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "data-mesh",
+   "kind": "link"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "knowledge-owner",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "knowledge-base",
+   "kind": "link"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "dynamic-context",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "sec-1-underestimated-pillar",
+   "kind": "link"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "sec-2-principle-zero",
+   "kind": "link"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "sec-3-lineage",
+   "kind": "link"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "sec-4-fundamentals",
+   "kind": "link"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "sec-5-knowledge-mesh",
+   "kind": "link"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "sec-6-knowledge-base",
+   "kind": "link"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "sec-7-knowledge-owner",
+   "kind": "link"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "sec-8-dynamic-context",
+   "kind": "link"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "sec-9-field-guide",
+   "kind": "link"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "sec-closing",
+   "kind": "link"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "sec-foreword",
+   "kind": "link"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "src-01-dehghani-2019",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "src-02-dehghani-2020",
+   "kind": "source"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "src-12-karpathy-2026",
+   "kind": "source"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "knowledge-as-a-pillar",
+   "kind": "link"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "underestimation-reasons",
+   "kind": "link"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "failure-modes",
+   "kind": "link"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "what-agents-change",
+   "kind": "link"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "src-19-platt-hp",
+   "kind": "link"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "src-16-iso-30401",
+   "kind": "link"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "src-04-nonaka-1994-1995",
+   "kind": "link"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "src-06-mcdermott-1999",
+   "kind": "link"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "src-18-mit-nanda-2025",
+   "kind": "link"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "src-01-dehghani-2019",
+   "kind": "link"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "src-02-dehghani-2020",
+   "kind": "link"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "sec-foreword",
+   "kind": "related"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "sec-2-principle-zero",
+   "kind": "related"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "src-19-platt-hp",
+   "kind": "source"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "src-16-iso-30401",
+   "kind": "source"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "src-04-nonaka-1994-1995",
+   "kind": "source"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "src-06-mcdermott-1999",
+   "kind": "source"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "src-18-mit-nanda-2025",
+   "kind": "source"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "src-01-dehghani-2019",
+   "kind": "source"
+  },
+  {
+   "from": "sec-1-underestimated-pillar",
+   "to": "src-02-dehghani-2020",
+   "kind": "source"
+  },
+  {
+   "from": "sec-2-principle-zero",
+   "to": "principle-zero",
+   "kind": "link"
+  },
+  {
+   "from": "sec-2-principle-zero",
+   "to": "fig-1-principle-zero",
+   "kind": "link"
+  },
+  {
+   "from": "sec-2-principle-zero",
+   "to": "src-20-furnas-1987",
+   "kind": "link"
+  },
+  {
+   "from": "sec-2-principle-zero",
+   "to": "src-02-dehghani-2020",
+   "kind": "link"
+  },
+  {
+   "from": "sec-2-principle-zero",
+   "to": "sec-1-underestimated-pillar",
+   "kind": "related"
+  },
+  {
+   "from": "sec-2-principle-zero",
+   "to": "sec-3-lineage",
+   "kind": "related"
+  },
+  {
+   "from": "sec-2-principle-zero",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "sec-2-principle-zero",
+   "to": "src-20-furnas-1987",
+   "kind": "source"
+  },
+  {
+   "from": "sec-2-principle-zero",
+   "to": "src-02-dehghani-2020",
+   "kind": "source"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "data-mesh",
+   "kind": "link"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "distributed-knowledge",
+   "kind": "link"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "codification-vs-personalisation",
+   "kind": "link"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "organised-fragmentation",
+   "kind": "link"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "src-01-dehghani-2019",
+   "kind": "link"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "src-02-dehghani-2020",
+   "kind": "link"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "src-03-tsoukas-1996",
+   "kind": "link"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "src-04-nonaka-1994-1995",
+   "kind": "link"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "src-05-wenger-1998",
+   "kind": "link"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "src-06-mcdermott-1999",
+   "kind": "link"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "src-07-hansen-1999",
+   "kind": "link"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "sec-2-principle-zero",
+   "kind": "related"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "sec-4-fundamentals",
+   "kind": "related"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "src-01-dehghani-2019",
+   "kind": "source"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "src-02-dehghani-2020",
+   "kind": "source"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "src-03-tsoukas-1996",
+   "kind": "source"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "src-04-nonaka-1994-1995",
+   "kind": "source"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "src-05-wenger-1998",
+   "kind": "source"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "src-06-mcdermott-1999",
+   "kind": "source"
+  },
+  {
+   "from": "sec-3-lineage",
+   "to": "src-07-hansen-1999",
+   "kind": "source"
+  },
+  {
+   "from": "sec-4-fundamentals",
+   "to": "data-information-knowledge",
+   "kind": "link"
+  },
+  {
+   "from": "sec-4-fundamentals",
+   "to": "tacit-and-explicit",
+   "kind": "link"
+  },
+  {
+   "from": "sec-4-fundamentals",
+   "to": "seci-cycle",
+   "kind": "link"
+  },
+  {
+   "from": "sec-4-fundamentals",
+   "to": "knowledge-lifecycle",
+   "kind": "link"
+  },
+  {
+   "from": "sec-4-fundamentals",
+   "to": "fig-2-tacit-and-explicit",
+   "kind": "link"
+  },
+  {
+   "from": "sec-4-fundamentals",
+   "to": "fig-3-lifecycle",
+   "kind": "link"
+  },
+  {
+   "from": "sec-4-fundamentals",
+   "to": "src-08-davenport-prusak-1998",
+   "kind": "link"
+  },
+  {
+   "from": "sec-4-fundamentals",
+   "to": "src-09-ackoff-fricke",
+   "kind": "link"
+  },
+  {
+   "from": "sec-4-fundamentals",
+   "to": "src-10-polanyi-1966",
+   "kind": "link"
+  },
+  {
+   "from": "sec-4-fundamentals",
+   "to": "src-04-nonaka-1994-1995",
+   "kind": "link"
+  },
+  {
+   "from": "sec-4-fundamentals",
+   "to": "sec-3-lineage",
+   "kind": "related"
+  },
+  {
+   "from": "sec-4-fundamentals",
+   "to": "sec-5-knowledge-mesh",
+   "kind": "related"
+  },
+  {
+   "from": "sec-4-fundamentals",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "sec-4-fundamentals",
+   "to": "src-08-davenport-prusak-1998",
+   "kind": "source"
+  },
+  {
+   "from": "sec-4-fundamentals",
+   "to": "src-09-ackoff-fricke",
+   "kind": "source"
+  },
+  {
+   "from": "sec-4-fundamentals",
+   "to": "src-10-polanyi-1966",
+   "kind": "source"
+  },
+  {
+   "from": "sec-4-fundamentals",
+   "to": "src-04-nonaka-1994-1995",
+   "kind": "source"
+  },
+  {
+   "from": "sec-5-knowledge-mesh",
+   "to": "knowledge-mesh",
+   "kind": "link"
+  },
+  {
+   "from": "sec-5-knowledge-mesh",
+   "to": "five-principles",
+   "kind": "link"
+  },
+  {
+   "from": "sec-5-knowledge-mesh",
+   "to": "domain-knowledge-ownership",
+   "kind": "link"
+  },
+  {
+   "from": "sec-5-knowledge-mesh",
+   "to": "knowledge-as-a-product",
+   "kind": "link"
+  },
+  {
+   "from": "sec-5-knowledge-mesh",
+   "to": "self-serve-knowledge-platform",
+   "kind": "link"
+  },
+  {
+   "from": "sec-5-knowledge-mesh",
+   "to": "federated-knowledge-governance",
+   "kind": "link"
+  },
+  {
+   "from": "sec-5-knowledge-mesh",
+   "to": "auditable-knowledge-construction",
+   "kind": "link"
+  },
+  {
+   "from": "sec-5-knowledge-mesh",
+   "to": "mesh-challenges",
+   "kind": "link"
+  },
+  {
+   "from": "sec-5-knowledge-mesh",
+   "to": "fundamentals-before-solutions",
+   "kind": "link"
+  },
+  {
+   "from": "sec-5-knowledge-mesh",
+   "to": "fig-4-multi-base",
+   "kind": "link"
+  },
+  {
+   "from": "sec-5-knowledge-mesh",
+   "to": "src-02-dehghani-2020",
+   "kind": "link"
+  },
+  {
+   "from": "sec-5-knowledge-mesh",
+   "to": "src-01-dehghani-2019",
+   "kind": "link"
+  },
+  {
+   "from": "sec-5-knowledge-mesh",
+   "to": "sec-4-fundamentals",
+   "kind": "related"
+  },
+  {
+   "from": "sec-5-knowledge-mesh",
+   "to": "sec-6-knowledge-base",
+   "kind": "related"
+  },
+  {
+   "from": "sec-5-knowledge-mesh",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "sec-5-knowledge-mesh",
+   "to": "src-02-dehghani-2020",
+   "kind": "source"
+  },
+  {
+   "from": "sec-5-knowledge-mesh",
+   "to": "src-01-dehghani-2019",
+   "kind": "source"
+  },
+  {
+   "from": "sec-6-knowledge-base",
+   "to": "knowledge-base",
+   "kind": "link"
+  },
+  {
+   "from": "sec-6-knowledge-base",
+   "to": "compiled-knowledge",
+   "kind": "link"
+  },
+  {
+   "from": "sec-6-knowledge-base",
+   "to": "document-as-output",
+   "kind": "link"
+  },
+  {
+   "from": "sec-6-knowledge-base",
+   "to": "coexisting-bases",
+   "kind": "link"
+  },
+  {
+   "from": "sec-6-knowledge-base",
+   "to": "fig-5-seven-parts",
+   "kind": "link"
+  },
+  {
+   "from": "sec-6-knowledge-base",
+   "to": "src-12-karpathy-2026",
+   "kind": "link"
+  },
+  {
+   "from": "sec-6-knowledge-base",
+   "to": "src-01-dehghani-2019",
+   "kind": "link"
+  },
+  {
+   "from": "sec-6-knowledge-base",
+   "to": "sec-5-knowledge-mesh",
+   "kind": "related"
+  },
+  {
+   "from": "sec-6-knowledge-base",
+   "to": "sec-7-knowledge-owner",
+   "kind": "related"
+  },
+  {
+   "from": "sec-6-knowledge-base",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "sec-6-knowledge-base",
+   "to": "src-12-karpathy-2026",
+   "kind": "source"
+  },
+  {
+   "from": "sec-6-knowledge-base",
+   "to": "src-01-dehghani-2019",
+   "kind": "source"
+  },
+  {
+   "from": "sec-7-knowledge-owner",
+   "to": "knowledge-owner",
+   "kind": "link"
+  },
+  {
+   "from": "sec-7-knowledge-owner",
+   "to": "dated-commitment",
+   "kind": "link"
+  },
+  {
+   "from": "sec-7-knowledge-owner",
+   "to": "fig-6-owner-flow",
+   "kind": "link"
+  },
+  {
+   "from": "sec-7-knowledge-owner",
+   "to": "src-01-dehghani-2019",
+   "kind": "link"
+  },
+  {
+   "from": "sec-7-knowledge-owner",
+   "to": "src-11-dama-dmbok-2017",
+   "kind": "link"
+  },
+  {
+   "from": "sec-7-knowledge-owner",
+   "to": "sec-6-knowledge-base",
+   "kind": "related"
+  },
+  {
+   "from": "sec-7-knowledge-owner",
+   "to": "sec-8-dynamic-context",
+   "kind": "related"
+  },
+  {
+   "from": "sec-7-knowledge-owner",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "sec-7-knowledge-owner",
+   "to": "src-01-dehghani-2019",
+   "kind": "source"
+  },
+  {
+   "from": "sec-7-knowledge-owner",
+   "to": "src-11-dama-dmbok-2017",
+   "kind": "source"
+  },
+  {
+   "from": "sec-8-dynamic-context",
+   "to": "grounding",
+   "kind": "link"
+  },
+  {
+   "from": "sec-8-dynamic-context",
+   "to": "context-engineering",
+   "kind": "link"
+  },
+  {
+   "from": "sec-8-dynamic-context",
+   "to": "dynamic-context",
+   "kind": "link"
+  },
+  {
+   "from": "sec-8-dynamic-context",
+   "to": "traceability",
+   "kind": "link"
+  },
+  {
+   "from": "sec-8-dynamic-context",
+   "to": "src-17-eu-ai-act",
+   "kind": "link"
+  },
+  {
+   "from": "sec-8-dynamic-context",
+   "to": "src-21-clark-brennan-1991",
+   "kind": "link"
+  },
+  {
+   "from": "sec-8-dynamic-context",
+   "to": "src-13-anthropic-2025",
+   "kind": "link"
+  },
+  {
+   "from": "sec-8-dynamic-context",
+   "to": "src-14-anthropic-2024",
+   "kind": "link"
+  },
+  {
+   "from": "sec-8-dynamic-context",
+   "to": "sec-7-knowledge-owner",
+   "kind": "related"
+  },
+  {
+   "from": "sec-8-dynamic-context",
+   "to": "sec-9-field-guide",
+   "kind": "related"
+  },
+  {
+   "from": "sec-8-dynamic-context",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "sec-8-dynamic-context",
+   "to": "src-17-eu-ai-act",
+   "kind": "source"
+  },
+  {
+   "from": "sec-8-dynamic-context",
+   "to": "src-21-clark-brennan-1991",
+   "kind": "source"
+  },
+  {
+   "from": "sec-8-dynamic-context",
+   "to": "src-13-anthropic-2025",
+   "kind": "source"
+  },
+  {
+   "from": "sec-8-dynamic-context",
+   "to": "src-14-anthropic-2024",
+   "kind": "source"
+  },
+  {
+   "from": "sec-9-field-guide",
+   "to": "start-small",
+   "kind": "link"
+  },
+  {
+   "from": "sec-9-field-guide",
+   "to": "mesh-trajectory",
+   "kind": "link"
+  },
+  {
+   "from": "sec-9-field-guide",
+   "to": "portability",
+   "kind": "link"
+  },
+  {
+   "from": "sec-9-field-guide",
+   "to": "delegation-levels",
+   "kind": "link"
+  },
+  {
+   "from": "sec-9-field-guide",
+   "to": "src-02-dehghani-2020",
+   "kind": "link"
+  },
+  {
+   "from": "sec-9-field-guide",
+   "to": "src-01-dehghani-2019",
+   "kind": "link"
+  },
+  {
+   "from": "sec-9-field-guide",
+   "to": "sec-8-dynamic-context",
+   "kind": "related"
+  },
+  {
+   "from": "sec-9-field-guide",
+   "to": "sec-closing",
+   "kind": "related"
+  },
+  {
+   "from": "sec-9-field-guide",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "sec-9-field-guide",
+   "to": "src-02-dehghani-2020",
+   "kind": "source"
+  },
+  {
+   "from": "sec-9-field-guide",
+   "to": "src-01-dehghani-2019",
+   "kind": "source"
+  },
+  {
+   "from": "sec-closing",
+   "to": "mesh-values",
+   "kind": "link"
+  },
+  {
+   "from": "sec-closing",
+   "to": "open-questions",
+   "kind": "link"
+  },
+  {
+   "from": "sec-closing",
+   "to": "src-15-montaigne-1580",
+   "kind": "link"
+  },
+  {
+   "from": "sec-closing",
+   "to": "sec-9-field-guide",
+   "kind": "related"
+  },
+  {
+   "from": "sec-closing",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "sec-closing",
+   "to": "src-15-montaigne-1580",
+   "kind": "source"
+  },
+  {
+   "from": "sec-foreword",
+   "to": "dated-commitment",
+   "kind": "link"
+  },
+  {
+   "from": "sec-foreword",
+   "to": "delegation-levels",
+   "kind": "link"
+  },
+  {
+   "from": "sec-foreword",
+   "to": "knowledge-owner",
+   "kind": "link"
+  },
+  {
+   "from": "sec-foreword",
+   "to": "portability",
+   "kind": "link"
+  },
+  {
+   "from": "sec-foreword",
+   "to": "context-engineering",
+   "kind": "link"
+  },
+  {
+   "from": "sec-foreword",
+   "to": "knowledge-as-a-pillar",
+   "kind": "link"
+  },
+  {
+   "from": "sec-foreword",
+   "to": "sec-1-underestimated-pillar",
+   "kind": "related"
+  },
+  {
+   "from": "sec-foreword",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
+  {
+   "from": "src-00-playbook-v2.5",
+   "to": "sec-foreword",
+   "kind": "link"
+  },
+  {
+   "from": "src-00-playbook-v2.5",
+   "to": "sec-1-underestimated-pillar",
+   "kind": "link"
+  },
+  {
+   "from": "src-00-playbook-v2.5",
+   "to": "sec-2-principle-zero",
+   "kind": "link"
+  },
+  {
+   "from": "src-00-playbook-v2.5",
+   "to": "sec-3-lineage",
+   "kind": "link"
+  },
+  {
+   "from": "src-00-playbook-v2.5",
+   "to": "sec-4-fundamentals",
+   "kind": "link"
+  },
+  {
+   "from": "src-00-playbook-v2.5",
+   "to": "sec-5-knowledge-mesh",
+   "kind": "link"
+  },
+  {
+   "from": "src-00-playbook-v2.5",
+   "to": "sec-6-knowledge-base",
+   "kind": "link"
+  },
+  {
+   "from": "src-00-playbook-v2.5",
+   "to": "sec-7-knowledge-owner",
+   "kind": "link"
+  },
+  {
+   "from": "src-00-playbook-v2.5",
+   "to": "sec-8-dynamic-context",
+   "kind": "link"
+  },
+  {
+   "from": "src-00-playbook-v2.5",
+   "to": "sec-9-field-guide",
+   "kind": "link"
+  },
+  {
+   "from": "src-00-playbook-v2.5",
+   "to": "sec-closing",
+   "kind": "link"
+  },
+  {
+   "from": "src-00-playbook-v2.5",
+   "to": "knowledge-mesh-playbook",
+   "kind": "related"
+  },
+  {
+   "from": "src-01-dehghani-2019",
+   "to": "sec-1-underestimated-pillar",
+   "kind": "link"
+  },
+  {
+   "from": "src-01-dehghani-2019",
+   "to": "sec-3-lineage",
+   "kind": "link"
+  },
+  {
+   "from": "src-01-dehghani-2019",
+   "to": "sec-5-knowledge-mesh",
+   "kind": "link"
+  },
+  {
+   "from": "src-01-dehghani-2019",
+   "to": "sec-6-knowledge-base",
+   "kind": "link"
+  },
+  {
+   "from": "src-01-dehghani-2019",
+   "to": "sec-7-knowledge-owner",
+   "kind": "link"
+  },
+  {
+   "from": "src-01-dehghani-2019",
+   "to": "sec-9-field-guide",
+   "kind": "link"
+  },
+  {
+   "from": "src-01-dehghani-2019",
+   "to": "data-mesh",
+   "kind": "link"
+  },
+  {
+   "from": "src-01-dehghani-2019",
+   "to": "domain-knowledge-ownership",
+   "kind": "link"
+  },
+  {
+   "from": "src-01-dehghani-2019",
+   "to": "failure-modes",
+   "kind": "link"
+  },
+  {
+   "from": "src-01-dehghani-2019",
+   "to": "federated-knowledge-governance",
+   "kind": "link"
+  },
+  {
+   "from": "src-01-dehghani-2019",
+   "to": "knowledge-as-a-product",
+   "kind": "link"
+  },
+  {
+   "from": "src-01-dehghani-2019",
+   "to": "knowledge-base",
+   "kind": "link"
+  },
+  {
+   "from": "src-01-dehghani-2019",
+   "to": "knowledge-mesh",
+   "kind": "link"
+  },
+  {
+   "from": "src-01-dehghani-2019",
+   "to": "knowledge-mesh-playbook",
+   "kind": "link"
+  },
+  {
+   "from": "src-01-dehghani-2019",
+   "to": "knowledge-owner",
+   "kind": "link"
+  },
+  {
+   "from": "src-01-dehghani-2019",
+   "to": "mesh-challenges",
+   "kind": "link"
+  },
+  {
+   "from": "src-01-dehghani-2019",
+   "to": "portability",
+   "kind": "link"
+  },
+  {
+   "from": "src-01-dehghani-2019",
+   "to": "zhamak-dehghani",
+   "kind": "related"
+  },
+  {
+   "from": "src-02-dehghani-2020",
+   "to": "sec-1-underestimated-pillar",
+   "kind": "link"
+  },
+  {
+   "from": "src-02-dehghani-2020",
+   "to": "sec-2-principle-zero",
+   "kind": "link"
+  },
+  {
+   "from": "src-02-dehghani-2020",
+   "to": "sec-3-lineage",
+   "kind": "link"
+  },
+  {
+   "from": "src-02-dehghani-2020",
+   "to": "sec-5-knowledge-mesh",
+   "kind": "link"
+  },
+  {
+   "from": "src-02-dehghani-2020",
+   "to": "sec-9-field-guide",
+   "kind": "link"
+  },
+  {
+   "from": "src-02-dehghani-2020",
+   "to": "auditable-knowledge-construction",
+   "kind": "link"
+  },
+  {
+   "from": "src-02-dehghani-2020",
+   "to": "data-mesh",
+   "kind": "link"
+  },
+  {
+   "from": "src-02-dehghani-2020",
+   "to": "domain-knowledge-ownership",
+   "kind": "link"
+  },
+  {
+   "from": "src-02-dehghani-2020",
+   "to": "failure-modes",
+   "kind": "link"
+  },
+  {
+   "from": "src-02-dehghani-2020",
+   "to": "federated-knowledge-governance",
+   "kind": "link"
+  },
+  {
+   "from": "src-02-dehghani-2020",
+   "to": "five-principles",
+   "kind": "link"
+  },
+  {
+   "from": "src-02-dehghani-2020",
+   "to": "knowledge-as-a-product",
+   "kind": "link"
+  },
+  {
+   "from": "src-02-dehghani-2020",
+   "to": "knowledge-mesh",
+   "kind": "link"
+  },
+  {
+   "from": "src-02-dehghani-2020",
+   "to": "knowledge-mesh-playbook",
+   "kind": "link"
+  },
+  {
+   "from": "src-02-dehghani-2020",
+   "to": "mesh-trajectory",
+   "kind": "link"
+  },
+  {
+   "from": "src-02-dehghani-2020",
+   "to": "principle-zero",
+   "kind": "link"
+  },
+  {
+   "from": "src-02-dehghani-2020",
+   "to": "self-serve-knowledge-platform",
+   "kind": "link"
+  },
+  {
+   "from": "src-02-dehghani-2020",
+   "to": "zhamak-dehghani",
+   "kind": "related"
+  },
+  {
+   "from": "src-03-tsoukas-1996",
+   "to": "sec-3-lineage",
+   "kind": "link"
+  },
+  {
+   "from": "src-03-tsoukas-1996",
+   "to": "distributed-knowledge",
+   "kind": "link"
+  },
+  {
+   "from": "src-03-tsoukas-1996",
+   "to": "organised-fragmentation",
+   "kind": "link"
+  },
+  {
+   "from": "src-04-nonaka-1994-1995",
+   "to": "sec-1-underestimated-pillar",
+   "kind": "link"
+  },
+  {
+   "from": "src-04-nonaka-1994-1995",
+   "to": "sec-3-lineage",
+   "kind": "link"
+  },
+  {
+   "from": "src-04-nonaka-1994-1995",
+   "to": "sec-4-fundamentals",
+   "kind": "link"
+  },
+  {
+   "from": "src-04-nonaka-1994-1995",
+   "to": "distributed-knowledge",
+   "kind": "link"
+  },
+  {
+   "from": "src-04-nonaka-1994-1995",
+   "to": "ikujiro-nonaka",
+   "kind": "related"
+  },
+  {
+   "from": "src-04-nonaka-1994-1995",
+   "to": "seci-cycle",
+   "kind": "link"
+  },
+  {
+   "from": "src-05-wenger-1998",
+   "to": "sec-3-lineage",
+   "kind": "link"
+  },
+  {
+   "from": "src-05-wenger-1998",
+   "to": "distributed-knowledge",
+   "kind": "link"
+  },
+  {
+   "from": "src-06-mcdermott-1999",
+   "to": "sec-1-underestimated-pillar",
+   "kind": "link"
+  },
+  {
+   "from": "src-06-mcdermott-1999",
+   "to": "sec-3-lineage",
+   "kind": "link"
+  },
+  {
+   "from": "src-06-mcdermott-1999",
+   "to": "distributed-knowledge",
+   "kind": "link"
+  },
+  {
+   "from": "src-07-hansen-1999",
+   "to": "sec-3-lineage",
+   "kind": "link"
+  },
+  {
+   "from": "src-07-hansen-1999",
+   "to": "codification-vs-personalisation",
+   "kind": "link"
+  },
+  {
+   "from": "src-08-davenport-prusak-1998",
+   "to": "sec-4-fundamentals",
+   "kind": "link"
+  },
+  {
+   "from": "src-08-davenport-prusak-1998",
+   "to": "data-information-knowledge",
+   "kind": "link"
+  },
+  {
+   "from": "src-09-ackoff-fricke",
+   "to": "sec-4-fundamentals",
+   "kind": "link"
+  },
+  {
+   "from": "src-09-ackoff-fricke",
+   "to": "data-information-knowledge",
+   "kind": "link"
+  },
+  {
+   "from": "src-10-polanyi-1966",
+   "to": "sec-4-fundamentals",
+   "kind": "link"
+  },
+  {
+   "from": "src-10-polanyi-1966",
+   "to": "michael-polanyi",
+   "kind": "related"
+  },
+  {
+   "from": "src-10-polanyi-1966",
+   "to": "tacit-and-explicit",
+   "kind": "link"
+  },
+  {
+   "from": "src-11-dama-dmbok-2017",
+   "to": "sec-7-knowledge-owner",
+   "kind": "link"
+  },
+  {
+   "from": "src-11-dama-dmbok-2017",
+   "to": "knowledge-owner",
+   "kind": "link"
+  },
+  {
+   "from": "src-12-karpathy-2026",
+   "to": "sec-6-knowledge-base",
+   "kind": "link"
+  },
+  {
+   "from": "src-12-karpathy-2026",
+   "to": "andrej-karpathy",
+   "kind": "related"
+  },
+  {
+   "from": "src-12-karpathy-2026",
+   "to": "compiled-knowledge",
+   "kind": "link"
+  },
+  {
+   "from": "src-12-karpathy-2026",
+   "to": "knowledge-base",
+   "kind": "link"
+  },
+  {
+   "from": "src-12-karpathy-2026",
+   "to": "knowledge-mesh-playbook",
+   "kind": "link"
+  },
+  {
+   "from": "src-13-anthropic-2025",
+   "to": "sec-8-dynamic-context",
+   "kind": "link"
+  },
+  {
+   "from": "src-13-anthropic-2025",
+   "to": "anthropic",
+   "kind": "related"
+  },
+  {
+   "from": "src-13-anthropic-2025",
+   "to": "context-engineering",
+   "kind": "link"
+  },
+  {
+   "from": "src-13-anthropic-2025",
+   "to": "dynamic-context",
+   "kind": "link"
+  },
+  {
+   "from": "src-14-anthropic-2024",
+   "to": "sec-8-dynamic-context",
+   "kind": "link"
+  },
+  {
+   "from": "src-14-anthropic-2024",
+   "to": "anthropic",
+   "kind": "related"
+  },
+  {
+   "from": "src-14-anthropic-2024",
+   "to": "dynamic-context",
+   "kind": "link"
+  },
+  {
+   "from": "src-14-anthropic-2024",
+   "to": "model-context-protocol",
+   "kind": "related"
+  },
+  {
+   "from": "src-15-montaigne-1580",
+   "to": "sec-closing",
+   "kind": "link"
+  },
+  {
+   "from": "src-15-montaigne-1580",
+   "to": "michel-de-montaigne",
+   "kind": "related"
+  },
+  {
+   "from": "src-15-montaigne-1580",
+   "to": "open-questions",
+   "kind": "link"
+  },
+  {
+   "from": "src-16-iso-30401",
+   "to": "sec-1-underestimated-pillar",
+   "kind": "link"
+  },
+  {
+   "from": "src-16-iso-30401",
+   "to": "iso-30401",
+   "kind": "related"
+  },
+  {
+   "from": "src-16-iso-30401",
+   "to": "knowledge-as-a-pillar",
+   "kind": "link"
+  },
+  {
+   "from": "src-17-eu-ai-act",
+   "to": "sec-8-dynamic-context",
+   "kind": "link"
+  },
+  {
+   "from": "src-17-eu-ai-act",
+   "to": "dynamic-context",
+   "kind": "link"
+  },
+  {
+   "from": "src-17-eu-ai-act",
+   "to": "eu-ai-act",
+   "kind": "related"
+  },
+  {
+   "from": "src-17-eu-ai-act",
+   "to": "traceability",
+   "kind": "link"
+  },
+  {
+   "from": "src-18-mit-nanda-2025",
+   "to": "sec-1-underestimated-pillar",
+   "kind": "link"
+  },
+  {
+   "from": "src-18-mit-nanda-2025",
+   "to": "knowledge-as-a-pillar",
+   "kind": "link"
+  },
+  {
+   "from": "src-18-mit-nanda-2025",
+   "to": "underestimation-reasons",
+   "kind": "link"
+  },
+  {
+   "from": "src-19-platt-hp",
+   "to": "sec-1-underestimated-pillar",
+   "kind": "link"
+  },
+  {
+   "from": "src-19-platt-hp",
+   "to": "knowledge-as-a-pillar",
+   "kind": "link"
+  },
+  {
+   "from": "src-19-platt-hp",
+   "to": "lew-platt",
+   "kind": "related"
+  },
+  {
+   "from": "src-20-furnas-1987",
+   "to": "sec-2-principle-zero",
+   "kind": "link"
+  },
+  {
+   "from": "src-20-furnas-1987",
+   "to": "principle-zero",
+   "kind": "link"
+  },
+  {
+   "from": "src-21-clark-brennan-1991",
+   "to": "sec-8-dynamic-context",
+   "kind": "link"
+  },
+  {
+   "from": "src-21-clark-brennan-1991",
+   "to": "grounding",
+   "kind": "link"
+  }
+ ]
+}
