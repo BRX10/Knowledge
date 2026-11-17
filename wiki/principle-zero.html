@@ -26,7 +26,7 @@
 <main class="wrap wiki kw">
   <nav class="side" id="side" aria-label="Wiki navigation">
     <form class="kw-search" action="index.html" role="search"><label class="sr" for="sq">Search the wiki</label><input id="sq" name="q" type="search" placeholder="Search the wiki" autocomplete="off"></form>
-    <div class="kw-browse"><a href="index.html#concepts">Concepts <small>38</small></a><a href="index.html#entities">Entities <small>10</small></a><a href="index.html#figures">Figures <small>6</small></a><a href="index.html#sources">Sources <small>22</small></a></div>
+    <div class="kw-browse"><a href="index.html#concepts">Concepts <small>39</small></a><a href="index.html#entities">Entities <small>10</small></a><a href="index.html#figures">Figures <small>6</small></a><a href="index.html#sources">Sources <small>22</small></a></div>
     <p class="s-h">Playbook</p>
     <ol><li><a href="index.html"><span class="k">INDEX</span>All pages</a></li><li><a href="knowledge-mesh-playbook.html"><span class="k">OVERVIEW</span>The Knowledge Mesh Playbook</a></li><li><a href="sec-foreword.html"><span class="k">FOREWORD</span>Why this playbook</a></li><li><a href="sec-1-underestimated-pillar.html"><span class="k">SECTION 1</span>The underestimated pillar</a></li><li><a href="sec-2-principle-zero.html"><span class="k">SECTION 2</span>Principle zero</a></li><li><a href="sec-3-lineage.html"><span class="k">SECTION 3</span>Where the Knowledge Mesh comes from</a></li><li><a href="sec-4-fundamentals.html"><span class="k">SECTION 4</span>Fundamentals we build on</a></li><li><a href="sec-5-knowledge-mesh.html"><span class="k">SECTION 5</span>The Knowledge Mesh in brief</a></li><li><a href="sec-6-knowledge-base.html"><span class="k">SECTION 6</span>The knowledge base</a></li><li><a href="sec-7-knowledge-owner.html"><span class="k">SECTION 7</span>The Knowledge Owner</a></li><li><a href="sec-8-dynamic-context.html"><span class="k">SECTION 8</span>Dynamic context</a></li><li><a href="sec-9-field-guide.html"><span class="k">SECTION 9</span>Field guide</a></li><li><a href="sec-closing.html"><span class="k">CLOSING</span>What it values, what stays open</a></li></ol>
   </nav>
@@ -78,8 +78,13 @@
 </tr>
 </tbody>
 </table></div>
-<p>Three consequences follow: each plane can change without breaking the other; one effort serves many uses; and a clear boundary, where consumers read but do not rewrite, and what they run into goes back to the management plane as a ticket. The base learns from its use without feeding on its own answers.</p>
-<p>The <a href="data-mesh.html">Data Mesh</a> offers a precedent with its operational and analytical planes, integrated yet separate, looked after by the same domains. RAG, chat interfaces and agents all belong to the consumption plane; they need something upstream to read. Whatever the way of bringing knowledge to a model (training, retrieval, web search, fine-tuning or distillation), what an agent can rely on depends on the quality and traceability of what it draws from. See <a href="fig-1-principle-zero.html">Figure 1: Principle zero</a>.</p>
+<p>Three consequences make the approach pragmatic:</p>
+<ul>
+<li><strong>Each plane can change without breaking the other.</strong> Models, chat tools and agent frameworks will change many times; a well-managed knowledge base survives them all. Conversely, a new use case does not require reorganising the knowledge.</li>
+<li><strong>One effort, many uses.</strong> Knowledge kept once serves a newcomer, a support agent and a generated report alike. The investment is made in the management plane and pays off in every consumption.</li>
+<li><strong>A clear boundary.</strong> Consumers read; they do not rewrite while they work. What they run into, a gap or a contradiction, goes back to the management plane as a ticket. The base learns from its use without feeding on its own answers.</li>
+</ul>
+<p>The <a href="data-mesh.html">Data Mesh</a> offers a precedent: it keeps operational and analytical data in two planes, integrated yet separate, because they serve different needs; and Dehghani is clear that this technical separation should not separate the organisation: the same domains look after both. The separation proposed here works the same way. RAG, chat interfaces and agents all belong to the consumption plane; they need something upstream to read. The same holds for the ways of bringing knowledge to a model (training, retrieval, web search, fine-tuning or distillation): each has its value, its cost and its prerequisites, and knowledge built into a model's weights is also tied to that model and hard to trace back to a source. Whatever the mode, what an agent can rely on depends on the quality and traceability of what it draws from: a matter of construction before consumption. See <a href="fig-1-principle-zero.html">Figure 1: Principle zero</a>.</p>
 
     </div>
     <section class="kw-rel" aria-label="Sources, related pages and backlinks">

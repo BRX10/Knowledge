@@ -3,7 +3,7 @@ id: sec-3-lineage
 title: 3. Where the Knowledge Mesh comes from
 type: section
 summary: 'Two foundations: the architecture of the Data Mesh and the diagnosis of thirty years of knowledge management research.'
-tags: [foundations]
+tags: [data-mesh, km-research]
 sources: [src-00-playbook-v2.5, src-01-dehghani-2019, src-02-dehghani-2020, src-03-tsoukas-1996, src-04-nonaka-1994-1995, src-05-wenger-1998, src-06-mcdermott-1999, src-07-hansen-1999]
 related: [sec-2-principle-zero, sec-4-fundamentals]
 raw: raw/playbook-v2.5.md#lineage

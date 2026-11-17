@@ -2,9 +2,49 @@
  "name": "The Knowledge Mesh Wiki",
  "version": "2.5",
  "built": "2026-11-17",
- "pages": 88,
+ "pages": 89,
  "schema": "https://brx10.github.io/Knowledge/wiki/SCHEMA.md",
  "items": [
+  {
+   "id": "ai-agent",
+   "title": "AI agent",
+   "type": "concept",
+   "summary": "AI agents are systems built on AI models that pursue a goal, use tools and act on someone's behalf. What they do depends on the context they are given.",
+   "aliases": [
+    "agent",
+    "agents",
+    "AI agents"
+   ],
+   "tags": [
+    "agents",
+    "foundations"
+   ],
+   "sources": [
+    "src-00-playbook-v2.5"
+   ],
+   "related": [
+    "what-agents-change",
+    "delegation-levels",
+    "dynamic-context"
+   ],
+   "raw": "raw/playbook-v2.5.md#overview",
+   "owner": "B. Rousseaux",
+   "status": "active",
+   "version": "2.5",
+   "updated": "2026-11-17",
+   "links": [
+    "dynamic-context",
+    "what-agents-change",
+    "delegation-levels"
+   ],
+   "backlinks": [
+    "knowledge-mesh-playbook",
+    "knowledge-as-a-pillar",
+    "what-agents-change"
+   ],
+   "html": "https://brx10.github.io/Knowledge/wiki/ai-agent.html",
+   "markdown": "https://brx10.github.io/Knowledge/wiki/pages/concepts/ai-agent.md"
+  },
   {
    "id": "auditable-knowledge-construction",
    "title": "Auditable knowledge construction",
@@ -382,6 +422,7 @@
    "backlinks": [
     "sec-9-field-guide",
     "sec-foreword",
+    "ai-agent",
     "dated-commitment",
     "traceability"
    ],
@@ -567,6 +608,7 @@
    "backlinks": [
     "knowledge-mesh-playbook",
     "sec-8-dynamic-context",
+    "ai-agent",
     "context-engineering",
     "failure-modes",
     "grounding",
@@ -842,7 +884,8 @@
    "related": [
     "underestimation-reasons",
     "what-agents-change",
-    "data-information-knowledge"
+    "data-information-knowledge",
+    "ai-agent"
    ],
    "raw": "raw/playbook-v2.5.md#underestimated-pillar",
    "owner": "B. Rousseaux",
@@ -855,7 +898,8 @@
     "data-information-knowledge",
     "underestimation-reasons",
     "iso-30401",
-    "what-agents-change"
+    "what-agents-change",
+    "ai-agent"
    ],
    "backlinks": [
     "knowledge-mesh-playbook",
@@ -881,8 +925,7 @@
    "summary": "Principle 2, transposing data as a product. There are two kinds of consumers, people and agents, and no base without a charter.",
    "aliases": [
     "principle 2",
-    "knowledge product",
-    "charter"
+    "knowledge product"
    ],
    "tags": [
     "governance",
@@ -1294,6 +1337,7 @@
    ],
    "backlinks": [
     "sec-closing",
+    "sec-foreword",
     "mesh-values",
     "michel-de-montaigne",
     "src-15-montaigne-1580"
@@ -1631,8 +1675,7 @@
    "type": "concept",
    "summary": "Every element of an agent's context points back to a page, and every page to its sources and its owner, so that whatever an agent relied on can be inspected afterwards.",
    "aliases": [
-    "traceable action",
-    "untraceable answer"
+    "traceable action"
    ],
    "tags": [
     "governance",
@@ -1730,7 +1773,8 @@
    "related": [
     "knowledge-as-a-pillar",
     "tacit-and-explicit",
-    "compiled-knowledge"
+    "compiled-knowledge",
+    "ai-agent"
    ],
    "raw": "raw/playbook-v2.5.md#underestimated-pillar",
    "owner": "B. Rousseaux",
@@ -1740,10 +1784,12 @@
    "links": [
     "tacit-and-explicit",
     "knowledge-as-a-pillar",
-    "compiled-knowledge"
+    "compiled-knowledge",
+    "ai-agent"
    ],
    "backlinks": [
     "sec-1-underestimated-pillar",
+    "ai-agent",
     "knowledge-as-a-pillar",
     "tacit-and-explicit"
    ],
@@ -1756,8 +1802,7 @@
    "type": "entity",
    "summary": "Described the \"LLM wiki\" pattern, the compiled layer behind the pages of a knowledge base, and the pattern this wiki follows.",
    "aliases": [
-    "Karpathy",
-    "LLM wiki"
+    "Karpathy"
    ],
    "tags": [
     "agents"
@@ -2393,6 +2438,7 @@
    "version": "2.5",
    "updated": "2026-11-17",
    "links": [
+    "ai-agent",
     "knowledge-as-a-pillar",
     "principle-zero",
     "knowledge-mesh",
@@ -2427,7 +2473,8 @@
    "type": "section",
    "summary": "Knowledge management is a mature discipline, yet AI programmes overlooked it. Eight failure modes appear when agents meet the real corpus.",
    "tags": [
-    "foundations"
+    "foundations",
+    "governance"
    ],
    "sources": [
     "src-00-playbook-v2.5",
@@ -2485,7 +2532,8 @@
    "type": "section",
    "summary": "Managing knowledge and consuming it are two different jobs. AI makes the separation possible, and the playbook makes it a principle.",
    "tags": [
-    "foundations"
+    "management-plane",
+    "consumption-plane"
    ],
    "sources": [
     "src-00-playbook-v2.5",
@@ -2526,7 +2574,8 @@
    "type": "section",
    "summary": "Two foundations: the architecture of the Data Mesh and the diagnosis of thirty years of knowledge management research.",
    "tags": [
-    "foundations"
+    "data-mesh",
+    "km-research"
    ],
    "sources": [
     "src-00-playbook-v2.5",
@@ -2584,7 +2633,9 @@
    "type": "section",
    "summary": "Four established ideas become directly operational once agents are the readers: data, information and knowledge; tacit and explicit; the creation cycle; the lifecycle.",
    "tags": [
-    "foundations"
+    "foundations",
+    "km-research",
+    "lifecycle"
    ],
    "sources": [
     "src-00-playbook-v2.5",
@@ -2635,6 +2686,8 @@
    "type": "section",
    "summary": "The definition, five principles transposed from the Data Mesh, and the challenges a Knowledge Mesh must address, in three families.",
    "tags": [
+    "federation",
+    "data-mesh",
     "governance"
    ],
    "sources": [
@@ -2684,6 +2737,7 @@
    "type": "section",
    "summary": "The unit of the mesh, in seven parts: an entry point for legacy documents and a destination for generated ones, living alongside other bases.",
    "tags": [
+    "management-plane",
     "governance"
    ],
    "sources": [
@@ -2728,6 +2782,7 @@
    "type": "section",
    "summary": "Authority, not probability: the person accountable for a base orients, arbitrates, commits, listens and retires, while agents take on the stewardship.",
    "tags": [
+    "ownership",
     "governance"
    ],
    "sources": [
@@ -2770,7 +2825,9 @@
    "type": "section",
    "summary": "No delegation without grounding. Context assembled at the moment of use, from governed bases, within the rights of the person, and traceable.",
    "tags": [
-    "governance"
+    "context",
+    "consumption-plane",
+    "regulation"
    ],
    "sources": [
     "src-00-playbook-v2.5",
@@ -2819,7 +2876,8 @@
    "type": "section",
    "summary": "Start small and real, treat the mesh as a trajectory, keep knowledge portable, and delegate to agents in three levels.",
    "tags": [
-    "practice"
+    "practice",
+    "agents"
    ],
    "sources": [
     "src-00-playbook-v2.5",
@@ -2897,7 +2955,8 @@
    "type": "section",
    "summary": "Four observations, about trust, organisation, pace and context, lead to an intuition: knowledge deserves to be managed as a pillar of AI, alongside data.",
    "tags": [
-    "foundations"
+    "foundations",
+    "agents"
    ],
    "sources": [
     "src-00-playbook-v2.5"
@@ -2917,6 +2976,7 @@
     "portability",
     "context-engineering",
     "knowledge-as-a-pillar",
+    "open-questions",
     "sec-1-underestimated-pillar"
    ],
    "backlinks": [
@@ -3475,7 +3535,7 @@
    "id": "src-17-eu-ai-act",
    "title": "EU AI Act (2024), Arts. 12, 14 and 26",
    "type": "source",
-   "summary": "Requires high-risk AI systems to log events automatically over their lifetime, to ensure a level of traceability of their functioning, and to be designed so that people can oversee, override or stop them; deployers must keep the logs…",
+   "summary": "Requires high-risk AI systems to log events automatically, to ensure traceability, and to be designed for human oversight; deployers must keep the logs for at least six months.",
    "tags": [
     "reference"
    ],

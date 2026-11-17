@@ -3,7 +3,7 @@ id: sec-1-underestimated-pillar
 title: 1. The underestimated pillar
 type: section
 summary: Knowledge management is a mature discipline, yet AI programmes overlooked it. Eight failure modes appear when agents meet the real corpus.
-tags: [foundations]
+tags: [foundations, governance]
 sources: [src-00-playbook-v2.5, src-19-platt-hp, src-16-iso-30401, src-04-nonaka-1994-1995, src-06-mcdermott-1999, src-18-mit-nanda-2025, src-01-dehghani-2019, src-02-dehghani-2020]
 related: [sec-foreword, sec-2-principle-zero]
 raw: raw/playbook-v2.5.md#underestimated-pillar

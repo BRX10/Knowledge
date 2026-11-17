@@ -3,7 +3,7 @@ id: sec-2-principle-zero
 title: 2. Principle zero
 type: section
 summary: Managing knowledge and consuming it are two different jobs. AI makes the separation possible, and the playbook makes it a principle.
-tags: [foundations]
+tags: [management-plane, consumption-plane]
 sources: [src-00-playbook-v2.5, src-20-furnas-1987, src-02-dehghani-2020]
 related: [sec-1-underestimated-pillar, sec-3-lineage]
 raw: raw/playbook-v2.5.md#principle-zero

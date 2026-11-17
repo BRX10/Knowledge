@@ -3,7 +3,7 @@ id: sec-8-dynamic-context
 title: 8. Dynamic context
 type: section
 summary: No delegation without grounding. Context assembled at the moment of use, from governed bases, within the rights of the person, and traceable.
-tags: [governance]
+tags: [context, consumption-plane, regulation]
 sources: [src-00-playbook-v2.5, src-17-eu-ai-act, src-21-clark-brennan-1991, src-13-anthropic-2025, src-14-anthropic-2024]
 related: [sec-7-knowledge-owner, sec-9-field-guide]
 raw: raw/playbook-v2.5.md#dynamic-context

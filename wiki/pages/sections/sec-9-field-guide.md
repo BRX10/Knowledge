@@ -3,7 +3,7 @@ id: sec-9-field-guide
 title: 9. Field guide
 type: section
 summary: Start small and real, treat the mesh as a trajectory, keep knowledge portable, and delegate to agents in three levels.
-tags: [practice]
+tags: [practice, agents]
 sources: [src-00-playbook-v2.5, src-02-dehghani-2020, src-01-dehghani-2019]
 related: [sec-8-dynamic-context, sec-closing]
 raw: raw/playbook-v2.5.md#field-guide

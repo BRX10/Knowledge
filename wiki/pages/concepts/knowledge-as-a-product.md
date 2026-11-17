@@ -3,7 +3,7 @@ id: knowledge-as-a-product
 title: Knowledge as a self-describing product
 type: concept
 summary: Principle 2, transposing data as a product. There are two kinds of consumers, people and agents, and no base without a charter.
-aliases: [principle 2, knowledge product, charter]
+aliases: [principle 2, knowledge product]
 tags: [governance, data-mesh, consumption-plane]
 sources: [src-00-playbook-v2.5, src-02-dehghani-2020, src-01-dehghani-2019]
 related: [five-principles, knowledge-base]

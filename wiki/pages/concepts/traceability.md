@@ -3,7 +3,7 @@ id: traceability
 title: Traceability
 type: concept
 summary: Every element of an agent's context points back to a page, and every page to its sources and its owner, so that whatever an agent relied on can be inspected afterwards.
-aliases: [traceable action, untraceable answer]
+aliases: [traceable action]
 tags: [governance, regulation, context]
 sources: [src-00-playbook-v2.5, src-17-eu-ai-act]
 related: [dynamic-context, auditable-knowledge-construction, eu-ai-act, delegation-levels, mesh-values]

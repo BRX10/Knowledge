@@ -6,7 +6,7 @@ The playbook is compiled, as a demonstration, into a wiki following the "LLM wik
 
 ## Wiki
 
-- [Index](https://brx10.github.io/Knowledge/wiki/index.md): catalog of the 88 pages, one line each
+- [Index](https://brx10.github.io/Knowledge/wiki/index.md): catalog of the 89 pages, one line each
 - [Schema](https://brx10.github.io/Knowledge/wiki/SCHEMA.md): layers, page types, frontmatter, operations
 - [Overview](https://brx10.github.io/Knowledge/wiki/pages/overview/knowledge-mesh-playbook.md): the thesis and how to read the playbook
 - [Pages JSON](https://brx10.github.io/Knowledge/wiki/api/pages.json): all pages with metadata, links and backlinks
@@ -28,6 +28,7 @@ The playbook is compiled, as a demonstration, into a wiki following the "LLM wik
 
 ## Concepts
 
+- [AI agent](https://brx10.github.io/Knowledge/wiki/pages/concepts/ai-agent.md): AI agents are systems built on AI models that pursue a goal, use tools and act on someone's behalf. What they do depends on the context they are given.
 - [Auditable knowledge construction](https://brx10.github.io/Knowledge/wiki/pages/concepts/auditable-knowledge-construction.md): Principle 5, extending quality assured by the domain. Knowledge quality is read through traceability: who proposed each change, who validated it, from which sources, and how to revert it.
 - [Authority, not probability](https://brx10.github.io/Knowledge/wiki/pages/concepts/dated-commitment.md): What the owner commits to is narrower than truth: "this is what the company holds to be true, as of this date, and I answer for it." Dated, sourced, open to challenge. No owner, no authority.
 - [Bases that coexist](https://brx10.github.io/Knowledge/wiki/pages/concepts/coexisting-bases.md): As bases multiply, the answer is coexistence rather than fusion. Each base keeps its owner, charter and pace; bases share identifiers, metadata and a common way to be reached.

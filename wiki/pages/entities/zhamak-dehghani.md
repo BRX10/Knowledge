@@ -16,7 +16,7 @@ updated: '2026-11-17'
 
 # Zhamak Dehghani
 
-In 2019, Zhamak Dehghani described the limits of central data platforms; in 2020 she formalised the four principles of the [[data-mesh]]. The playbook draws on her work more than on any other source:
+In 2019, Zhamak Dehghani described the limits of central data platforms; in 2020 she formalised the four principles of the [[data-mesh]]. Her two texts are cited in seven of the playbook's "Sources & inspirations" boxes. The playbook takes from them:
 
 - the failure modes of centralised platforms, named one by one ([[failure-modes]]);
 - operational and analytical data as two planes, a precedent for [[principle-zero]];

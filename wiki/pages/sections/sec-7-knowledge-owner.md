@@ -3,7 +3,7 @@ id: sec-7-knowledge-owner
 title: 7. The Knowledge Owner
 type: section
 summary: 'Authority, not probability: the person accountable for a base orients, arbitrates, commits, listens and retires, while agents take on the stewardship.'
-tags: [governance]
+tags: [ownership, governance]
 sources: [src-00-playbook-v2.5, src-01-dehghani-2019, src-11-dama-dmbok-2017]
 related: [sec-6-knowledge-base, sec-8-dynamic-context]
 raw: raw/playbook-v2.5.md#knowledge-owner

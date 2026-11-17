@@ -16,7 +16,7 @@ updated: '2026-11-17'
 
 # Grounding
 
-Before an agent can decide or act, it needs to stand on solid ground: facts, rules and reasons that are established, dated and owned. Linguists Herbert Clark and Susan Brennan called the process of building that shared basis grounding: the mutual knowledge on which any joint action rests. The same word is now used in AI for anchoring an answer in sources.
+Before an agent can decide or act, it needs to stand on solid ground: facts, rules and reasons that are established, dated and owned. Linguists Herbert Clark and Susan Brennan called the process of building that shared basis grounding: the mutual knowledge on which any joint action rests. The same word is now used in AI for anchoring an answer in sources. The overlap is not a coincidence: whether between two people or between a company and its agents, nobody can act together without first agreeing on what is taken to be true.
 
 Grounding separates an answer that sounds right from a decision that can be defended. It requires knowledge that someone stands behind (the management plane, see [[dated-commitment]]) and a way to bring it to the agent at the moment it acts ([[dynamic-context]]).
 

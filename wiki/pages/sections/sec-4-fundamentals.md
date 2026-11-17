@@ -3,7 +3,7 @@ id: sec-4-fundamentals
 title: 4. Fundamentals we build on
 type: section
 summary: 'Four established ideas become directly operational once agents are the readers: data, information and knowledge; tacit and explicit; the creation cycle; the lifecycle.'
-tags: [foundations]
+tags: [foundations, km-research, lifecycle]
 sources: [src-00-playbook-v2.5, src-08-davenport-prusak-1998, src-09-ackoff-fricke, src-10-polanyi-1966, src-04-nonaka-1994-1995]
 related: [sec-3-lineage, sec-5-knowledge-mesh]
 raw: raw/playbook-v2.5.md#fundamentals

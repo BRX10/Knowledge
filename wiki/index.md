@@ -2,12 +2,12 @@
 id: index
 title: "Knowledge Mesh Wiki: index"
 updated: 2026-11-17
-pages: 88
+pages: 89
 ---
 
 # Knowledge Mesh Wiki: index
 
-Catalog of the 88 pages compiled from the Knowledge Mesh Playbook v2.5. One line per page: link and summary. Read this first, then open the pages it points to.
+Catalog of the 89 pages compiled from the Knowledge Mesh Playbook v2.5. One line per page: link and summary. Read this first, then open the pages it points to.
 
 ## Overview (1)
 
@@ -27,8 +27,9 @@ Catalog of the 88 pages compiled from the Knowledge Mesh Playbook v2.5. One line
 - [[sec-9-field-guide|9. Field guide]]: Start small and real, treat the mesh as a trajectory, keep knowledge portable, and delegate to agents in three levels.
 - [[sec-closing|What it values, what stays open]]: Five preferences sum up the playbook's answer, four questions remain open, and Montaigne's well-made mind closes it.
 
-## Concepts (38)
+## Concepts (39)
 
+- [[ai-agent|AI agent]]: AI agents are systems built on AI models that pursue a goal, use tools and act on someone's behalf. What they do depends on the context they are given.
 - [[auditable-knowledge-construction|Auditable knowledge construction]]: Principle 5, extending quality assured by the domain. Knowledge quality is read through traceability: who proposed each change, who validated it, from which sources, and how to revert it.
 - [[dated-commitment|Authority, not probability]]: What the owner commits to is narrower than truth: "this is what the company holds to be true, as of this date, and I answer for it." Dated, sourced, open to challenge. No owner, no authority.
 - [[coexisting-bases|Bases that coexist]]: As bases multiply, the answer is coexistence rather than fusion. Each base keeps its owner, charter and pace; bases share identifiers, metadata and a common way to be reached.
@@ -109,7 +110,7 @@ Catalog of the 88 pages compiled from the Knowledge Mesh Playbook v2.5. One line
 - [[src-14-anthropic-2024|Anthropic (2024), Model Context Protocol]]: Announces an open standard that lets AI applications connect to data sources and tools through a common client-server protocol.
 - [[src-15-montaigne-1580|Montaigne (1580), Essais I, 26]]: Essay on the education of children, in which Montaigne prefers a well-formed judgement to an accumulation of learning.
 - [[src-16-iso-30401|ISO 30401 (2018)]]: International standard that sets requirements for establishing, maintaining and improving a knowledge management system in an organisation.
-- [[src-17-eu-ai-act|EU AI Act (2024), Arts. 12, 14 and 26]]: Requires high-risk AI systems to log events automatically over their lifetime, to ensure a level of traceability of their functioning, and to be designed so that people can oversee, override or stop them; deployers must keep the logs…
+- [[src-17-eu-ai-act|EU AI Act (2024), Arts. 12, 14 and 26]]: Requires high-risk AI systems to log events automatically, to ensure traceability, and to be designed for human oversight; deployers must keep the logs for at least six months.
 - [[src-18-mit-nanda-2025|MIT NANDA (2025), The GenAI Divide]]: Reports that most organisations studied see no measurable return from their generative AI initiatives despite significant investment.
 - [[src-19-platt-hp|Platt, attributed (1990s)]]: An attributed quotation, reported in several variants (“productive”, “profitable”), with no primary source located.
 - [[src-20-furnas-1987|Furnas et al. (1987), The Vocabulary Problem]]: Shows experimentally that two people choose the same word for the same object less than 20% of the time.

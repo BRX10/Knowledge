@@ -2,9 +2,14 @@
  "name": "The Knowledge Mesh Wiki",
  "version": "2.5",
  "built": "2026-11-17",
- "pages": 88,
+ "pages": 89,
  "schema": "https://brx10.github.io/Knowledge/wiki/SCHEMA.md",
  "nodes": [
+  {
+   "id": "ai-agent",
+   "type": "concept",
+   "title": "AI agent"
+  },
   {
    "id": "auditable-knowledge-construction",
    "type": "concept",
@@ -447,6 +452,26 @@
   }
  ],
  "edges": [
+  {
+   "from": "ai-agent",
+   "to": "dynamic-context",
+   "kind": "related"
+  },
+  {
+   "from": "ai-agent",
+   "to": "what-agents-change",
+   "kind": "related"
+  },
+  {
+   "from": "ai-agent",
+   "to": "delegation-levels",
+   "kind": "related"
+  },
+  {
+   "from": "ai-agent",
+   "to": "src-00-playbook-v2.5",
+   "kind": "source"
+  },
   {
    "from": "auditable-knowledge-construction",
    "to": "mesh-challenges",
@@ -1054,6 +1079,11 @@
   },
   {
    "from": "knowledge-as-a-pillar",
+   "to": "ai-agent",
+   "kind": "related"
+  },
+  {
+   "from": "knowledge-as-a-pillar",
    "to": "src-00-playbook-v2.5",
    "kind": "source"
   },
@@ -1644,6 +1674,11 @@
   },
   {
    "from": "what-agents-change",
+   "to": "ai-agent",
+   "kind": "related"
+  },
+  {
+   "from": "what-agents-change",
    "to": "src-00-playbook-v2.5",
    "kind": "source"
   },
@@ -1976,6 +2011,11 @@
    "from": "fig-6-owner-flow",
    "to": "src-00-playbook-v2.5",
    "kind": "source"
+  },
+  {
+   "from": "knowledge-mesh-playbook",
+   "to": "ai-agent",
+   "kind": "link"
   },
   {
    "from": "knowledge-mesh-playbook",
@@ -2810,6 +2850,11 @@
   {
    "from": "sec-foreword",
    "to": "knowledge-as-a-pillar",
+   "kind": "link"
+  },
+  {
+   "from": "sec-foreword",
+   "to": "open-questions",
    "kind": "link"
   },
   {

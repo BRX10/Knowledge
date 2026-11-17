@@ -2,7 +2,7 @@
 id: src-17-eu-ai-act
 title: EU AI Act (2024), Arts. 12, 14 and 26
 type: source
-summary: Requires high-risk AI systems to log events automatically over their lifetime, to ensure a level of traceability of their functioning, and to be designed so that people can oversee, override or stop them; deployers must keep the logs…
+summary: Requires high-risk AI systems to log events automatically, to ensure traceability, and to be designed for human oversight; deployers must keep the logs for at least six months.
 tags: [reference]
 related: [eu-ai-act]
 ref: 17

@@ -18,7 +18,7 @@ updated: '2026-11-17'
 
 The challenges are stated as questions, because each organisation will answer them in its own way.
 
-**Managing knowledge** (the management plane, see [[principle-zero]])
+**Managing knowledge.** The first family concerns the management plane ([[principle-zero]]): how knowledge enters a base, how someone commits to it, and how it stays true over time.
 
 | Challenge | What it asks |
 |---|---|
@@ -28,7 +28,7 @@ The challenges are stated as questions, because each organisation will answer th
 | Lifecycle | How is knowledge reviewed, quarantined and retired? |
 | Auditable construction | How is every contribution proposed, reviewed, merged and reversed? |
 
-**Consuming knowledge** (the consumption plane)
+**Consuming knowledge.** The second family concerns the consumption plane: how people and agents draw on knowledge at the moment they need it, within the right limits, and with a trace of what they relied on.
 
 | Challenge | What it asks |
 |---|---|
@@ -37,7 +37,7 @@ The challenges are stated as questions, because each organisation will answer th
 | Traceability | How can any answer or action be traced to the knowledge it relied on? |
 | Reaching the tacit | How are the people who hold what is not written found and connected? |
 
-**Federating the mesh**
+**Federating the mesh.** The third family concerns the mesh itself: how bases owned by different domains are found, live side by side, and keep their value as tools change.
 
 | Challenge | What it asks |
 |---|---|

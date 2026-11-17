@@ -3,7 +3,7 @@ id: andrej-karpathy
 title: Andrej Karpathy
 type: entity
 summary: Described the "LLM wiki" pattern, the compiled layer behind the pages of a knowledge base, and the pattern this wiki follows.
-aliases: [Karpathy, LLM wiki]
+aliases: [Karpathy]
 tags: [agents]
 sources: [src-00-playbook-v2.5, src-12-karpathy-2026]
 related: [compiled-knowledge, knowledge-base]

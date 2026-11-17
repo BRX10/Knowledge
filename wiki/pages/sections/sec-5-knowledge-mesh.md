@@ -3,7 +3,7 @@ id: sec-5-knowledge-mesh
 title: 5. The Knowledge Mesh in brief
 type: section
 summary: The definition, five principles transposed from the Data Mesh, and the challenges a Knowledge Mesh must address, in three families.
-tags: [governance]
+tags: [federation, data-mesh, governance]
 sources: [src-00-playbook-v2.5, src-02-dehghani-2020, src-01-dehghani-2019]
 related: [sec-4-fundamentals, sec-6-knowledge-base]
 raw: raw/playbook-v2.5.md#knowledge-mesh

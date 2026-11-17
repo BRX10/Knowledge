@@ -6,7 +6,7 @@ summary: The fundamentals of knowledge management stay. Agents change three thin
 aliases: [what genuinely changes with AI agents]
 tags: [foundations, agents]
 sources: [src-00-playbook-v2.5]
-related: [knowledge-as-a-pillar, tacit-and-explicit, compiled-knowledge]
+related: [knowledge-as-a-pillar, tacit-and-explicit, compiled-knowledge, ai-agent]
 raw: raw/playbook-v2.5.md#underestimated-pillar
 owner: B. Rousseaux
 status: active

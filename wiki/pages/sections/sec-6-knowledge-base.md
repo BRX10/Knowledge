@@ -3,7 +3,7 @@ id: sec-6-knowledge-base
 title: 6. The knowledge base
 type: section
 summary: 'The unit of the mesh, in seven parts: an entry point for legacy documents and a destination for generated ones, living alongside other bases.'
-tags: [governance]
+tags: [management-plane, governance]
 sources: [src-00-playbook-v2.5, src-12-karpathy-2026, src-01-dehghani-2019]
 related: [sec-5-knowledge-mesh, sec-7-knowledge-owner]
 raw: raw/playbook-v2.5.md#knowledge-base
