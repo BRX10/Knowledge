@@ -115,7 +115,8 @@
     });
     return dlg;
   }
-  document.addEventListener('click', function (e) {
+  function onDl(e) {
+    if (e.type === 'auxclick' && e.button !== 1) return; /* middle click opens the same confirmation */
     var t = e.target.closest && e.target.closest('[data-dl]');
     if (!t || e.defaultPrevented) return;
     var d = dlDialog();
@@ -124,5 +125,7 @@
     d.querySelector('.dl-ask .dl-f').textContent = DL[t.getAttribute('data-dl')] || 'PDF file';
     d.querySelector('.dl-ask').hidden = false; d.querySelector('.dl-done').hidden = true;
     d.showModal(); d.querySelector('[data-go]').focus();
-  });
+  }
+  document.addEventListener('click', onDl);
+  document.addEventListener('auxclick', onDl);
 })();
